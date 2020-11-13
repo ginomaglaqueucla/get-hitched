@@ -1,3 +1,4 @@
+
 // const Sequelize = require('sequelize');
 
 // //this makes links to the .env file that allows us to safely hide our password and username
@@ -17,8 +18,6 @@
 
 
 // module.exports = sequelize;
-
-
 
 const Sequelize = require('sequelize');
 

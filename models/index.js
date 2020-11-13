@@ -4,7 +4,6 @@ const User = require('./User');
 const Wedding = require('./Wedding');
 const GuestList = require('./GuestList');
 
-
 User.hasMany(Guest, {
     foreignKey: 'user_id'
   });

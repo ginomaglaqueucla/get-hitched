@@ -30,6 +30,7 @@ Guest.init(
         //       key: 'id'
         //     }
         // }
+
     },
     {
         sequelize,

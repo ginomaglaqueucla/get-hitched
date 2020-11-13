@@ -18,13 +18,18 @@ Guest.init(
               key: 'id'
             }
         },
-        wedding_id: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'wedding',
-              key: 'id'
-            }
+        guest_name: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
+        //This may need to be an array
+        // wedding_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //       model: 'wedding',
+        //       key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,

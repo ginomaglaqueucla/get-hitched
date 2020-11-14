@@ -36,6 +36,10 @@ User.init(
             validate: {
                 len: [5]
             }
+        },
+        full_name: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {

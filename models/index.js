@@ -6,7 +6,7 @@ const GuestList = require('./GuestList');
 
 User.hasMany(Guest, {
     foreignKey: 'user_id'
-  });
+});
   
 Guest.belongsTo(User, {
     foreignKey: 'user_id'
@@ -14,7 +14,7 @@ Guest.belongsTo(User, {
 
 User.hasMany(Couple, {
     foreignKey: 'user_id'
-  });
+});
   
 Couple.belongsTo(User, {
     foreignKey: 'user_id'

@@ -15,13 +15,13 @@ const seedAll = async () => {
   await seedGuests();
   console.log('--------------');
 
-  await seedCouples();
-  console.log('--------------');
-
   await seedGuestLists();
   console.log('--------------');
 
   await seedWeddings();
+  console.log('--------------');
+
+  await seedCouples();
   console.log('--------------');
 
   process.exit(0);

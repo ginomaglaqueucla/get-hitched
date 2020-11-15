@@ -1,0 +1,84 @@
+/* over all styles for the entire site  */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #F4ABD3 ;
+}
+
+header, 
+footer {
+    padding: 15px 55px;
+    display: flex;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 45px;
+    color: #E32D91 ;
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 0.2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li a{
+    padding: 5px;
+    color: #4E0FEB;
+    text-decoration: none;
+}
+
+main {
+    background-color: #fff;
+    max-width: 3000px;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 25px;
+    color: #E32D91 ;
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 0.2rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul li a {
+    color: #4E0FEB;
+    text-decoration: none;
+}
+
+

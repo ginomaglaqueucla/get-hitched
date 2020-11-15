@@ -18,13 +18,6 @@ Wedding.init(
             len: [5]
         }
     },
-    guest_list_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'guestlist',
-            key: 'id'
-        }
-    },
     wedding_location: {
         type: DataTypes.TEXT,
         allowNull: false,

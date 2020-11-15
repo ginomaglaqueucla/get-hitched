@@ -21,12 +21,25 @@ User.init(
                 len: [5]
             }
         },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+              isEmail: true
+            }
+        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [5]
             }
+
+        },
+        full_name: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {

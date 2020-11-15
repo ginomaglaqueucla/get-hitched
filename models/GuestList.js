@@ -16,6 +16,13 @@ GuestList.init(
             references: {
               model: 'user',
               key: 'id'
+          }
+        },
+        wedding_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model:'wedding',
+                key: 'id'
             }
         },
         rsvp: {

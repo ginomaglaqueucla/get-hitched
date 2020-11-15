@@ -3,11 +3,16 @@ const sequelize = require('../config/connection');
 
 class Couple extends Model {}
 
+console.log('couple');
 Couple.init(
     {
-        // id: {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        },
 
-        // },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

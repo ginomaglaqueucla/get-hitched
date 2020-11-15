@@ -21,7 +21,7 @@ Wedding.belongsToMany(User, {
     foreignKey: 'user_id'
 });
 
-Wedding.hasMany(Couple, {
+Wedding.hasOne(Couple, {
     foreignKey: 'wedding_id'
 });
   

@@ -12,4 +12,5 @@ router.use('/guestlist', guestListRoutes);
 router.use('/user', userRoutes);
 router.use('/wedding', weddingRoutes);
 
+
 module.exports = router;

@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Couple extends Model {}
+class Guest extends Model {}
 
-console.log('couple');
-Couple.init(
+Guest.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -12,21 +11,12 @@ Couple.init(
             primaryKey: true,
             autoIncrement: true
         },
-
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
-                key: 'id'
+              model: 'user',
+              key: 'id'
             }
-        },
-        partner1_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        partner2_name: {
-            type: DataTypes.STRING,
-            allowNull:false
         },
         wedding_id: {
             type: DataTypes.INTEGER,
@@ -38,12 +28,10 @@ Couple.init(
     },
     {
         sequelize,
-        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'couple'
+        modelName: 'guest'
     }
-
 );
 
-module.exports = Couple;
+module.exports = Guest;

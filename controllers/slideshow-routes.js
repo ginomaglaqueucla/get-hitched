@@ -8,6 +8,16 @@ router.get('/', (req, res) => {
     res.render('slideshow');
 });
 
+//GET request to view upload page
+
+//POST request to upload a picture?
+//might not be needed with cloudinary
+
+//PUT request to edit image
+//like it we'd like to add captioning to images
+
+//DELETE request to delete image
+
 
 
 module.exports = router;

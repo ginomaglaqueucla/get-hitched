@@ -18,6 +18,13 @@ GuestList.init(
               key: 'id'
           }
         },
+        wedding_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model:'wedding',
+                key: 'id'
+            }
+        },
         rsvp: {
             type: DataTypes.BOOLEAN,
             allowNull: true

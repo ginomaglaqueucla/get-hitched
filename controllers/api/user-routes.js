@@ -99,6 +99,17 @@ router.post('/login', (req, res) => {
   });
 });
 
+//POST request which will logout the user
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+})
+
 // PUT /api/user/1
 router.put('/:id', (req, res) => {
   // expects {username: '', password: ''}

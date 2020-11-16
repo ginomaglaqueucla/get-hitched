@@ -3,9 +3,7 @@ async function loginFormHandler(event) {
 
     const email = document.querySelector('#login-email').value.trim();
     const password = document.querySelector('#login-pw').value.trim();
-console.log(email, password);
     if (email && password) {
-        console.log('are we getting along?');
         const response = await fetch('api/user/login', {
             method: 'POST',
             body: JSON.stringify({

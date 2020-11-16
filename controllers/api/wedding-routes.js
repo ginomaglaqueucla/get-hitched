@@ -17,17 +17,17 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    // include: [
-    //   {
-    //     model: GuestList,
-    //     attributes: [
-    //     'id',
-    //     'user_id'
-    //     ],
-    //     through: User,
-    //     as: 'wedding_guestlist'
-    //   }
-    // ]
+    include: [
+      {
+        model: User,
+        attributes: [
+        'id',
+        'full_name'
+        ],
+        through: GuestList,
+        as: 'wedding_guestlist'
+      }
+    ]
   })
     .then(dbWeddingData => {
       if (!dbWeddingData) {

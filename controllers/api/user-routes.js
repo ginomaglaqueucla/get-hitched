@@ -35,7 +35,10 @@ router.get('/:id', (req, res) => {
           'wedding_location',
           'wedding_hashtag',
           'wedding_details'
-        ]
+        ],
+        through: GuestList,
+        as: "wedding_guestlist"
+        
       }
     ]
   })

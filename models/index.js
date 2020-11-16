@@ -20,7 +20,7 @@ User.belongsToMany(Wedding, {
 Wedding.belongsToMany(User, {
     through: GuestList,
     as: 'wedding_guestlist',
-    foreignKey: 'user_id'
+    foreignKey: 'wedding_id'
 });
 
 Wedding.hasOne(Couple, {

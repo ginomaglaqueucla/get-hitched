@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Wedding, Couple, GuestList } = require('../../models');
 
 // GET /api/user
 router.get('/', (req, res) => {
@@ -16,7 +16,31 @@ router.get('/:id', (req, res) => {
   User.findOne({
     where: {
       id: req.params.id
-    }
+    },
+    include: [
+      {
+        model: Couple,
+        attributes: [
+          'id',
+          'partner1_name',
+          'partner2_name',
+          'wedding_id'
+        ]
+      },
+      {
+        model: Wedding,
+        attributes: [
+          'id',
+          'wedding_date',
+          'wedding_location',
+          'wedding_hashtag',
+          'wedding_details'
+        ],
+        through: GuestList,
+        as: "wedding_guestlist"
+        
+      }
+    ]
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -36,7 +60,9 @@ router.post('/', (req, res) => {
   // expects {username: '', password: ''}
   User.create({
     username: req.body.username,
-    password: req.body.password
+    email: req.body.email,
+    password: req.body.password,
+    full_name: req.body.full_name
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {

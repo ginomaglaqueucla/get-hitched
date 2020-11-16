@@ -1,9 +1,24 @@
 const express = require('express');
-
 const sequelize = require('./config/connection.js');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const routes = require('./controllers');
+
+//session cookies
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const sess = {
+    secret: process.env.SECURE_KEY,
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
+};
+
+app.use(session(sess));
 
 //setting up handlebars engine
 const exphbs = require('express-handlebars');
@@ -26,6 +41,6 @@ app.use(routes);
 
 //this turns on the connection to the server and db
 
-sequelize.sync({ force: true }).then(() => { //at the bottom of the file, we use the sequelize.sync() method to establish the connection to the database
+sequelize.sync({ force: false }).then(() => { //at the bottom of the file, we use the sequelize.sync() method to establish the connection to the database
     app.listen(PORT, () => console.log(`Now listening at ${PORT}!`));
 });

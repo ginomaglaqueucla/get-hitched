@@ -41,6 +41,8 @@ header h1 {
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: .3em;
+    margin: 0;
 }
 
 header nav ul {

@@ -70,6 +70,7 @@ main {
     align-items: center;
 }
 
+
 footer ul.misc-ul,
 header ul.misc-ul {
     margin-bottom: 0;
@@ -156,4 +157,5 @@ footer ul li a {
     font-weight: lighter;
     color: #fff;
 }
+
 

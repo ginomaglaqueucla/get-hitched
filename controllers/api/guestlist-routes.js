@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { GuestList } = require('../../models');
+const { GuestList, Wedding, User } = require('../../models');
 
 // GET /api/guestlist
 router.get('/', (req, res) => {
@@ -16,7 +16,25 @@ router.get('/:id', (req, res) => {
   GuestList.findOne({
     where: {
       id: req.params.id
-    }
+    },
+    // include: [
+    //   {
+    //     model: GuestList,
+    //     attributes: [
+    //       'wedding_id'
+    //     ],
+    //     through: Wedding
+    //   },
+    //   {
+    //     model: User,
+    //     attributes: [
+    //       'id',
+    //       'email',
+    //       'full_name'
+    //     ],
+    //     through: GuestList
+    //   }
+    // ]
   })
     .then(dbGuestListData => {
       if (!dbGuestListData) {

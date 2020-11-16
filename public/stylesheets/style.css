@@ -52,8 +52,13 @@ header nav ul {
 
 header ul li a{
     padding: 5px;
-    color: #4E0FEB;
+    color: #fff;
     text-decoration: none;
+}
+
+header ul li a:hover,
+footer ul li a:hover  {
+    color: #E32D91;
 }
 
 main {
@@ -63,6 +68,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+footer ul.misc-ul,
+header ul.misc-ul {
+    margin-bottom: 0;
 }
 
 footer {
@@ -78,6 +88,7 @@ footer h3 {
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     letter-spacing: 0.2rem;
+    margin-right: 25px;
 }
 
 footer ul {
@@ -88,8 +99,9 @@ footer ul {
 }
 
 footer ul li a {
-    color: #4E0FEB;
+    color:#fff;
     text-decoration: none;
+    margin: 5px;
 }
 
 

@@ -1,4 +1,27 @@
+<div class="email-form-wrapper">
+    <div class="row">
 
-<p>
-    This will be the login page
-</p>
+        <div class="col-4 logo-login-div">
+            {{!-- update with logo and remove css for icon on line-ish 115  --}}
+            <i class="fas fa-heart"></i>
+        </div>
+
+        <div class="col-8 login-form">
+            <form>
+                <h5>Login</h5>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                    <small id="emailHelp" class="form-text text-muted">We could say something here, idk what tho</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn login-btn login-hover">Enter <i class="far fa-heart"></i></button> 
+            </form>
+        </div>
+
+    </div>
+
+</div>

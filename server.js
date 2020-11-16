@@ -14,6 +14,7 @@ app.set('view engine', 'handlebars');
 
 //stylesheets
 const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 
 //middleware
 app.use(express.json());

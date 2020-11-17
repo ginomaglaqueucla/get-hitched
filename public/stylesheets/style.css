@@ -41,6 +41,8 @@ header h1 {
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: .3em;
+    margin: 0;
 }
 
 header nav ul {
@@ -59,6 +61,19 @@ header ul li a{
 header ul li a:hover,
 footer ul li a:hover  {
     color: #E32D91;
+}
+
+.logout-btn {
+    background-color: #fff;
+    color: #E32D91;
+    cursor: pointer;
+    margin-left: 0.3em;
+}
+
+.logout-btn:hover {
+    color: #EE81BD;
+    box-shadow: 0 0 8px 3px #fff;
+    transition: box-shadow 0.5s ease-out;
 }
 
 main {

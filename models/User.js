@@ -16,13 +16,6 @@ User.init(
             allowNull: false,
             autoIncrement: true
         },
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            vaidate: {
-                len: [5]
-            }
-        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,

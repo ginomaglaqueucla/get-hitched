@@ -127,7 +127,7 @@ footer ul li a {
 /* below are the styles for the login and signup page  */
 
 .login-form-wrapper {
-    margin: 10rem;
+    margin: 9rem;
 }
 
 .logo-login-div {
@@ -209,6 +209,7 @@ footer ul li a {
 .user-type {
     color: #fff;
     font-size: 5em;
+    margin-left: 0.25em;
 }
 
  .toggle-a:checked ~ .toggle-a-btn,

@@ -14,7 +14,7 @@ async function loginFormHandler(event) {
         });
         if (response.ok) {
             console.log('u r logged in')
-            document.location.replace('/'); //will reroute to the homepage
+            document.location.replace('/dashboard'); //will reroute to the homepage
         } else {
             console.log(response.statusText);
         }

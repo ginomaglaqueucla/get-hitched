@@ -1,3 +1,89 @@
-<p>
-    Here is where the signup page will go
-</p>
+<div class="signup-form-wrapper">
+    <div class="row">
+
+        <div class="col-8 signup-form">
+            <form id="signup-form">
+                <h3>Signup</h3>
+
+                {{!-- these are the two choices: guest or couple  --}}
+                <input hidden type="radio" class="hidden toggle-a" name="user-type" id="couple-choice" value="couple" checked>
+                <input hidden type="radio" class="hidden toggle-b" name="user-type" id="guest-choice" value="guest">
+                <label for="couple-choice" class="user-type toggle-a-btn"><i class="fas fa-user-friends"></i></label>
+                <label for="guest-choice" class="user-type toggle-b-btn"><i class="fas fa-user-alt"></i></label>
+                <small class="form-text text-muted">Choose whether you'd like to sign up as a Couple or <br />a Guest by clicking on one of the icons above.</small>
+
+                <br  />
+
+                <div class="toggle-a-content">
+                    <h4>Couple Account</h4>
+                </div>
+
+                <div class="toggle-b-content">
+                    <h4>Guest Account</h4>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-email">Email address</label>
+                    <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Preferred email">
+                    <small class="form-text text-muted">We'll never share your email.</small>
+                </div>
+
+                {{!-- <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" class="form-control" id="signup-username" placeholder="Pick your username">
+                    <small class="form-text text-muted">A unique username will help others recognize you.</small>
+                </div> --}}
+
+                <div class="form-group">
+                    <label for="signup-pw">Password</label>
+                    <input type="password" class="form-control" id="signup-pw" placeholder="Choose a secure password">
+                    <small class="form-text text-muted">Your password will be securely kept.</small>
+                </div>
+
+                {{!-- here are the couple's form options  --}}
+                <div class="toggle-a-content">
+                    <div class="form-group">
+                        <label for="signup-partner-one">Partner One's Name</label>
+                        <input type="text" class="form-control" id="signup-partner-one" placeholder="Top">
+                        <small class="form-text text-muted">Both names of couple are nessecary.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-partner-two">Partner Two's Name</label>
+                        <input type="text" class="form-control" id="signup-partner-two" placeholder="Bottom">
+                        <small class="form-text text-muted">Both names of couple are nessecary.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="requested-wedding-id">Unique Wedding ID</label>
+                        <input type="text" class="form-control" id="requested-wedding-id" placeholder="Unique ID for Wedding">
+                        <small class="form-text text-muted">Pick a unique hastag for your guests use for your wedding</small>
+                    </div>
+                </div>
+
+                {{!-- here are the guest's form options  --}}
+                <div class="toggle-b-content">
+                    <div class="form-group">
+                        <label for="guest-wedding-id">Couple's Wedding ID</label>
+                        <input type="text" class="form-control" id="guest-wedding-id" placeholder="ID Given by Couple">
+                        <small class="form-text text-muted">Enter the ID of the Wedding you're attending</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="guest-fullname">Full Name</label>
+                        <input type="text" class="form-control" id="guest-fullname" placeholder="Enter your fullname">
+                        <small class="form-text text-muted">Your fullname will be displayed on the guestlist.</small>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn signup-btn signup-hover">Enter <i class="far fa-heart"></i></button> 
+            </form>
+        </div>
+
+        <div class="col-4 logo-signup-div">
+            {{!-- update with logo and remove css for icon on line-ish 142  --}}
+            <i class="fas fa-heart"></i>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/javascript/signup.js"></script>

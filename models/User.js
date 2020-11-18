@@ -35,7 +35,13 @@ User.init(
         full_name: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        // guest = true | couple = false
+        userType: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
         }
+
     },
     {
         hooks: {

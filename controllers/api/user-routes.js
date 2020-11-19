@@ -95,8 +95,8 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
-      req.session.is_couple = dbUserData.is_couple;
-      // req.session.is_couple = true;
+      // req.session.is_couple = dbUserData.is_couple;
+      req.session.is_couple = true;
 
       res.status(200).json({ user: dbUserData, message: 'Login sucessful'});
     });

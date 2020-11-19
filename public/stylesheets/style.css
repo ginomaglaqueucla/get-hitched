@@ -82,6 +82,8 @@ footer ul li a:hover  {
 main {
     background-color: #fff;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -210,7 +212,7 @@ footer ul li a {
     font-size: 5em;
 }
 
- .toggle-a:checked ~ .toggle-a-btn,
+.toggle-a:checked ~ .toggle-a-btn,
 .toggle-b:checked ~ .toggle-b-btn{
     color: #E32D91;
     box-shadow: none;
@@ -229,56 +231,39 @@ footer ul li a {
 
 /* Dashboard Styling Starts */
 
-.get-hitched-dashboard-page {
+.dashboard-page {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-.toggle-couple,
-.toggle-guest {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.couple-dashboard-navbar-wrapper,
-.guest-dashboard-navbar-wrapper {
+.dashboard-navbar-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-end;
+    margin: 2rem 0 0 0;
 }
 
-.my-wedding-btn,
-.guestlist-btn,
-.slide-show-btn,
-.your-weddings-btn,
-.slide-shows-btn {
+.dashboard-nav-btn {
     background-color: #EE81BD;
     color: #FFFFFF;
     width: 10em;
     height: 4em;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 0px 0px;
     border: none;
-    margin: 10px;
 }
 
-.my-wedding-btn:hover,
-.guestlist-btn:hover,
-.slide-show-btn:hover,
-.your-weddings-btn:hover,
-.slide-shows-btn:hover {
+.dashboard-nav-btn:hover {
     background-color: #a2bbff;
     color: #FFFFFF;
     width: 10em;
     height: 4em;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 0px 0px;
     border: none;
-
 }
 
-.couple-dashboard-wrapper,
-.guest-dashboard-wrapper {
+.dashboard-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -300,24 +285,40 @@ footer ul li a {
     text-shadow: 0px 0px 10px #FFFFFF;
 }
 
-.dashboard-my-wedding,
-.dashboard-guestlist,
-.dashboard-slide-show,
-.dashboard-your-weddings,
-.dashboard-slide-shows {
+.toggle-my-wedding,
+.toggle-guestlist,
+.toggle-slide-show,
+.toggle-your-weddings,
+.toggle-invites,
+.toggle-slide-shows {
     background-color: #a2bbff;
     color: #FFFFFF;
     width: 25em;
-    height: 25em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 0px 15px 0px;
+    padding: 2em;
 }
 
-.couple-dashboard-navbar-wrapper,
-.guest-dashboard-navbar-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+/* .dashboard {
+
+} */
+
+.dashboard-title {
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    text-align: center;
+    margin-bottom: 1em;
 }
+
+.dashboard-subtitle {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.dashboard-widget {
+    color: #FFFFFF;
+}
+
+/* Dashboard Styling Ends */

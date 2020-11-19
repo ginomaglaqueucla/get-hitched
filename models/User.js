@@ -16,13 +16,6 @@ User.init(
             allowNull: false,
             autoIncrement: true
         },
-        // username: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //     vaidate: {
-        //         len: [5]
-        //     }
-        // },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -43,10 +36,13 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        is_couple: {
+        // guest = true | couple = false
+        engaged: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            allowNull: false,
+            defaultValue: false
         }
+
     },
     {
         hooks: {

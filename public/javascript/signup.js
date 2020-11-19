@@ -1,48 +1,44 @@
 async function signupFormHandler(event) {
     event.preventDefault();
 
-    // const username = document.querySelector("#signup-email").value;
-    const email = document.querySelector("#signup-email").value;
-    const password = document.querySelector("#signup-pw").value;
-    const is_couple = document.querySelector("#couple-choice").checked === true;
-    (console.log(is_couple));
 
-    if(is_couple) {
-        const partner1_name = document.querySelector("#signup-partner-one").value;
-        const partner2_name = document.querySelector("#signup-partner-two").value;
-        const wedding_date = document.querySelector("#signup-wedding-date").value;
-        const wedding_id = document.querySelector("#requested-wedding-id").value;
-        fetch('/api/couple', {
-            method: 'POST',
-            body: JSON.stringify({
-                email,
-                is_couple,
-                partner1_name,
-                partner2_name,
-                wedding_date,
-                wedding_id
-            }), 
-            headers: { 
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        }).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err));
-    } else {
-        const full_name = document.querySelector("#guest-fullname").value;
-        fetch('/api/user', {
-            method: 'POST',
-            body: JSON.stringify({
-                email,
-                is_couple,
-                full_name,
-                password
-            }), 
-            headers: { 
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        }).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err));
+    console.log("in sign up");
+
+    const email = document.querySelector('#signup-email').value.trim();
+    const password = document.querySelector('#signup-pw').value.trim();
+    const full_name = document.querySelector('#user-fullname').value.trim();
+    
+    // placeholder for partner2 name, 
+    //will get overwritten with real name or will not be used at all
+    let partner2 = "placeholder";
+
+    const engaged = document.querySelector('#couple-choice').checked;
+    console.log(email, password, full_name, engaged, partner2);
+    
+    if(engaged) {
+        partner2 = document.querySelector('#signup-partner-two').value.trim();
     }
-
-    document.location.replace('/dashboard');
+    console.log(partner2);
+    if (email && password && full_name && partner2) {
+        const response = await fetch('/api/user', {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                password,
+                full_name,
+                engaged,
+                partner2
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        // check the response status
+        if (response.ok) {
+            console.log('You have successfully made an account.');
+            document.location.replace('/dashboard');
+        } else {
+            console.log(response.statusText);
+        }
+    } 
 }
 
 document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);

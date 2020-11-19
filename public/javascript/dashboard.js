@@ -6,22 +6,26 @@ async function toggleGuestDashboard() {
 
 }
 
-async function toggleCoupleMyWedding() {
+async function toggleMyWedding() {
 
 }
 
-async function toggleCoupleGuestList() {
+async function toggleGuestList() {
 
 }
 
-async function toggleCoupleSlideShow() {
+async function toggleSlideShow() {
 
 }
 
-async function toggleGuestYourWeddings() {
+async function toggleYourWeddings() {
 
 }
 
-async function toggleGuestSlideShows() {
+async function toggleInvites() {
+
+}
+
+async function toggleSlideShows() {
 
 }

@@ -144,8 +144,7 @@ footer ul li a {
 .logo-signup-div i.fa-heart {
     font-size: 5em;
     color: #fff;
-    text-shadow: 0px 0px 10px #FFFFFF
-
+    text-shadow: 0px 0px 10px #FFFFFF;
 }
 
 .login-form {
@@ -228,4 +227,97 @@ footer ul li a {
     display: none;
 }
 
+/* Dashboard Styling Starts */
 
+.get-hitched-dashboard-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.toggle-couple,
+.toggle-guest {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.couple-dashboard-navbar-wrapper,
+.guest-dashboard-navbar-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.my-wedding-btn,
+.guestlist-btn,
+.slide-show-btn,
+.your-weddings-btn,
+.slide-shows-btn {
+    background-color: #EE81BD;
+    color: #FFFFFF;
+    width: 10em;
+    height: 4em;
+    border-radius: 15px 15px 15px 15px;
+    border: none;
+    margin: 10px;
+}
+
+.my-wedding-btn:hover,
+.guestlist-btn:hover,
+.slide-show-btn:hover,
+.your-weddings-btn:hover,
+.slide-shows-btn:hover {
+    background-color: #a2bbff;
+    color: #FFFFFF;
+    width: 10em;
+    height: 4em;
+    border-radius: 15px 15px 15px 15px;
+    border: none;
+
+}
+
+.couple-dashboard-wrapper,
+.guest-dashboard-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.logo-dashboard-div {
+    background-color: #EE81BD;
+    width: 25em;
+    height: 25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.logo-dashboard-div i.fa-heart {
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 0px 0px 10px #FFFFFF;
+}
+
+.dashboard-my-wedding,
+.dashboard-guestlist,
+.dashboard-slide-show,
+.dashboard-your-weddings,
+.dashboard-slide-shows {
+    background-color: #a2bbff;
+    color: #FFFFFF;
+    width: 25em;
+    height: 25em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.couple-dashboard-navbar-wrapper,
+.guest-dashboard-navbar-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

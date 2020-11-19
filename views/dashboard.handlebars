@@ -1,3 +1,75 @@
-<p>
-    This will be the dashboard.
-</p>
+<div class="col-12 get-hitched-dashboard-page">
+    <div class="toggle-couple">
+        <div class="col-8 couple-dashboard-navbar-wrapper">
+            <button onclick="toggleMyWedding()" class="my-wedding-btn">My Wedding</button>
+            <button onclick="toggleGuestList()" class="guestlist-btn">Guest List</button>
+            <button onclick="toggleSlideShow()"class="slide-show-btn">Slide Show</button>
+        </div>
+
+        <div class="couple-dashboard-wrapper">
+            <div class="col-4 logo-dashboard-div">
+                {{!-- update with logo and remove css for icon on line 115-sh --}}
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <div class="col-8 toggle-my-wedding dashboard-my-wedding">
+                <div class="dashboard-my-wedding-my-wedding">
+                    <h2>My Wedding</h2>
+                    <h2>{{couple.partner1_name}}</h2> </br>
+                    <h2>&{{couple.partner2_name}}</h2> </br>
+                    <h2>#{{wedding.hashtag}}</h2>
+                </div>
+                <div class="dashboard-my-wedding-wedding-info">
+                    <h2>Wedding Information</h2> </br>
+                    <h3>Date: {{wedding.date}}</h3> </br>
+                    <h3>Location: {{wedding.location}}</h3>
+                </div>
+            </div>
+
+            <div class="col-8 toggle-guestlist dashboard-guestlist">
+                <div class="dashboard-guestlist-guestlist">
+                    <h2>Guest List</h2> </br>
+                    {{guestlist}}
+                </div>
+                <div class="dashboard-guestlist-wedding-details">
+                    <h2>Wedding Details</h2> </br>
+                    {{wedding.wedding_details}}
+            </div>
+
+            <div class="col-8 toggle-slide-show dashboard-slide-show">
+                <div class="dashboard-slide-show-slide-show">
+                    <h2>Slide Show</h2> </br>
+                    {{! import slide show data here }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toggle-guest">
+        <div class="col-8 guest-dashboard-navbar-wrapper">
+            <button onclick="toggleYourWeddings()" class="your-weddings-btn">Your Weddings</button>
+            <button class="slide-shows-btn">Slide Shows</button>
+        </div>
+
+        <div class="guest-dashboard-wrapper">
+            <div class="col-4 logo-dashboard-div">
+                {{!-- update with logo and remove css for icon on line 115-sh --}}
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <div class="col-8 toggle-your-weddings dashboard-your-weddings">
+                <div class="dashboad-your-weddings-your-weddings">
+                    <h2>Your Weddings</h2> </br>
+                    <h2>{{user.full_name}}</h2>
+                </div>
+            </div>
+
+            <div class="col-8 toggle-slide-shows dashboard-slide-shows">
+                <div class="dashboard-slide-shows-slide-shows">
+                    <h2>Slide Shows</h2> </br>
+                    {{! import slide show data here }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

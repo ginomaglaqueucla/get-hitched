@@ -16,13 +16,13 @@ User.init(
             allowNull: false,
             autoIncrement: true
         },
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            vaidate: {
-                len: [5]
-            }
-        },
+        // username: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     vaidate: {
+        //         len: [5]
+        //     }
+        // },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -41,6 +41,10 @@ User.init(
         },
         full_name: {
             type: DataTypes.STRING,
+            allowNull: false
+        },
+        is_couple: {
+            type: DataTypes.BOOLEAN,
             allowNull: false
         }
     },

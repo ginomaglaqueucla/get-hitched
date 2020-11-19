@@ -1,5 +1,27 @@
-async function toggleYourWedding(event) {
-  event.preventDefault();
-};
+async function toggleCoupleDashboard() {
+  
+}
 
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+async function toggleGuestDashboard() {
+
+}
+
+async function toggleCoupleMyWedding() {
+
+}
+
+async function toggleCoupleGuestList() {
+
+}
+
+async function toggleCoupleSlideShow() {
+
+}
+
+async function toggleGuestYourWeddings() {
+
+}
+
+async function toggleGuestSlideShows() {
+
+}

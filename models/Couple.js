@@ -33,6 +33,10 @@ Couple.init(
               model: 'wedding',
               key: 'id'
             }
+        },
+        is_couple: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
         }
     },
     {

@@ -1,9 +1,10 @@
 <div class="col-12 get-hitched-dashboard-page">
+    {{#if is_couple}}
     <div class="toggle-couple">
-        <div class="col-8 couple-dashboard-navbar-wrapper">
-            <button onclick="toggleMyWedding()" class="my-wedding-btn">My Wedding</button>
-            <button onclick="toggleGuestList()" class="guestlist-btn">Guest List</button>
-            <button onclick="toggleSlideShow()"class="slide-show-btn">Slide Show</button>
+        <div class="col-12 couple-dashboard-navbar-wrapper" style="justify-content: flex-end;">
+            <button class="my-wedding-btn">My Wedding</button>
+            <button class="guestlist-btn">Guest List</button>
+            <button class="slide-show-btn">Slide Show</button>
         </div>
 
         <div class="couple-dashboard-wrapper">
@@ -15,9 +16,9 @@
             <div class="col-8 toggle-my-wedding dashboard-my-wedding">
                 <div class="dashboard-my-wedding-my-wedding">
                     <h2>My Wedding</h2>
-                    <h2>{{couple.partner1_name}}</h2> </br>
-                    <h2>&{{couple.partner2_name}}</h2> </br>
-                    <h2>#{{wedding.hashtag}}</h2>
+                    <h3>{{couple.partner1_name}}</h3> </br>
+                    <h3>&{{couple.partner2_name}}</h3> </br>
+                    <h4>#{{wedding.hashtag}}</h4>
                 </div>
                 <div class="dashboard-my-wedding-wedding-info">
                     <h2>Wedding Information</h2> </br>
@@ -29,11 +30,11 @@
             <div class="col-8 toggle-guestlist dashboard-guestlist">
                 <div class="dashboard-guestlist-guestlist">
                     <h2>Guest List</h2> </br>
-                    {{guestlist}}
+                    <h3>{{guestlist}}</h3>
                 </div>
                 <div class="dashboard-guestlist-wedding-details">
                     <h2>Wedding Details</h2> </br>
-                    {{wedding.wedding_details}}
+                    <h3>{{wedding.wedding_details}}</h3>
             </div>
 
             <div class="col-8 toggle-slide-show dashboard-slide-show">
@@ -44,10 +45,12 @@
             </div>
         </div>
     </div>
+    {{/if}}
 
+    {{#unless is_couple}}
     <div class="toggle-guest">
-        <div class="col-8 guest-dashboard-navbar-wrapper">
-            <button onclick="toggleYourWeddings()" class="your-weddings-btn">Your Weddings</button>
+        <div class="col-12 guest-dashboard-navbar-wrapper" style="justify-content: flex-end">
+            <button class="your-weddings-btn">Your Weddings</button>
             <button class="slide-shows-btn">Slide Shows</button>
         </div>
 
@@ -59,7 +62,7 @@
 
             <div class="col-8 toggle-your-weddings dashboard-your-weddings">
                 <div class="dashboad-your-weddings-your-weddings">
-                    <h2>Your Weddings</h2> </br>
+                    <h2 style="text-align: center;">Your Weddings</h2> </br>
                     <h2>{{user.full_name}}</h2>
                 </div>
             </div>
@@ -72,4 +75,5 @@
             </div>
         </div>
     </div>
+    {{/unless}}
 </div>

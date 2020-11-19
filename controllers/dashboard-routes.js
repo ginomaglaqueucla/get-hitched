@@ -4,7 +4,7 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
     console.log('dashboard page');
     //session login
-    res.render('dashboard');
+    res.render('dashboard', {is_couple:req.session.is_couple});
 });
 
 //GET request to view edit dashbaord information

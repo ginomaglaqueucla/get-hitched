@@ -37,9 +37,10 @@ User.init(
             allowNull: false
         },
         // guest = true | couple = false
-        userType: {
+        engaged: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            allowNull: false,
+            defaultValue: false
         }
 
     },

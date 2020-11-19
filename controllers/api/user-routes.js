@@ -58,13 +58,22 @@ router.get('/:id', (req, res) => {
 // POST /api/user
 router.post('/', (req, res) => {
   // expects {email: '', password: ''}
-  console.log("in here");
   User.create({
     email: req.body.email,
     password: req.body.password,
     full_name: req.body.full_name,
-    engaged: req.body.engaged
+    engaged: req.body.engaged,
   })
+    // PUT entry for couples table if engaged
+    .then(dbUserData => {
+      if(dbUserData.engaged){
+        Couple.create({
+          user_id: dbUserData.id,
+          partner1_name: dbUserData.full_name,
+          partner2_name: req.body.partner2
+        }).then(dbUserData => res.json(dbUserData))
+      }
+    })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
       console.log(err);

@@ -14,7 +14,6 @@ cloudinary.config({
     api_secret: process.env.API_SECRET
 });
 
-// cloudinary.uploader.upload('', function(error, result) {console.log(result)})
 
 router.post('/upload', upload.single('weddingImage') , async (req, res, next) => {
     console.log(req.file);

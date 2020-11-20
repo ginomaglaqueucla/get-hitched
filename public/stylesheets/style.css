@@ -160,14 +160,16 @@ footer ul li a {
 }
 
 .login-btn,
-.signup-btn {
+.signup-btn,
+.upload-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
 }
 
 .login-btn:hover,
-.signup-btn:hover {
+.signup-btn:hover,
+.upload-btn:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
@@ -302,13 +304,9 @@ footer ul li a {
     padding: 2em;
 }
 
-/* .dashboard {
-
-} */
-
 .dashboard-title {
     color: #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
+    border-rgb(49, 26, 26) 2px solid #FFFFFF;
     text-align: center;
     margin-bottom: 1em;
 }
@@ -322,4 +320,19 @@ footer ul li a {
     color: #FFFFFF;
 }
 
-/* Dashboard Styling Ends */
+/* gallery page styling  */
+.gallery-wrapper {
+    margin: 5em;
+}
+
+.gallery-div {
+    background-color: #EE81BD;
+    width: 60em;
+    height: 29em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 15px 15px;
+}
+
+

@@ -41,7 +41,9 @@ router.get('/', (req, res) => {
         // ]
     })
     .then(dbCoupleData => {
+        console.log(dbCoupleData);
         const couple = dbCoupleData.map(couple => couple.get({plain:true}));
+        console.log('data',couple);
         res.render('dashboard', {couple, loggedIn: true, keyname:'fun times.'});
     })
     .catch(err => {

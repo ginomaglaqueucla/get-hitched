@@ -2,14 +2,14 @@ async function imageUploadForm(event) {
     event.preventDefault();
 
     const formData = new FormData(this);
-    const response = await fetch('api/cloudinary/upload', {
+    const response = await fetch('/api/cloudinary/upload', {
         method: 'POST',
         body: formData,
         header: { 'Content-Type': 'application/json' }
     });
     if (response.ok) {
         console.log('image uploaded')
-        // document.location.replace('/gallery');
+        // document.location.replace('gallery/upload');
     } else {
         console.log(response.statusText);
     }

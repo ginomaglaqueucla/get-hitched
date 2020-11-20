@@ -103,7 +103,9 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
-  
+      // req.session. = dbUserData.;
+      req.session.engaged = true;
+
       res.status(200).json({ user: dbUserData, message: 'Login sucessful'});
     });
   });

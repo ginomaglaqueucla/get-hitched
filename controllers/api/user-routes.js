@@ -57,13 +57,23 @@ router.get('/:id', (req, res) => {
 
 // POST /api/user
 router.post('/', (req, res) => {
-  // expects {username: '', password: ''}
+  // expects {email: '', password: ''}
   User.create({
-    username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    full_name: req.body.full_name
+    full_name: req.body.full_name,
+    engaged: req.body.engaged,
   })
+    // PUT entry for couples table if engaged
+    .then(dbUserData => {
+      if(dbUserData.engaged){
+        Couple.create({
+          user_id: dbUserData.id,
+          partner1_name: dbUserData.full_name,
+          partner2_name: req.body.partner2
+        }).then(dbUserData => res.json(dbUserData))
+      }
+    })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
       console.log(err);
@@ -93,7 +103,9 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.email = dbUserData.email;
       req.session.loggedIn = true;
-  
+      // req.session. = dbUserData.;
+      req.session.engaged = true;
+
       res.status(200).json({ user: dbUserData, message: 'Login sucessful'});
     });
   });
@@ -110,9 +122,11 @@ router.post('/logout', (req, res) => {
   }
 })
 
+//POST request which will signup user
+
+
 // PUT /api/user/1
 router.put('/:id', (req, res) => {
-  // expects {username: '', password: ''}
   // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
   User.update(req.body, {
     where: {

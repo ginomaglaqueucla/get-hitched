@@ -126,10 +126,10 @@ footer ul li a {
 
 
 
-/* below are the styles for the login and signup page  */
+/* below are the form styles */
 
 .login-form-wrapper {
-    margin: 10rem;
+    margin: 9rem;
 }
 
 .logo-login-div {
@@ -160,14 +160,16 @@ footer ul li a {
 }
 
 .login-btn,
-.signup-btn {
+.signup-btn,
+.edit-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
 }
 
 .login-btn:hover,
-.signup-btn:hover {
+.signup-btn:hover,
+.edit-btn {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
@@ -190,7 +192,8 @@ footer ul li a {
     margin: 5rem 0;
 }
 
-.signup-form {
+.signup-form,
+.edit-form {
     background-color: #a2bbff;
     width: 25em;
     display: flex;
@@ -210,6 +213,7 @@ footer ul li a {
 .user-type {
     color: #fff;
     font-size: 5em;
+    margin-left: 0.25em;
 }
 
 .toggle-a:checked ~ .toggle-a-btn,

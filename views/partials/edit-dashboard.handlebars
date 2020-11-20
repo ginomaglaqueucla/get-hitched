@@ -1,0 +1,42 @@
+<div class="edit-form-wrapper">
+    <div class="row">
+
+        <div class="col-8 edit-form">
+            <form id="edit-form">
+                <h3>Enter Your Wedding Information</h3>
+                
+                <div class="form-group">
+                    <label for="wedding-date">Choose Your Wedding Date:</label>
+                    <input type="date" class="form-control" id="wedding-date" name="wedding-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="wedding-hashtag">Create Your Wedding Hashtag</label>
+                    <input type="text" class="form-control" id="wedding-hashtag" placeholder="#">
+                    <small class="form-text text-muted">This hashtag will allow your invited guests to search and link to your wedding</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="wedding-location">Enter Your Wedding Location:</label>
+                    <input type="text" class="form-control fullname" id="wedding-location" placeholder="Enter the location of your wedding">
+                </div>
+
+                <div class="form-group">
+                    <label for="wedding-details">Enter Your Wedding Details:</label>
+                    <input type="text" class="form-control fullname" id="wedding-details" placeholder="Semi-formal, please leave the kids at home, etc..">
+                </div>
+
+                <button type="submit" class="btn edit-btn edit-hover">Create Wedding<i class="far fa-heart"></i></button> 
+            </form>
+        </div>
+
+        <div class="col-4 logo-signup-div">
+            {{!-- update with logo and remove css for icon on line-ish 142  --}}
+            <i class="fas fa-heart"></i>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../../public/javascript/edit-dashboard.js"></script>

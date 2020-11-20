@@ -1,8 +1,10 @@
 const express = require('express');
-const sequelize = require('./config/connection.js');
 const app = express();
 const PORT = process.env.PORT || 3001;
+const sequelize = require('./config/connection.js');
+// const cloudinary = require('./config/cloudinary-connection.js');
 const routes = require('./controllers');
+
 
 //session cookies
 const session = require('express-session');
@@ -20,6 +22,7 @@ const sess = {
 
 app.use(session(sess));
 
+
 //setting up handlebars engine
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
@@ -29,7 +32,6 @@ app.set('view engine', 'handlebars');
 
 //stylesheets
 const path = require('path');
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 //middleware

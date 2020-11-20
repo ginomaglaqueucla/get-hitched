@@ -22,6 +22,11 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 })
 
-
+//GET request for signup
+router.get('/dashboard', (req, res) => {
+    console.log('dashboard page');
+    //session logic will go here
+    res.render('dashboard');
+})
 
 module.exports = router;

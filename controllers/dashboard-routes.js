@@ -8,48 +8,78 @@ router.get('/', (req, res) => {
     console.log('this is the user id', req.session.user_id);
     console.log('this is just the engaged', req.session.engaged);
     console.log('this is just the session', req.session);
-    Couple.findAll({
-        where:{
-            user_id: req.session.user_id
-        },
-        attributes: [
-            'id',
-            'partner1_name',
-            'partner2_name',
-            'wedding_id'
-        ]
-        // include: [
-        //     {
-        //         model: User,
-        //         attributes: [
-        //             'id',
-        //             'engaged'
-        //         ],
-        //         through: GuestList,
-        //         as: 'wedding_guestlist'
-        //     }
-        // ]
-        //     {
-        //         model: Couple,
-        //         attributes: [
-        //             'id',
-        //             'partner1_name',
-        //             'partner2_name',
-        //             'wedding_id'
-        //         ]
-        //     }
-        // ]
-    })
-    .then(dbCoupleData => {
-        console.log(dbCoupleData);
-        const couple = dbCoupleData.map(couple => couple.get({plain:true}));
-        console.log('data',couple);
-        res.render('dashboard', {couple, loggedIn: true, keyname:'fun times.'});
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
+    if(req.session.engaged){
+        Couple.findAll({
+            where:{
+                user_id: req.session.user_id
+            },
+            attributes: [
+                'id',
+                'partner1_name',
+                'partner2_name',
+                'wedding_id'
+            ],
+            include: [
+                {
+                    model: Wedding,
+                    attributes: [
+                        'id',
+                        'wedding_date',
+                        'wedding_location',
+                        'wedding_hashtag',
+                        'wedding_details'
+                    ]
+                }
+            ]
+  
+        })
+        .then(dbCoupleData => {
+            console.log(dbCoupleData);
+            const couple = dbCoupleData.map(couple => couple.get({plain:true}));
+            console.log('data',couple);
+            res.render('dashboard', {couple, loggedIn: true, keyname:'fun times.'});
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+    }
+    else {
+        console.log('in here');
+        User.findAll({
+            where:{
+                id: req.session.user_id
+            },
+            attributes: [
+                'id',
+                'full_name'
+            ]            
+        //     include: [
+        //         {
+        //             model: Wedding,
+        //             attributes: [
+        //                 'id',
+        //                 'wedding_date',
+        //                 'wedding_location',
+        //                 'wedding_hashtag',
+        //                 'wedding_details'
+        //             ],
+        //             through: GuestList,
+        //             as: "wedding_guestlist"
+        //         }
+        //     ]         
+        })
+        .then(dbUserData => {
+            console.log(dbUserData);
+            const user = dbUserData.map(user => user.get({plain:true}));
+            console.log('data',user);
+            res.render('dashboard', {user, loggedIn: true, keyname:'fun times.'});
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+    }
 });
 
 //GET request to view edit dashbaord information

@@ -1,14 +1,14 @@
 <div class="launch-page">
     {{#if engaged}}
         <div class="col-8 launch-wrapper">
-            <div class="col-5 launch-profile-pic-div">
+            <div class="col-4 launch-profile-pic-div">
                 <img src="#" />
                 {{#each couple}}
                 <h2>{{partner1_name}} & {{partner2_name}}</h5>
                 {{/each}}
             </div>
 
-            <div class="col-8 launch-nav-btns-div">
+            <div class="col-6 launch-nav-btns-div">
                 <button class="dashboard-nav-btn btn">My Wedding</button>
                 <button class="dashboard-nav-btn btn">Guest List</button>
                 <button class="dashboard-nav-btn btn">Slide Show</button>
@@ -17,15 +17,15 @@
         {{/if}}
 
         {{unless engaged}}
-        <div class="col-12 launch-wrapper">
-            <div class="launch-profile-pic-div">
+        <div class="col-8 launch-wrapper">
+            <div class="col-4 launch-profile-pic-div">
                 <img src="#" />
                 {{#each user}}
                 <h2>{{full_name}}</h5>
                 {{/each}}
             </div>
 
-            <div class="launch-nav-btns-div">
+            <div class="col-6 launch-nav-btns-div">
                 <button class="dashboard-nav-btn btn">Your Weddings</button>
                 <button class="dashboard-nav-btn btn">Slide Shows</button>
             </div>

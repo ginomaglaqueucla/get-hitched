@@ -239,6 +239,7 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: stretch;
 }
 
 .dashboard-wrapper {
@@ -252,11 +253,19 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #E32D91;
-    align-items: stretch;
+    color: #FFFFFF;
     width: 15em;
     height: 25em;
     border-radius: 15px 0px 0px 15px;
+}
+
+.nav-btns-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .dashboard-nav-btn {
@@ -266,8 +275,10 @@ footer ul li a {
 }
 
 .dashboard-nav-btn:hover {
-    background-color: #a2bbff;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color:  #E32D91;
+    box-shadow: 0 0 8px 3px #fff;
+    transition: box-shadow 0.5s ease-out;
 }
 
 .toggle-my-wedding,

@@ -129,7 +129,7 @@ footer ul li a {
 /* below are the form styles */
 
 .login-form-wrapper {
-    margin: 9rem;
+    margin: 3rem;
 }
 
 .logo-login-div {
@@ -196,7 +196,7 @@ footer ul li a {
     justify-content: center;
     align-items: center;
     border-radius: 0px 15px 15px 0px;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 .signup-form,
@@ -208,7 +208,7 @@ footer ul li a {
     align-items: center;
     border-radius: 15px 0px 0px 15px;
     padding: 3em;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 /* * */
@@ -240,32 +240,50 @@ footer ul li a {
     display: none;
 }
 
+/* Launch Styling Starts */
+
+.launch-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.launch-profile-pic-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.launch-nav-btns-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Launch Styling Ends */
+
+
+
 /* Dashboard Styling Starts */
 
-/* .dashboard-page {
+.dashboard-page {
+    margin: 3rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: stretch;
-} */
-
-.dashboard-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 5em;
 }
 
 .dashboard-nav-div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #E32D91;
+    justify-content: space-evenly;
+    background-color: #EE81BD;
     color: #FFFFFF;
-    width: 15em;
-    height: 25em;
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -273,8 +291,9 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: .5em;
 }
 
 .nav-btns-div {
@@ -297,23 +316,23 @@ footer ul li a {
 }
 
 .dashboard {
-    background-color: #EE81BD;
+    background-color: #E32D91;
     color: #FFFFFF;
-    width: 25em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     border-radius: 0px 15px 15px 0px;
-    padding: 2em;
+    padding: 1.5em;
 }
 
-.dashboard-title h2 {
-    border-bottom: 2px solid #FFFFFF;
+.dashboard-title {
     text-align: center;
-    margin-bottom: 1em;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;
+    text-shadow: 1px 1px 5px white;
 }
 
 
@@ -323,6 +342,21 @@ footer ul li a {
 }
 
 .dashboard-widget {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.my-wedding-info-widget-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     color: #FFFFFF;
 }
 

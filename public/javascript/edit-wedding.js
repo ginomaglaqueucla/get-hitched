@@ -1,8 +1,8 @@
-async function editDashboardFormHandler(event) {
+async function editWeddingFormHandler(event) {
   event.preventDefault();
 
 
-  console.log("in edit-dashboard");
+  console.log("in edit-wedding");
 
   const wedding_date = document.querySelector('#wedding-date').value.trim();
   const wedding_hashtag = document.querySelector('#wedding-hashtag').value.trim();
@@ -32,4 +32,4 @@ async function editDashboardFormHandler(event) {
   } 
 }
 
-document.querySelector('#edit-dashboard').addEventListener('submit', editDashboardFormHandler);
+document.querySelector('#edit-form').addEventListener('submit', editDashboardFormHandler);

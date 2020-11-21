@@ -1,0 +1,44 @@
+{{!-- Partial for Your Weddings Page --}}
+
+<div class="dashboard-page">
+    <div class="col-4 dashboard-nav-div">
+        <div class="profile-pic-div">
+            <img src="#" />
+            {{#each user}}
+            <h5>{{full_name}}</h5>
+            {{/each}}
+        </div>
+
+        <div class="nav-btns-div">
+            <button class="dashboard-nav-btn btn">Invites</button>
+            <button class="dashboard-nav-btn btn">Slide Show</button>
+        </div>
+    </div>
+
+    <div class="col-8 dashboard">
+        <div class="dashboard-title">
+            <h2>Your Weddings</h2>
+        </div>
+
+        <div class="dashboard-widget">
+            <div class="my-wedding-info-widget-title">
+                <h3>Wedding Information</h3>
+            </div>
+
+            </div class="my-wedding-info-widget-info">
+            {{#each user.wedding_id}}
+                <h3>{{wedding.wedding_date}}</h3> </br>
+                <h3>{{wedding.wedding_location}}</h3>
+                <h3>{{wedding.wedding_details}}</h3>
+            {{/each}}
+                {{!-- possibly include map in widget? --}}
+            </div>
+            
+            <button class="dashboard-nav-btn btn">Edit My Wedding</button>
+
+            {{!-- possibly include another widget for weather?--}}
+        </div>
+    </div>
+</div>
+
+{{!-- <script src="/javascript/dashboard.js"></script> --}}

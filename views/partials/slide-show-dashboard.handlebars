@@ -1,0 +1,32 @@
+{{!-- Partial for Slide Show Page --}}
+
+<div class="dashboard-page">
+    <div class="col-4 dashboard-nav-div">
+        <div class="profile-pic-div">
+            <img src="#" />
+            {{#each couple}}
+            <h5>{{partner1_name}} &</br>
+            {{partner2_name}}</h5>
+            {{/each}}
+        </div>
+
+        <div class="nav-btns-div">
+            <button class="dashboard-nav-btn btn">My Wedding</button>
+            <button class="dashboard-nav-btn btn">Guest List</button>
+        </div>
+    </div>
+
+    <div class="col-8 dashboard">
+        <div class="toggle-slide-show">
+            <div class="dashboard-title">
+                <h2>Slide Show</h2> </br>
+            </div>
+
+            <div class="dashboard-widget">
+                {{! import slide show here }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- <script src="/javascript/dashboard.js"></script> --}}

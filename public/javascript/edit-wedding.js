@@ -32,4 +32,4 @@ async function editWeddingFormHandler(event) {
   } 
 }
 
-document.querySelector('#edit-form').addEventListener('submit', editDashboardFormHandler);
+document.querySelector('#edit-form').addEventListener('submit', editWeddingFormHandler);

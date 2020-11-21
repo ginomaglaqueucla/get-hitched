@@ -351,11 +351,6 @@ footer ul li a {
 }
 
 .my-wedding-info-widget-info {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     text-align: center;
     color: #FFFFFF;
 }

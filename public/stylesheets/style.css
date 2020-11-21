@@ -85,7 +85,7 @@ footer ul li a:hover  {
 main {
     background-color: #fff;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -180,7 +180,7 @@ footer ul li a {
 
 .login-form h3,
 .signup-form h3,
-.gallery-header {
+.gallery-header h3 {
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;
@@ -326,28 +326,66 @@ footer ul li a {
 
 /* gallery page styling  */
 .gallery-wrapper {
-    margin: 5em;
-    overflow: scroll;
-}
-
-.row {
-    max-width: 100%;
+    margin: 5em 0;
 }
 
 .gallery-div {
     background-color: #EE81BD;
-    width: 60em;
-    height: 29em;
+    width: 75em;
+    height: 30em;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     border-radius: 15px 15px 15px 15px;
+    overflow: auto;
 }
 
-.btn-wrapper {
+.gallery-header {
     display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
+    justify-content: space-between;
+}
+
+.gallery-div .row {
+    margin: 1em;
+}
+
+.gallery-img {
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 25px 25px;
+}
+
+.upload-btn {
+    margin-top: 0.5em;
+}
+
+.carousel img {
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+.gallerymodal-btn {
+    background-color: #E32D91;
+    color: #fff;
+}
+
+.gallerymodal-btn:hover {
+    color: #fff;
+    background-color: #EE81BD;
+    box-shadow: 0 0 8px 3px #EE81BD;
+    transition: box-shadow 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.carousel-control-bg {
+    background-color: #EE81BD;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background-size: 20px 20px;
+}
+
+.carousel-inner {
+    border-radius: .75em;
 }
 
 /* * */
@@ -363,17 +401,6 @@ footer ul li a {
     border-radius: 15px 15px 15px 15px;
     margin: 5rem 0;
 }
-/* 
-.uploadimage-btn {
-    background-color: #fff;
-    color: #E32D91;
-    cursor: pointer;
-    margin:
-}
 
-.uploadimage-btn:hover {
-    color: #EE81BD;
-    box-shadow: 0 0 8px 3px #fff;
-    transition: box-shadow 0.5s ease-out;
-} */
+
 

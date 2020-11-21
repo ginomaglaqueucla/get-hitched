@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const cloudinary = require('cloudinary').v2;
-const { response } = require('express');
 const multer = require('multer');
 const upload = multer();
 const streamifier = require('streamifier');
+
+
 const weddingHashtag = require('../../models/Wedding.js');
 
 require('dotenv').config();
@@ -15,26 +16,29 @@ cloudinary.config({
     api_secret: process.env.API_SECRET
 });
 
+// please leave this here as it might be needed later 
+
 //this is a GET  request to get the images from cloudinary
-router.get('/images', (req , res) => {
-    console.log('image request');
-    // cloudinary.image(`https://res.cloudinary.com/${process.env.CLOUD_NAME}/image/list/test.json`, {type: "fetch"})
-    cloudinary.api.resources(
-        {
-            type: 'upload',
-            prefix: 'other folder/'
-        },
-        function(err, result) {
-            if (err) {
-                console.log('err');
-                return;
-            }
-            console.log('result', result);
-            const galleryImages = result.resources
-            res.render('gallery', { galleryImages }) 
-        }
-    )
-});
+// router.get('/', (req , res) => {
+//     console.log('image request');
+
+//     cloudinary.api.resources(
+//         {
+//             type: 'upload',
+//             prefix: 'test/'
+//         },
+//         function(err, result) {
+//             if (err) {
+//                 console.log('err');
+//                 return;
+//             }
+//             console.log('result', result);
+//             const galleryImages = result.resources;
+//             res.render('gallery', { galleryImages })
+//         }
+//     )
+// });
+
 
 
 //this is a POST request to send a file to cloudinary
@@ -43,7 +47,7 @@ router.post('/upload', upload.single('weddingImage') , async (req, res, next) =>
     
     const cloudUpload = cloudinary.uploader.upload_stream(
         {
-            folder: "other folder",
+            folder: "tester",
             tags: "tester"
         },
         function(err, result) {

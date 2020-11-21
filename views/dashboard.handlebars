@@ -1,16 +1,17 @@
 <div class="dashboard-page">
-        {{#if user.engaged}}
-
-            <div class="col-12 dashboard-navbar-wrapper">
-                <button class="dashboard-nav-btn">Your Weddings</button>
-                <button class="dashboard-nav-btn">Guest List</button>
-                <button class="dashboard-nav-btn">Slide Show</button>
-            </div>
+        {{#if engaged}}
 
             <div class="col-12 dashboard-wrapper">
-                <div class="col-4 logo-dashboard-div">
-                    {{!-- update with logo and remove css for icon on line 115-sh --}}
-                    <i class="fas fa-heart"></i>
+                <div class="col-4 dashboard-nav-div">
+                    <div class="profile-pic">
+                        Profile pic will go here
+                    </div>
+
+                    <div class="nav-btns-div">
+                        <button class="dashboard-nav-btn btn">Your Weddings</button>
+                        <button class="dashboard-nav-btn btn">Guest List</button>
+                        <button class="dashboard-nav-btn btn">Slide Show</button>
+                    </div>
                 </div>
 
                 <div class="col-8 toggle-my-wedding">
@@ -21,23 +22,27 @@
                             </div>
 
                             <div class="dashboard-subtitle">
-                                <h3>{{couple.partner1_name}} & {{couple.partner2_name}}</h3> </br>
-                                <h4>#{{couple.wedding_id}}</h4>
+                                {{!-- Is there a better way to destructure our data object? --}}
+                                {{#each couple}}
+                                <h3>{{partner1_name}} & {{partner2_name}}</h3> </br>
+                                <h4>#{{wedding.wedding_hashtag}}</h4>
+                                
                             </div> 
                         </div>
 
                         <div class="dashboard-widget">
                             <div class="my-wedding-info-widget-title">
                                 <h3>Wedding Information</h3>
-                            </div>
+                            </div>s
 
                             </div class="my-wedding-info-widget-info">
-                                <h3>Date: {{wedding.date}}</h3> </br>
-                                <h3>Location: {{wedding.location}}</h3>
+                            
+                                <h3>Date: {{wedding.wedding_date}}</h3> </br>
+                                <h3>Location: {{wedding.wedding_location}}</h3>
                                 <h3>Wedding Details: {{wedding.wedding_details}}</h3>
                                 {{!-- possibly include map in widget? --}}
                             </div>
-
+                            {{/each}}
                             {{!-- possibly include another widget for weather?--}}
                         </div>
                     </div>
@@ -69,10 +74,9 @@
             </div>
         {{/if}}
 
-        {{#unless user.engaged}}
+        {{#unless engaged}}
             <div class="col-12 dashboard-navbar-wrapper">
                 <button class="dashboard-nav-btn">Your Weddings</button>
-                <button class="dashboard-nav-btn">Invites</button>
                 <button class="dashboard-nav-btn">Slide Shows</button>
             </div>
 
@@ -90,24 +94,14 @@
 
                         </div class="dashboard-widget">
                             {{!-- add names and wedding ids to this info --}}
-                            <h3>Date: {{wedding.date}}</h3> </br>
+                            {{#each}}
+                            <h3>Date: {{wedding.wedding_date}}</h3> </br>
                             <h3>Location: {{wedding.location}}</h3>
                             <h3>Wedding Details: {{wedding.wedding_details}}</h3>
+                            {{/each}}
                             {{!-- possibly include map in widget? --}}
                         </div>
                             {{!-- possibly include another widget for weather?--}}
-                    </div>
-                </div>
-
-                <div class="col-8 toggle-invites">
-                    <div class="dashboard">
-                        <div class="dashboard-title">
-                            <h2>Invites</h2> </br>
-                        </div>
-
-                        <div class="invites-widget">
-                            {{! import invites here }}
-                        </div>
                     </div>
                 </div>
 

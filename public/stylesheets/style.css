@@ -238,55 +238,36 @@ footer ul li a {
 .dashboard-page {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.dashboard-navbar-wrapper {
+.dashboard-wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    margin: 5em;
+}
+
+.dashboard-nav-div {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 2rem 0 0 0;
+    flex-direction: column;
+    background-color: #EE81BD;
+    align-items: stretch;
+    width: 15em;
+    height: 25em;
+    border-radius: 15px 0px 0px 15px;
 }
 
 .dashboard-nav-btn {
     background-color: #EE81BD;
     color: #FFFFFF;
-    width: 10em;
-    height: 4em;
-    border-radius: 15px 15px 0px 0px;
-    border: none;
+    margin: 1em;
 }
 
 .dashboard-nav-btn:hover {
     background-color: #a2bbff;
     color: #FFFFFF;
-    width: 10em;
-    height: 4em;
-    border-radius: 15px 15px 0px 0px;
-    border: none;
-}
-
-.dashboard-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.logo-dashboard-div {
-    background-color: #EE81BD;
-    width: 25em;
-    height: 25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px 0px 0px 15px;
-}
-
-.logo-dashboard-div i.fa-heart {
-    font-size: 5em;
-    color: #fff;
-    text-shadow: 0px 0px 10px #FFFFFF;
 }
 
 .toggle-my-wedding,
@@ -295,7 +276,7 @@ footer ul li a {
 .toggle-your-weddings,
 .toggle-invites,
 .toggle-slide-shows {
-    background-color: #a2bbff;
+    background-color: #EE81BD;
     color: #FFFFFF;
     width: 25em;
     display: flex;

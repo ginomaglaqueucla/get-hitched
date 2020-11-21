@@ -264,8 +264,6 @@ footer ul li a {
     align-items: center;
 }
 
-.
-
 /* Launch Styling Ends */
 
 
@@ -275,7 +273,7 @@ footer ul li a {
 .dashboard-page {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
 }
@@ -294,7 +292,7 @@ footer ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #E32D91;
+    background-color: #EE81BD;
     color: #FFFFFF;
     border-radius: 15px 0px 0px 15px;
 }
@@ -343,7 +341,7 @@ footer ul li a {
 }
 
 .dashboard {
-    background-color: #EE81BD;
+    background-color: #E32D91;
     color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
@@ -352,12 +350,12 @@ footer ul li a {
     padding: 1.5em;
 }
 
-.dashboard-title h2 {
-    border-bottom: 2px solid #FFFFFF;
+.dashboard-title {
     text-align: center;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;
+    text-shadow: 1px 1px 5px white;
 }
 
 
@@ -367,6 +365,9 @@ footer ul li a {
 }
 
 .dashboard-widget {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     color: #FFFFFF;
 }
 

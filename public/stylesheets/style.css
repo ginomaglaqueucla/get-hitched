@@ -298,22 +298,6 @@ footer ul li a {
     transition: box-shadow 0.5s ease-out;
 }
 
-.toggle-my-wedding,
-.toggle-guestlist,
-.toggle-slide-show,
-.toggle-your-weddings,
-.toggle-invites,
-.toggle-slide-shows {
-    /* background-color: #EE81BD;
-    color: #FFFFFF;
-    width: 25em;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border-radius: 0px 15px 15px 0px;
-    padding: 2em; */
-}
-
 .dashboard {
     background-color: #EE81BD;
     color: #FFFFFF;

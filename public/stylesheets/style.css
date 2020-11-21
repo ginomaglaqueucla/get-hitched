@@ -240,21 +240,52 @@ footer ul li a {
     display: none;
 }
 
-/* Dashboard Styling Starts */
+/* Launch Styling Starts */
 
-/* .dashboard-page {
+.launch-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.launch-profile-pic-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.launch-nav-btns-div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.
+
+/* Launch Styling Ends */
+
+
+
+/* Dashboard Styling Starts */
+
+.dashboard-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: stretch;
-} */
+}
 
 .dashboard-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: inherit;
     margin: 5em;
 }
 
@@ -262,12 +293,9 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
     background-color: #E32D91;
     color: #FFFFFF;
-    width: 15em;
-    height: 25em;
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -317,18 +345,16 @@ footer ul li a {
 .dashboard {
     background-color: #EE81BD;
     color: #FFFFFF;
-    width: 25em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     border-radius: 0px 15px 15px 0px;
-    padding: 2em;
+    padding: 1.5em;
 }
 
 .dashboard-title h2 {
     border-bottom: 2px solid #FFFFFF;
     text-align: center;
-    margin-bottom: 1em;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;

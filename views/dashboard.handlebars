@@ -1,127 +1,131 @@
-<div class="dashboard-page">
+<div class="col-12 dashboard-page">
         {{#if engaged}}
 
-            <div class="col-12 dashboard-wrapper">
-                <div class="col-4 dashboard-nav-div">
-                    <div class="profile-pic-div">
-                        <img src="#" />
-                        {{#each couple}}
-                        <h5>{{partner1_name}} & {{partner2_name}}</h5>
-                        {{/each}}
-                    </div>
-
-                    <div class="nav-btns-div">
-                        <button class="dashboard-nav-btn btn">My Wedding</button>
-                        <button class="dashboard-nav-btn btn">Guest List</button>
-                        <button class="dashboard-nav-btn btn">Slide Show</button>
-                    </div>
-                </div>
-
-                <div class="col-8 dashboard">
-                    <div class="toggle-my-wedding">
-                        <div class="dashboard-title-div">
-                            <div class="dashboard-title">
-                                <h2>My Wedding</h2>
-                            </div>
-
-                            <div class="dashboard-subtitle">
-                                {{!-- Is there a better way to destructure our data object? --}}
-                                {{#each couple}}
-                                <h4>#{{wedding.wedding_hashtag}}</h4>
-                            </div> 
+                <div class="row-12 dashboard-wrapper">
+                    <div class="col-4 dashboard-nav-div">
+                        <div class="profile-pic-div">
+                            <img src="#" />
+                            {{#each couple}}
+                            <h5>{{partner1_name}} & </br> 
+                            {{partner2_name}}</h5>
+                            {{/each}}
                         </div>
 
-                        <div class="dashboard-widget">
-                            <div class="my-wedding-info-widget-title">
-                                <h3>Wedding Information</h3>
+                        <div class="nav-btns-div">
+                            <button class="dashboard-nav-btn btn">My Wedding</button>
+                            <button class="dashboard-nav-btn btn">Guest List</button>
+                            <button class="dashboard-nav-btn btn">Slide Show</button>
+                        </div>
+                    </div>
+
+                    <div class="col-8 dashboard">
+                        <div class="toggle-my-wedding">
+                            <div class="dashboard-title-div">
+                                <div class="dashboard-title">
+                                    <h2>My Wedding</h2>
+                                </div>
+
+                                <div class="dashboard-subtitle">
+                                    {{!-- Is there a better way to destructure our data object? --}}
+                                    {{#each couple}}
+                                    <h4>#{{wedding.wedding_hashtag}}</h4>
+                                </div> 
                             </div>
 
-                            </div class="my-wedding-info-widget-info">
-                            
+                            <div class="dashboard-widget">
+                                <div class="my-wedding-info-widget-title">
+                                    <h3>Wedding Information</h3>
+                                </div>
+
+                                </div class="my-wedding-info-widget-info">
+                                
+                                    <h4>Date: {{wedding.wedding_date}}</h4> </br>
+                                    <h4>Location: {{wedding.wedding_location}}</h4>
+                                    <h4>Wedding Details: {{wedding.wedding_details}}</h4>
+                                    {{!-- possibly include map in widget? --}}
+                                </div>
+                                
+                                <button class="dashboard-nav-btn btn">Edit My Wedding</button>
+                                {{/each}}
+                                {{!-- possibly include another widget for weather?--}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8 dashboard">
+                        <div class="toggle-guestlist">
+                            <div class="dashboard-title">
+                                <h2>Guest List</h2> </br>
+                            </div>
+
+                            <div class="dashboard-widget">
+                                <h3>{{guestlist}}</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8 dashboard">
+                        <div class="toggle-slide-show">
+                            <div class="dashboard-title">
+                                <h2>Slide Show</h2> </br>
+                            </div>
+
+                            <div class="dashboard-widget">
+                                {{! import slide show here }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+
+            {{#unless engaged}}
+                <div class="col-12 dashboard-wrapper">
+                    <div class="col-2 dashboard-nav-div">
+                        <div class="profile-pic-div">
+                            <img src="#" />
+                            {{#each user}}
+                            <h5>{{full_name}}</h5>
+                            {{/each}}
+                        </div>
+
+                        <div class="nav-btns-div">
+                            <button class="dashboard-nav-btn btn">Your Weddings</button>
+                            <button class="dashboard-nav-btn btn">Slide Shows</button>
+                        </div>
+                    </div>
+
+                    <div class="col-8 dashboard">
+                        <div class="toggle-your-weddings">
+                            <div class="dashboard-title">
+                                <h2>Your Weddings</h2>
+                            </div>
+
+                            </div class="dashboard-widget">
+                                {{!-- add names and wedding ids to this info --}}
+                                {{#each wedding}}
                                 <h3>Date: {{wedding.wedding_date}}</h3> </br>
-                                <h3>Location: {{wedding.wedding_location}}</h3>
+                                <h3>Location: {{wedding.location}}</h3>
                                 <h3>Wedding Details: {{wedding.wedding_details}}</h3>
+                                {{/each}}
                                 {{!-- possibly include map in widget? --}}
                             </div>
-                            
-                            <button class="dashboard-nav-btn btn">Edit My Wedding</button>
-                            {{/each}}
-                            {{!-- possibly include another widget for weather?--}}
+                                {{!-- possibly include another widget for weather?--}}
+                        </div>
+                    </div>
+
+                    <div class="col-8 dashboard">
+                        <div class="toggle-slide-shows">
+                            <div class="dashboard-title">
+                                <h2>Slide Shows</h2> </br>
+                            </div>
+
+                            <div class="dashboard-widget">
+                                {{! import slide shows here }}
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-8 dashboard">
-                    <div class="toggle-guestlist">
-                        <div class="dashboard-title">
-                            <h2>Guest List</h2> </br>
-                        </div>
-
-                        <div class="dashboard-widget">
-                            <h3>{{guestlist}}</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dashboard">
-                    <div class="toggle-slide-show">
-                        <div class="dashboard-title">
-                            <h2>Slide Show</h2> </br>
-                        </div>
-
-                        <div class="dashboard-widget">
-                            {{! import slide show here }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {{/if}}
-
-        {{#unless engaged}}
-            <div class="col-12 dashboard-navbar-wrapper">
-                <button class="dashboard-nav-btn">Your Weddings</button>
-                <button class="dashboard-nav-btn">Slide Shows</button>
-            </div>
-
-            <div class="col-12 dashboard-wrapper">
-                <div class="col-4 logo-dashboard-div">
-                    {{!-- update with logo and remove css for icon on line 115-sh --}}
-                    <i class="fas fa-heart"></i>
-                </div>
-
-                <div class="col-8 dashboard">
-                    <div class="toggle-your-weddings">
-                        <div class="dashboard-title">
-                            <h2>Your Weddings</h2>
-                        </div>
-
-                        </div class="dashboard-widget">
-                            {{!-- add names and wedding ids to this info --}}
-                            {{#each}}
-                            <h3>Date: {{wedding.wedding_date}}</h3> </br>
-                            <h3>Location: {{wedding.location}}</h3>
-                            <h3>Wedding Details: {{wedding.wedding_details}}</h3>
-                            {{/each}}
-                            {{!-- possibly include map in widget? --}}
-                        </div>
-                            {{!-- possibly include another widget for weather?--}}
-                    </div>
-                </div>
-
-                <div class="col-8 dashboard">
-                    <div class="toggle-slide-shows">
-                        <div class="dashboard-title">
-                            <h2>Slide Shows</h2> </br>
-                        </div>
-
-                        <div class="dashboard-widget">
-                            {{! import slide shows here }}
-                        </div>
-                    </div>
-                </div>
-            </div>
         {{/unless}}
-    </div>
 </div>
 
 <script src="/javascript/dashboard.js"></script>

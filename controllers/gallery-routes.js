@@ -5,19 +5,13 @@ router.get('/', (req, res) => {
     console.log('image slide show page')
     //i think this should also have session logic
     //and keep users who didn't go to this wedding from seeing it
-    res.render('slideshow');
+    res.render('gallery');
 });
 
 //GET request to view upload page
 
-//POST request to upload a picture?
-//might not be needed with cloudinary
-
-//PUT request to edit image
-//like it we'd like to add captioning to images
-
-//DELETE request to delete image
-
+//POST request to upload a picture
+// this exists as a backend route
 
 
 module.exports = router;

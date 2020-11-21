@@ -46,3 +46,4 @@ Couple.init(
 );
 
 module.exports = Couple;
+

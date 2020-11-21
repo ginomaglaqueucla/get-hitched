@@ -252,7 +252,7 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: #EE81BD;
+    background-color: #E32D91;
     align-items: stretch;
     width: 15em;
     height: 25em;
@@ -290,12 +290,15 @@ footer ul li a {
 
 } */
 
-.dashboard-title {
-    color: #FFFFFF;
+.dashboard-title h2 {
     border-bottom: 2px solid #FFFFFF;
     text-align: center;
     margin-bottom: 1em;
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #fff;
 }
+
 
 .dashboard-subtitle {
     color: #FFFFFF;

@@ -4,7 +4,10 @@
             <div class="col-12 dashboard-wrapper">
                 <div class="col-4 dashboard-nav-div">
                     <div class="profile-pic">
-                        Profile pic will go here
+                        <img src="#" />
+                        {{#each couple}}
+                        <h5>{{partner1_name}} & {{partner2_name}}</h5>
+                        {{/each}}
                     </div>
 
                     <div class="nav-btns-div">
@@ -24,16 +27,14 @@
                             <div class="dashboard-subtitle">
                                 {{!-- Is there a better way to destructure our data object? --}}
                                 {{#each couple}}
-                                <h3>{{partner1_name}} & {{partner2_name}}</h3> </br>
                                 <h4>#{{wedding.wedding_hashtag}}</h4>
-                                
                             </div> 
                         </div>
 
                         <div class="dashboard-widget">
                             <div class="my-wedding-info-widget-title">
                                 <h3>Wedding Information</h3>
-                            </div>s
+                            </div>
 
                             </div class="my-wedding-info-widget-info">
                             

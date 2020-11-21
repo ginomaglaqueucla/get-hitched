@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { User, Wedding, Couple, GuestList } = require('../models');
 
 //GET request to view dashboard page
+// Need to split up this route into 2 sep
 router.get('/', (req, res) => {
     console.log('dashboard page');
     console.log('this is the user id', req.session.user_id);
@@ -39,7 +40,6 @@ router.get('/', (req, res) => {
             console.log(dbCoupleData);
             const couple = dbCoupleData.map(couple => couple.get({plain:true}));
             console.log('data',couple);
-            console.log('eng',engaged);
             res.render('dashboard', {couple, engaged, loggedIn: true, keyname:'fun times.'});
         })
         .catch(err => {
@@ -66,27 +66,30 @@ router.get('/', (req, res) => {
             console.log(dbGuestListData);
             const guestlist = dbGuestListData.map(guestlist => guestlist.get({plain:true}));
             console.log('data',guestlist);
-            console.log('data',guestlist.user_id);
-            console.log('data',guestlist[0].user_id);
-            Wedding.findAll({
-                where:{
-                    id: guestlist[0].wedding_id
-                },
-                attributes: [
-                    'id',
-                    'wedding_date',
-                    'wedding_location',
-                    'wedding_hashtag',
-                    'wedding_details'
-                ]
-            })
-            .then(dbUserData => {
-                console.log(dbUserData);
-                const user = dbUserData.map(user => user.get({plain:true}));
-                console.log('data',user);
-                console.log('data',user[0].wedding_hashtag);
-                res.render('dashboard', {user, loggedIn: true, keyname:'fun times.'});
-            })
+            if(guestlist.length <= 0){
+                // no wedding invites
+                res.render('dashboard', {loggedIn: true, keyname:'fun times.'});
+            }
+            else {
+                Wedding.findAll({
+                    where:{
+                        id: guestlist[0].wedding_id
+                    },
+                    attributes: [
+                        'id',
+                        'wedding_date',
+                        'wedding_location',
+                        'wedding_hashtag',
+                        'wedding_details'
+                    ]
+                })
+                .then(dbUserData => {
+                    console.log(dbUserData);
+                    const user = dbUserData.map(user => user.get({plain:true}));
+                    console.log('data',user);
+                    res.render('dashboard', {user, loggedIn: true, keyname:'fun times.'});
+                })
+            }
         })
         .catch(err => {
             console.log(err);

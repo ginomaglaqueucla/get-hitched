@@ -66,15 +66,25 @@ router.post('/', (req, res) => {
   })
     // PUT entry for couples table if engaged
     .then(dbUserData => {
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.email = dbUserData.email;
+        req.session.loggedIn = true;
+        // req.session. = dbUserData.;
+        req.session.engaged = dbUserData.engaged;
+  
+        res.status(200).json({ user: dbUserData, message: 'Login sucessful'});
       if(dbUserData.engaged){
+        console.log("vhcd");
         Couple.create({
           user_id: dbUserData.id,
           partner1_name: dbUserData.full_name,
           partner2_name: req.body.partner2
         }).then(dbUserData => res.json(dbUserData))
       }
+      res.json(dbUserData);
+      })
     })
-    .then(dbUserData => res.json(dbUserData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);

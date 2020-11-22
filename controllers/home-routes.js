@@ -13,7 +13,6 @@ router.get('/login', (req, res) => {
     //session logic will go there
     res.render('login');
 });
-//login logic will be locationed in a frontend javascript file
 
 //GET request for signup
 router.get('/signup', (req, res) => {

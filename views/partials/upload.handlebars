@@ -1,12 +1,16 @@
 <div class="upload-page-wrapper">
+    <div class="back-button-wrapper">
+        <a class="btn back-btn" href="/gallery"><i class="fas fa-arrow-left"></i> Gallery</a>
+    </div>
+
     <div class="upload-form-wrapper">
         <h3>Wedding Galley Upload</h3>
-        <p>On this page you can upload images to a wedding gallery created just for you!</p>
+        <small class="text-muted">On this page you can upload images to a wedding gallery created just for you!</small>
         
         <form class="custom-file" name="gallery" id="uploadImageForm" enctype="multipart/form-data" method="POST">
             <input class="custom-file-input" name="weddingImage" type="file" id="fileImage">
-            <input class="btn" name="upload" type="submit" value="Upload">
-            <label class="custom-file-label" for="fileImage">Choose file</label>
+            <input class="btn upload-btn" name="upload" type="submit" value="Upload">
+            <label class="custom-file-label" for="fileImage">Choose image </label>
         </form>
     </div>
 

@@ -16,8 +16,6 @@ html {
 
 body {
     background-color: #F4ABD3;
-    
-    width: 100vw;
     height: 80vh;
 }
 
@@ -85,7 +83,6 @@ footer ul li a:hover  {
 main {
     background-color: #fff;
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -164,7 +161,8 @@ footer ul li a {
 
 .login-btn,
 .signup-btn,
-.upload-btn {
+.upload-btn,
+.back-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
@@ -172,7 +170,8 @@ footer ul li a {
 
 .login-btn:hover,
 .signup-btn:hover,
-.upload-btn:hover {
+.upload-btn:hover,
+.back-btn:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
@@ -180,7 +179,8 @@ footer ul li a {
 
 .login-form h3,
 .signup-form h3,
-.gallery-header h3 {
+.gallery-header h3,
+.upload-form-wrapper h3 {
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;
@@ -396,19 +396,33 @@ footer ul li a {
     border-radius: .75em;
 }
 
-/* * */
+/* upload to wedding gallery styles */
+
+.upload-page-wrapper {
+    background-color: #EE81BD;
+    width: 50em;
+    height: 29em;
+    margin: 5rem 0;
+    display: flex;
+    border-radius: 15px 15px 15px 15px;
+}
 
 .upload-form-wrapper {
-    background-color: #EE81BD;
-    width: 25em;
-    height: 25em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-radius: 15px 15px 15px 15px;
-    margin: 5rem 0;
 }
 
+.upload-form-wrapper small {
+    margin-bottom: 1em;
+}
+
+form.custom-file {
+    width: 85%;
+}
+
+.back-button-wrapper {
+    margin: 1em 0 0 1em;
+}
 
 

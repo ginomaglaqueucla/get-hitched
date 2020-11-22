@@ -114,7 +114,7 @@ router.get('/', (req, res) => {
     }
 });
 
-//GET request to view edit dashbaord information
+//GET request to view edit dashboard information
 router.get('/edit', (req, res) => {
     console.log('in edit')
     res.render('edit-wedding')

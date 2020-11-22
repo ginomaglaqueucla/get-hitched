@@ -126,10 +126,10 @@ footer ul li a {
 
 
 
-/* below are the styles for the login and signup page  */
+/* below are the form styles */
 
 .login-form-wrapper {
-    margin: 9rem;
+    margin: 3rem;
 }
 
 .logo-login-div {
@@ -146,7 +146,14 @@ footer ul li a {
 .logo-signup-div i.fa-heart {
     font-size: 5em;
     color: #fff;
+}
+
+.logo-login-div i.fa-heart:hover,
+.logo-signup-div i.fa-heart:hover {
+    font-size: 5em;
+    color: #fff;
     text-shadow: 0px 0px 10px #FFFFFF;
+    transition: text-shadow 0.5s ease-out;
 }
 
 .login-form {
@@ -154,6 +161,8 @@ footer ul li a {
     width: 25em;
     height: 25em;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0px 15px 15px 0px;
@@ -162,7 +171,8 @@ footer ul li a {
 .login-btn,
 .signup-btn,
 .upload-btn,
-.back-btn {
+.back-btn, 
+.edit-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
@@ -171,7 +181,8 @@ footer ul li a {
 .login-btn:hover,
 .signup-btn:hover,
 .upload-btn:hover,
-.back-btn:hover {
+.back-btn:hover,
+.edit-btn:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
@@ -197,9 +208,11 @@ footer ul li a {
     justify-content: center;
     align-items: center;
     border-radius: 0px 15px 15px 0px;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
+.signup-form,
+.edit-form,
 .signup-form {
     background-color: #9d93fc;
     width: 25em;
@@ -208,7 +221,7 @@ footer ul li a {
     align-items: center;
     border-radius: 15px 0px 0px 15px;
     padding: 3em;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 /* * */
@@ -217,15 +230,19 @@ footer ul li a {
     color: #fff;
 }
 
+/* .edit-wedding-text-area {
+    
+} */
+
 .user-type {
-    color: #fff;
+    color: #EE81BD;
     font-size: 5em;
     margin-left: 0.25em;
 }
 
 .toggle-a:checked ~ .toggle-a-btn,
 .toggle-b:checked ~ .toggle-b-btn{
-    color: #E32D91;
+    color: #ffffff;
     box-shadow: none;
 }
 
@@ -243,81 +260,73 @@ footer ul li a {
 /* Dashboard Styling Starts */
 
 .dashboard-page {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.dashboard-navbar-wrapper {
+    margin: 5rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
-    margin: 2rem 0 0 0;
+}
+
+.dashboard-nav-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #EE81BD;
+    color: #FFFFFF;
+    border-radius: 15px 0px 0px 15px;
+    width: 15em;
+}
+
+.profile-pic-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+}
+
+.nav-btns-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .dashboard-nav-btn {
-    background-color: #EE81BD;
-    color: #FFFFFF;
-    width: 10em;
-    height: 4em;
-    border-radius: 15px 15px 0px 0px;
-    border: none;
+    background-color: #FFFFFF;
+    color: #E32D91;
+    margin: 1em;
 }
 
 .dashboard-nav-btn:hover {
-    background-color: #9d93fc;
+    background-color: #FFFFFF;
+    color:  #E32D91;
+    box-shadow: 0 0 8px 3px #fff;
+    transition: box-shadow 0.5s ease-out;
+}
+
+.dashboard {
+    background-color: #E32D91;
     color: #FFFFFF;
-    width: 10em;
-    height: 4em;
-    border-radius: 15px 15px 0px 0px;
-    border: none;
-}
-
-.dashboard-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.logo-dashboard-div {
-    background-color: #EE81BD;
-    width: 25em;
-    height: 25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px 0px 0px 15px;
-}
-
-.logo-dashboard-div i.fa-heart {
-    font-size: 5em;
-    color: #fff;
-    text-shadow: 0px 0px 10px #FFFFFF;
-}
-
-.toggle-my-wedding,
-.toggle-guestlist,
-.toggle-slide-show,
-.toggle-your-weddings,
-.toggle-invites,
-.toggle-slide-shows {
-    background-color: #9d93fc;
-    color: #FFFFFF;
-    width: 25em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border-radius: 0px 0px 15px 0px;
-    padding: 2em;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0px 15px 15px 0px;
+    padding: 1.5em;
+    width: 35em;
+    height: 35em;
 }
 
-.dashboard-title {
-    color: #FFFFFF;
-    border-rgb(49, 26, 26) 2px solid #FFFFFF;
+.dashboard-title h2 {
     text-align: center;
-    margin-bottom: 1em;
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    text-shadow: 1px 1px 5px white;
 }
+
 
 .dashboard-subtitle {
     color: #FFFFFF;
@@ -325,6 +334,16 @@ footer ul li a {
 }
 
 .dashboard-widget {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.my-wedding-info-widget-info {
+    text-align: center;
     color: #FFFFFF;
 }
 
@@ -424,7 +443,4 @@ footer ul li a {
 form.custom-file {
     width: 85%;
 }
-
-
-
 

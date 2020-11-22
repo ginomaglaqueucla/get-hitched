@@ -1,31 +1,9 @@
-async function toggleCoupleDashboard() {
-  
+async function editWeddingButtonHandler(event){
+    event.preventDefault();
+
+    console.log("redirecting to edit wedding");
+    document.location.replace('/dashboard/edit'); 
 }
 
-async function toggleGuestDashboard() {
 
-}
-
-async function toggleMyWedding() {
-
-}
-
-async function toggleGuestList() {
-
-}
-
-async function toggleSlideShow() {
-
-}
-
-async function toggleYourWeddings() {
-
-}
-
-async function toggleInvites() {
-
-}
-
-async function toggleSlideShows() {
-
-}
+document.querySelector('#edit-wedding-btn').addEventListener('click', editWeddingButtonHandler);

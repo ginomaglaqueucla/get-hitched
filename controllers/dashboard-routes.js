@@ -63,6 +63,7 @@ router.get('/', (req, res) => {
             ]      
         })
         .then(dbGuestListData => {
+            let userWedding = [];
             console.log(dbGuestListData);
             const guestlist = dbGuestListData.map(guestlist => guestlist.get({plain:true}));
             console.log('data',guestlist);
@@ -71,24 +72,39 @@ router.get('/', (req, res) => {
                 res.render('dashboard', {loggedIn: true, keyname:'fun times.'});
             }
             else {
-                Wedding.findAll({
-                    where:{
-                        id: guestlist[0].wedding_id
-                    },
-                    attributes: [
-                        'id',
-                        'wedding_date',
-                        'wedding_location',
-                        'wedding_hashtag',
-                        'wedding_details'
-                    ]
-                })
-                .then(dbUserData => {
-                    console.log(dbUserData);
-                    const user = dbUserData.map(user => user.get({plain:true}));
-                    console.log('data',user);
-                    res.render('dashboard', {user, loggedIn: true, keyname:'fun times.'});
-                })
+                for (let i = 0; i < guestlist.length; i++){
+                    Wedding.findAll({
+                        where:{
+                            id: guestlist[i].wedding_id
+                        },
+                        attributes: [
+                            'id',
+                            'wedding_date',
+                            'wedding_location',
+                            'wedding_hashtag',
+                            'wedding_details'
+                        ]
+                    })
+                    .then(dbUserData => {
+                        console.log(dbUserData);
+                        const user = dbUserData.map(user => user.get({plain:true}));
+                        userWedding.push(user[0]);
+                        console.log('this is the',userWedding);
+                        console.log('data',user);
+                        if(i === guestlist.length-1){
+                            // const userWeddingData = {
+                            //     weddings: userWedding,
+                            //     loggedIn: true
+                            // };
+                            // console.log("sending this over:",userWeddingData);
+                            res.render('dashboard', {userWedding, loggedIn: true});
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.status(500).json(err);
+                    })
+                }
             }
         })
         .catch(err => {

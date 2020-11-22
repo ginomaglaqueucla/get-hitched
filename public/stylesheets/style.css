@@ -220,6 +220,10 @@ footer ul li a {
     color: #fff;
 }
 
+.edit-wedding-text-area {
+    
+}
+
 .user-type {
     color: #EE81BD;
     font-size: 5em;
@@ -243,44 +247,10 @@ footer ul li a {
     display: none;
 }
 
-/* Launch Styling Starts */
-
-.launch-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: #E32D91;
-    color: #FFFFFF;
-    border-radius: 15px 15px 15px 15px;
-    margin: 3rem;
-}
-
-.launch-nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.launch-nav-btns {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* Launch Styling Ends */
-
-
-
 /* Dashboard Styling Starts */
 
 .dashboard-page {
-    margin: 3rem;
+    margin: 5rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -294,6 +264,7 @@ footer ul li a {
     background-color: #EE81BD;
     color: #FFFFFF;
     border-radius: 15px 0px 0px 15px;
+    width: 15em;
 }
 
 .profile-pic-div {
@@ -334,9 +305,11 @@ footer ul li a {
     align-items: center;
     border-radius: 0px 15px 15px 0px;
     padding: 1.5em;
+    width: 35em;
+    height: 35em;
 }
 
-.dashboard-title {
+.dashboard-title h2 {
     text-align: center;
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;

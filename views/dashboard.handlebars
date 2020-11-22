@@ -11,9 +11,9 @@
                 </div>
 
                 <div class="nav-btns-div">
-                    <button class="dashboard-nav-btn btn">My Wedding</button>
-                    <button class="dashboard-nav-btn btn">Guest List</button>
-                    <button class="dashboard-nav-btn btn">Slide Show</button>
+                    <a href="#" class="dashboard-nav-btn btn">My Wedding</a>
+                    <a href="#" class="dashboard-nav-btn btn">Guest List</a>
+                    <a href="/gallery" class="dashboard-nav-btn btn">Slide Show</a>
                 </div>
             </div>
 
@@ -45,24 +45,6 @@
                 </div>
             </div>
 
-            <div class="col-8 dashboard">
-                <div class="dashboard-title">
-                    <h2>Guest List</h2> </br>
-                </div>
-
-                <div class="dashboard-widget">
-                    <h3>{{guestlist}}</h3>
-                </div>
-            </div>
-
-            <div class="col-8 dashboard">
-                <div class="dashboard-title">
-                    <h2>Slide Show</h2> </br>
-                </div>
-
-                <div class="dashboard-widget">
-                    {{! import slide show here }}
-                </div>
             </div>
         </div>
     {{/if}}
@@ -96,27 +78,6 @@
                         <h3>Location: {{wedding.wedding_location}}</h3>
                         <h3>Wedding Details: {{wedding.wedding_details}}</h3>
                     {{/each}}
-                    {{!-- possibly include map in widget? --}}
-                </div>
-            </div>
-
-            <div class="col-8 dashboard">
-                <div class="dashboard-title">
-                    <h2>Invites</h2> </br>
-                </div>
-
-                <div class="dashboard-widget">
-                    {{! import invites here }}
-                </div>
-            </div>
-
-            <div class="col-8 dashboard">
-                <div class="dashboard-title">
-                    <h2>Slide Shows</h2> </br>
-                </div>
-
-                <div class="dashboard-widget">
-                    {{! import slide shows here }}
                 </div>
             </div>
         </div>

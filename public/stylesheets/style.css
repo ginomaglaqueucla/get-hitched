@@ -177,6 +177,10 @@ footer ul li a {
     transition: box-shadow 0.5s ease-out;
 }
 
+.back-button-wrapper {
+    margin: 1em 0 0 1em;
+}
+
 .login-form h3,
 .signup-form h3,
 .gallery-header h3,
@@ -421,8 +425,6 @@ form.custom-file {
     width: 85%;
 }
 
-.back-button-wrapper {
-    margin: 1em 0 0 1em;
-}
+
 
 

@@ -7,12 +7,14 @@ async function imageUploadForm(event) {
         body: formData,
         header: { 'Content-Type': 'application/json' }
     });
+    console.log(response);
     if (response.ok) {
         console.log('image uploaded')
-        // document.location.replace('gallery/upload');
+        document.location.replace('/partials/upload');
     } else {
         console.log(response.statusText);
     }
+    
 };
 
 document.querySelector('#uploadImageForm').addEventListener('submit', imageUploadForm);

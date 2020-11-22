@@ -16,31 +16,6 @@ cloudinary.config({
     api_secret: process.env.API_SECRET
 });
 
-// please leave this here as it might be needed later 
-
-//this is a GET  request to get the images from cloudinary
-// router.get('/', (req , res) => {
-//     console.log('image request');
-
-//     cloudinary.api.resources(
-//         {
-//             type: 'upload',
-//             prefix: 'test/'
-//         },
-//         function(err, result) {
-//             if (err) {
-//                 console.log('err');
-//                 return;
-//             }
-//             console.log('result', result);
-//             const galleryImages = result.resources;
-//             res.render('gallery', { galleryImages })
-//         }
-//     )
-// });
-
-
-
 //this is a POST request to send a file to cloudinary
 router.post('/upload', upload.single('weddingImage') , async (req, res, next) => {
     // console.log(req.file);
@@ -54,8 +29,10 @@ router.post('/upload', upload.single('weddingImage') , async (req, res, next) =>
             console.log(err, result);
         }
     );
-    console.log(cloudUpload)
+    // console.log(cloudUpload)
     streamifier.createReadStream(req.file.buffer).pipe(cloudUpload);
+    console.log(next);
+    console.log(res);
 });
 
 module.exports = router;

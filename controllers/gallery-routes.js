@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
         {
             type: 'upload',
             prefix: 'tester/',
-            invalidate: true
+            invalidate: true,
+            max_results: 30
         },
         function(err, result) {
             if (err) {

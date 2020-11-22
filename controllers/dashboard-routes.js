@@ -99,6 +99,10 @@ router.get('/', (req, res) => {
 });
 
 //GET request to view edit dashbaord information
+router.get('/edit', (req, res) => {
+    console.log('in edit')
+    res.render('edit-wedding')
+  });
 
 
 

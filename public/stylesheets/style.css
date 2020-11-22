@@ -124,6 +124,22 @@ footer ul li a {
     margin: 5px;
 }
 
+/* Homepage Styles Start */
+
+.main-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+    justify-content: center;
+}
+
+.cta-wrapper {
+    background-image: url('/assets/graphics/gh-gif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75em;
+    height: 29em;
+}
 
 
 /* below are the form styles */
@@ -171,7 +187,8 @@ footer ul li a {
 
 .login-btn,
 .signup-btn,
-.edit-btn {
+.edit-btn,
+.main-btns {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
@@ -179,7 +196,8 @@ footer ul li a {
 
 .login-btn:hover,
 .signup-btn:hover,
-.edit-btn:hover {
+.edit-btn:hover,
+.main-btns:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;

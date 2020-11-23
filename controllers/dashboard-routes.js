@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { User, Wedding, Couple, GuestList } = require('../models');
+const withAuth = require('../../utils/auth');
 
 //GET request to view dashboard page
 // Need to split up this route into 2 sep
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log('dashboard page');
     const engaged = req.session.engaged;
     if(req.session.engaged){
@@ -113,7 +114,7 @@ router.get('/', (req, res) => {
 });
 
 //GET request to view edit dashboard information
-router.get('/edit', (req, res) => {
+router.get('/edit', withAuth, (req, res) => {
     console.log('in edit');
     if(req.session.cachedWedding !== null){
         Wedding.findAll({
@@ -149,7 +150,7 @@ router.get('/edit', (req, res) => {
   });
 
 // POST request which will logout the user
-router.post('/edit/logout', (req, res) => {
+router.post('/edit/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -160,7 +161,7 @@ router.post('/edit/logout', (req, res) => {
 });
 
 // POST request which will logout the user
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();

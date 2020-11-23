@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});;
+});
 
 // POST /api/couple
 router.post('/', (req, res) => {

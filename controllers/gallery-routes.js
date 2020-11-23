@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const cloudinary = require('cloudinary').v2;
+const withAuth = require('../../utils/auth');
 
 //GET request to image slide show page 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log('wedding pictures gallery')
     //i think this should also have session logic
     console.log('image request');
@@ -27,7 +28,7 @@ router.get('/', (req, res) => {
 });
 
 //GET request to view upload page
-router.get('/upload', (req, res) => {
+router.get('/upload', withAuth, (req, res) => {
     console.log('upload page')
     res.render('partials/upload');
 })

@@ -1,3 +1,35 @@
-<p>
-    this is the guestlist
-</p>
+{{!-- Partial for Guestlist Page --}}
+
+<div class="dashboard-page">
+    
+        <div class="row">
+            <div class="col-4 dashboard-nav-div">
+                <div class="profile-pic-div">
+                    <img src="#" />
+                    {{#each couple}}
+                    <h5>{{partner1_name}} &</br>
+                    {{partner2_name}}</h5>
+                    {{/each}}
+                </div>
+
+                <div class="nav-btns-div">
+                    <button class="dashboard-nav-btn btn">My Wedding</button>
+                    <button class="dashboard-nav-btn btn">Slide Show</button>
+                </div>
+            </div>
+
+            <div class="col-8 dashboard">
+                <div class="dashboard-title">
+                    <h2>Guest List</h2> </br>
+                </div>
+
+                <div class="dashboard-widget-wrapper">
+                    <div class="dashboard-widget">
+                        <h3> Here's where the individual guest</h3>
+                    </div>
+                <div>
+            </div>
+        </div>
+</div>
+
+{{!-- <script src="/javascript/dashboard.js"></script> --}}

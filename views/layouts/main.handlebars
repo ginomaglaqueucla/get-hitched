@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geddin' Hitched</title>
+    <title>Get Hitched</title>
 
     <!-- here is our browser icon  -->
-    <link rel="icon" type="image/png" href="" />
+    <link rel="icon" type="image/png" href="/assets/graphics/get-hitched-browser-logo-03.png" />
     <!-- here is bootstrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <!-- here are the icon and font cdn  -->
@@ -18,16 +18,13 @@
 </head>
 <body>
         <header>
-            <h1>Geddin' Hitched</h1>
+            <h1>Gettin' Hitched</h1>
             <nav>
                     {{!-- this are just placeholders --}}
                     <ul class="misc-ul">
-                        <li><a href="/">Back to Main Page</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/signup">Signup</a></li>
-                        <li><a href="/gallery">Image Gallery</a></li>
+                        {{#if loggedIn}}
                         <li><a href="/dashboard">Dashboard</a></li>
-                        <li><a href="/dashboard/edit">Edit</a></li>
+                        {{/if}}
                         <li><button class="btn logout-btn" id="logout-btn">Logout</button></li>
                     </ul>
             </nav>

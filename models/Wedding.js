@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Wedding extends Model {}
 
+
 Wedding.init(
   {
     id: {
@@ -28,7 +29,7 @@ Wedding.init(
     wedding_hashtag: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true, //this will make it unique in the database and keep it from being used twice, needs to be pre queried and have error handling
+        unique: true, //this will make it unique in the database and keep it from being used twice, needs to be pre queries and have error 
         validate: {
             len: [5]
         }

@@ -1,4 +1,7 @@
 /* over all styles for the entire site  */
+:root {
+
+}
 
 * {
     margin: 0px;
@@ -13,8 +16,6 @@ html {
 
 body {
     background-color: #F4ABD3;
-    
-    width: 100vw;
     height: 80vh;
 }
 
@@ -39,7 +40,7 @@ header h1 {
     background: -webkit-linear-gradient(
         5deg,
         #E32D91,
-        #EE81BD 
+        #9d93fc
     );
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -82,7 +83,6 @@ footer ul li a:hover  {
 main {
     background-color: #fff;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -124,7 +124,47 @@ footer ul li a {
     margin: 5px;
 }
 
+/* Homepage Styles Start */
 
+.main-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-wrapper {
+    background-image: url('/assets/graphics/ghmainpagelogogif.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 29em;
+}
+
+.main-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.main-btns {
+    background-color: #E32D91;
+    color: #fff;
+    margin-right: 1em;
+    margin-top: 9em;
+}
+
+.main-btns:hover {
+    color: #fff;
+    background-color: #EE81BD;
+    box-shadow: 0 0 8px 3px #EE81BD;
+    transition: box-shadow 0.5s ease-out, background-color 0.5s ease-out;
+}
 
 /* below are the form styles */
 
@@ -156,8 +196,9 @@ footer ul li a {
     transition: text-shadow 0.5s ease-out;
 }
 
+
 .login-form,
-.signup-form,
+.signup-form
 .edit-form {
     background-color: #E32D91;
     color: #FFFFFF;
@@ -171,6 +212,8 @@ footer ul li a {
 
 .login-btn,
 .signup-btn,
+.upload-btn,
+.back-btn, 
 .edit-btn {
     background-color: #fff;
     color: #E32D91;
@@ -179,14 +222,23 @@ footer ul li a {
 
 .login-btn:hover,
 .signup-btn:hover,
+.main-btns:hover,
+.upload-btn:hover,
+.back-btn:hover,
 .edit-btn:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
 }
 
+.back-button-wrapper {
+    margin: 1em 0 0 1em;
+}
+
 .login-form h3,
-.signup-form h3 {
+.signup-form h3,
+.gallery-header h3,
+.upload-form-wrapper h3 {
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;
@@ -203,8 +255,9 @@ footer ul li a {
 }
 
 .signup-form,
-.edit-form {
-    background-color: #E32D91;
+.edit-form,
+.signup-form {
+    background-color: #9d93fc;
     width: 25em;
     display: flex;
     justify-content: center;
@@ -337,4 +390,100 @@ footer ul li a {
     color: #FFFFFF;
 }
 
-/* Dashboard Styling Ends */
+/* gallery page styling  */
+.gallery-wrapper {
+    margin: 5em 0;
+}
+
+.gallery-div {
+    background-color: #EE81BD;
+    width: 75em;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 15px 15px 15px 15px;
+    overflow: auto;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-div .row {
+    margin: 1em;
+}
+
+.gallery-img {
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 25px 25px;
+    cursor: zoom-in;
+}
+
+.gallery-img:hover {
+    opacity: 50%;
+    transition: opacity 0.5s ease-out;
+}
+
+
+
+.upload-btn {
+    margin-top: 0.5em;
+}
+
+.carousel img {
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+.gallerymodal-btn {
+    background-color: #E32D91;
+    color: #fff;
+}
+
+.gallerymodal-btn:hover {
+    color: #fff;
+    background-color: #EE81BD;
+    box-shadow: 0 0 8px 3px #EE81BD;
+    transition: box-shadow 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.carousel-control-bg {
+    background-color: #EE81BD;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background-size: 20px 20px;
+}
+
+.carousel-inner {
+    border-radius: .75em;
+}
+
+/* upload to wedding gallery styles */
+
+.upload-page-wrapper {
+    background-color: #EE81BD;
+    width: 50em;
+    height: 29em;
+    margin: 5rem 0;
+    display: flex;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.upload-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upload-form-wrapper small {
+    margin-bottom: 1em;
+}
+
+form.custom-file {
+    width: 85%;
+}
+

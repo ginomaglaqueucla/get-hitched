@@ -6,9 +6,6 @@ const { User, Wedding, Couple, GuestList } = require('../models');
 // Need to split up this route into 2 sep
 router.get('/', (req, res) => {
     console.log('dashboard page');
-    console.log('this is the user id', req.session.user_id);
-    console.log('this is just the engaged', req.session.engaged);
-    console.log('this is just the session', req.session);
     const engaged = req.session.engaged;
     if(req.session.engaged){
         //should this be findOne?
@@ -66,9 +63,9 @@ router.get('/', (req, res) => {
         })
         .then(dbGuestListData => {
             let userWedding = [];
-            console.log(dbGuestListData);
+            // console.log(dbGuestListData);
             const guestlist = dbGuestListData.map(guestlist => guestlist.get({plain:true}));
-            console.log('data',guestlist);
+            // console.log('data',guestlist);
             if(guestlist.length <= 0){
                 // no wedding invites
                 res.render('dashboard', {loggedIn: true, keyname:'fun times.'});
@@ -88,11 +85,10 @@ router.get('/', (req, res) => {
                         ]
                     })
                     .then(dbUserData => {
-                        console.log(dbUserData);
+                        // console.log(dbUserData);
                         const user = dbUserData.map(user => user.get({plain:true}));
                         userWedding.push(user[0]);
-                        console.log('this is the',userWedding);
-                        console.log('data',user);
+                        // console.log('data',user);
                         if(i === guestlist.length-1){
                             // const userWeddingData = {
                             //     weddings: userWedding,
@@ -116,7 +112,7 @@ router.get('/', (req, res) => {
     }
 });
 
-//GET request to view edit dashbaord information
+//GET request to view edit dashboard information
 router.get('/edit', (req, res) => {
     console.log('in edit');
     if(req.session.cachedWedding !== null){

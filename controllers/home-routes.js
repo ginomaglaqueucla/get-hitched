@@ -13,7 +13,6 @@ router.get('/login', (req, res) => {
     //session logic will go there
     res.render('login');
 });
-//login logic will be locationed in a frontend javascript file
 
 //GET request for signup
 router.get('/signup', (req, res) => {
@@ -21,12 +20,5 @@ router.get('/signup', (req, res) => {
     //session logic will go here
     res.render('signup');
 })
-
-//GET request for signup
-// router.get('/dashboard', (req, res) => {
-//     console.log('dashboard page');
-//     //session logic will go here
-//     res.render('dashboard');
-// })
 
 module.exports = router;

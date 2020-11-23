@@ -139,6 +139,7 @@ router.get('/edit', withAuth, (req, res) => {
     else{
         const wedding = [
             {
+                id: 0,
                 wedding_date: "MM/DD/YY",
                 wedding_location: "Torrey Pines Country Club 11480 N Torrey Pines Rd, La Jolla, CA 92037",
                 wedding_hashtag: "#YourUniqueWeddingHashtag",

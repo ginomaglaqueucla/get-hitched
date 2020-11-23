@@ -5,6 +5,11 @@
             <form id="edit-form">
                 <h3>Enter Your Wedding Information</h3>
                 {{#each wedding}}
+                <div hidden class="form-group">
+                    <label for="wedding-id">ID:</label>
+                    <input type="text" class="form-control" id="wedding-id" name="wedding-id" value="{{id}}">
+                </div>
+
                 <div class="form-group">
                     <label for="wedding-date">Date:</label>
                     <input type="date" class="form-control" id="wedding-date" name="wedding-date" placeholder="{{wedding_date}}">

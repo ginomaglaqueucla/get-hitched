@@ -131,16 +131,40 @@ footer ul li a {
     flex-direction: column;
     margin: 3em 0;
     justify-content: center;
+    align-items: center;
 }
 
 .cta-wrapper {
     background-image: url('/assets/graphics/gh-gif.gif');
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 75em;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
     height: 29em;
 }
 
+.main-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.main-btns {
+    background-color: #E32D91;
+    color: #fff;
+    margin-right: 1em;
+    margin-top: 9em;
+}
+
+.main-btns:hover {
+    color: #fff;
+    background-color: #EE81BD;
+    box-shadow: 0 0 8px 3px #EE81BD;
+    transition: box-shadow 0.5s ease-out, background-color 0.5s ease-out;
+}
 
 /* below are the form styles */
 
@@ -173,7 +197,7 @@ footer ul li a {
 }
 
 .login-form,
-.signup-form,
+.signup-form
 .edit-form {
     background-color: #E32D91;
     color: #FFFFFF;
@@ -187,8 +211,7 @@ footer ul li a {
 
 .login-btn,
 .signup-btn,
-.edit-btn,
-.main-btns {
+.edit-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;

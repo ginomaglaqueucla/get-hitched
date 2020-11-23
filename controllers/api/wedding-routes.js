@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Wedding, User, GuestList } = require('../../models');
+const { Wedding, User, GuestList, Couple } = require('../../models');
 
 // GET /api/wedding
 router.get('/', (req, res) => {
@@ -44,15 +44,28 @@ router.get('/:id', (req, res) => {
 
 // POST /api/wedding
 router.post('/', (req, res) => {
+  console.log("in wedding");
   // expects {wedding_date: '', guest_list_id: '', wedding_location: '', wedding_hashtag: '', wedding_details: ''}
   Wedding.create({
     wedding_date: req.body.wedding_date,
-    guest_list_id: req.body.guest_list_id,
+    // guest_list_id: req.body.guest_list_id,
     wedding_location: req.body.wedding_location,
     wedding_hashtag: req.body.wedding_hashtag,
     wedding_details: req.body.wedding_details
   })
-    .then(dbWeddingData => res.json(dbWeddingData))
+    .then(dbWeddingData => {
+      console.log("WEDDING",dbWeddingData.id);
+      // Updates couple table with "their" wedding
+      Couple.update({wedding_id: dbWeddingData.id},{
+        where: {
+          user_id: req.session.user_id
+        }
+      });
+      req.session.save(() => {
+        req.session.cachedWedding = true;
+      });
+      res.json(dbWeddingData);
+    })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);

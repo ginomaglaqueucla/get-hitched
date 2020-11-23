@@ -138,6 +138,7 @@ router.post('/logout', (req, res) => {
 // PUT /api/user/1
 router.put('/:id', (req, res) => {
   // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
+  console.log(req.body);
   User.update(req.body, {
     where: {
       id: req.params.id

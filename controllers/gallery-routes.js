@@ -3,11 +3,10 @@ const cloudinary = require('cloudinary').v2;
 const withAuth = require('../utils/auth');
 
 //GET request to image slide show page 
+
 router.get('/', withAuth, (req, res) => {
     console.log('wedding pictures gallery')
     //i think this should also have session logic
-    console.log('image request');
-
     cloudinary.api.resources(
         {
             type: 'upload',
@@ -22,7 +21,7 @@ router.get('/', withAuth, (req, res) => {
             }
             console.log('result', result);
             const galleryImages = result.resources;
-            res.render('gallery', { galleryImages })
+            res.render('gallery', { loggedIn: true, galleryImages })
         }
     )
 });
@@ -30,7 +29,7 @@ router.get('/', withAuth, (req, res) => {
 //GET request to view upload page
 router.get('/upload', withAuth, (req, res) => {
     console.log('upload page')
-    res.render('partials/upload');
+    res.render('partials/upload', { loggedIn: true });
 })
 
 

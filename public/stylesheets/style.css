@@ -155,8 +155,7 @@ footer ul li a {
 .main-btns {
     background-color: #E32D91;
     color: #fff;
-    margin-right: 1em;
-    margin-top: 9em;
+    margin: 1em 0 0 1em;
 }
 
 .main-btns:hover {
@@ -235,6 +234,10 @@ footer ul li a {
     margin: 1em 0 0 1em;
 }
 
+.edit-form a.btn {
+    margin-bottom: 1em;
+}
+
 .login-form h3,
 .signup-form h3,
 .gallery-header h3,
@@ -257,7 +260,7 @@ footer ul li a {
 .signup-form,
 .edit-form,
 .signup-form {
-    background-color: #9d93fc;
+    background-color:#f4abd3;
     width: 25em;
     display: flex;
     justify-content: center;
@@ -267,15 +270,11 @@ footer ul li a {
     margin: 3rem 0;
 }
 
-/* * */
 
 .signup-form h4 {
     color: #fff;
 }
 
-/* .edit-wedding-text-area {
-    
-} */
 
 .user-type {
     color: #EE81BD;
@@ -311,9 +310,9 @@ footer ul li a {
 
 .dashboard-nav-div {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     background-color: #EE81BD;
     color: #FFFFFF;
     border-radius: 15px 0px 0px 15px;
@@ -324,9 +323,31 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: .5em;
+    margin-top: 5em;
+}
+
+.dashboard-title h2 {
+margin-bottom: 1em;
+}
+
+.details-span {
+    color: #EE81BD;
+    font-size: 0.75em;
+}
+
+.profile-pic-div h5 {
+    font-size: 1.75em;
+}
+
+.profile-pic-div i {
+    font-size: 6em;
+}
+
+.span-anpersan {
+    color: #e32d91;
 }
 
 .nav-btns-div {
@@ -385,6 +406,10 @@ footer ul li a {
     color: #FFFFFF;
 }
 
+.guest-border {
+    border: solid 10px #EE81BD;
+}
+
 .my-wedding-info-widget-info {
     text-align: center;
     color: #FFFFFF;
@@ -426,8 +451,6 @@ footer ul li a {
     opacity: 50%;
     transition: opacity 0.5s ease-out;
 }
-
-
 
 .upload-btn {
     margin-top: 0.5em;

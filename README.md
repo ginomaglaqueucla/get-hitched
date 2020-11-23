@@ -4,7 +4,6 @@ ___
 ## Description
 
 
-
 **Packages Used:**
 
 * cloudinary
@@ -19,6 +18,8 @@ ___
 * express-session
 * mysql2
 * sequelize
+
+
 
 **New Technology:**
 
@@ -79,6 +80,7 @@ Replace with your own info in the config/connection.js
 * Backend Routes and Models
 * Backend Model Assocations
 * Nodemailer
+
 
 ### Chris Meissner
 

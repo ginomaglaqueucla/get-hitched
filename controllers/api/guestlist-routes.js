@@ -54,6 +54,7 @@ router.post('/', (req, res) => {
   // expects {user_id: '', rsvp: '', food_choice: '', plus_one: ''}
   GuestList.create({
     user_id: req.body.user_id,
+    wedding_id: req.body.wedding_id,
     rsvp: req.body.rsvp,
     food_choice: req.body.food_choice,
     plus_one: req.body.plus_one

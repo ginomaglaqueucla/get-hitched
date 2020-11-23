@@ -19,6 +19,6 @@ async function addWeddingButtonHandler(event){
     document.location.replace('/dashboard/add'); 
 }
 
-document.querySelector('#add-wedding-btn').addEventListener('click', editWeddingButtonHandler);
+// document.querySelector('#add-wedding-btn').addEventListener('click', editWeddingButtonHandler);
 document.querySelector('#edit-wedding-btn').addEventListener('click', editWeddingButtonHandler);
 document.querySelector('#guestlist-btn').addEventListener('click', guestlistButtonHandler);

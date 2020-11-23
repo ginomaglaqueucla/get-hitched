@@ -63,12 +63,16 @@
                     <h2>Your Weddings</h2>
                 </div>
 
-                <div class="dashboard-widget">
+
+
+                <div class="dashboard-widget list-group">
+                    {{#each userWedding}}
+                        {{> upcoming-weddings}}
+                    {{/each}}
+                </div>
+
                     </div class="my-wedding-info-widget-info">
                         <ul>
-                            {{#each userWedding}}
-                            {{> upcoming-weddings}}
-                            {{/each}}
                         </ul>
                     </div>
                 </div>

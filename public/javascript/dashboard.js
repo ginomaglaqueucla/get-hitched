@@ -12,5 +12,13 @@ async function guestlistButtonHandler(event){
     document.location.replace('/dashboard/guestlist'); 
 }
 
+async function addWeddingButtonHandler(event){
+    event.preventDefault();
+
+    console.log("redirecting to add wedding");
+    document.location.replace('/dashboard/add'); 
+}
+
+document.querySelector('#add-wedding-btn').addEventListener('click', editWeddingButtonHandler);
 document.querySelector('#edit-wedding-btn').addEventListener('click', editWeddingButtonHandler);
 document.querySelector('#guestlist-btn').addEventListener('click', guestlistButtonHandler);

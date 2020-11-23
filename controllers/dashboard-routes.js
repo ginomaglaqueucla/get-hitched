@@ -151,7 +151,49 @@ router.get('/edit', withAuth, (req, res) => {
 
 router.get('/guestlist', (req, res) => {
     console.log("in guestlist");
+    if(req.session.cachedWedding !== null){
+        GuestList.findAll({
+            where:{
+                wedding_id: req.session.cachedWedding
+            },
+            attributes: [
+                'user_id',
+                'rsvp',
+                'food_choice',
+                'plus_one'
+            ]
+        })
+        .then(dbGuestListData => {
+            const guestList = dbGuestListData.map(guestList => guestList.get({plain:true}));
+            console.log("guestlist",guestList);
+            let userData = [];
+            for(let i = 0; i < guestList.length; i++){
+                User.findAll({
+                    where:{
+                        id: guestList[i].user_id
+                    },
+                    attributes: [
+                        'full_name'
+                    ]
+                })
+                .then(dbUserData => {
+                    const user = dbUserData.map(user => user.get({plain:true}));
+                    userData.push(user[0]);
+                    console.log("users invited",userData);
+                    // render editable wedding guestlist page
+                    if(i===guestList.length-1){
+                        res.render('guestList', {guestList, userData, loggedIn: true, hello: "hello"});
+                    }
+                    
+                })
+            }
+        })
+    }
+    else {
+    // guestlist not made yet, render create guestlist page
     res.render('guestlist');
+    }
+
 });
 
 // POST request which will logout the user

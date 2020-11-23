@@ -147,7 +147,12 @@ router.get('/edit', withAuth, (req, res) => {
         ]
         res.render('edit-wedding', {wedding, loggedIn: true});
     }
-  });
+});
+
+router.get('/guestlist', (req, res) => {
+    console.log("in guestlist");
+    res.render('guestlist');
+});
 
 // POST request which will logout the user
 router.post('/edit/logout', withAuth, (req, res) => {

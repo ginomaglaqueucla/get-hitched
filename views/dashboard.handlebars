@@ -12,7 +12,7 @@
 
                 <div class="nav-btns-div">
                     <a href="#" class="dashboard-nav-btn btn">My Wedding</a>
-                    <a href="#" class="dashboard-nav-btn btn">Guest List</a>
+                    <button class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
                     <a href="/gallery" class="dashboard-nav-btn btn">Slide Show</a>
                 </div>
             </div>
@@ -39,9 +39,6 @@
                         {{/each}}
                         <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
                     </div>
-                    
-                    
-                    {{!-- possibly include another widget for weather?--}}
                 </div>
             </div>
 
@@ -59,9 +56,9 @@
                 </div>
 
                 <div class="nav-btns-div">
-                    <button class="dashboard-nav-btn btn">Your Upcoming Weddings</button>
-                    <button class="dashboard-nav-btn btn">Invites</button>
-                    <button class="dashboard-nav-btn btn">Slide Shows</button>
+                    <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a>
+                    <a href="" class="dashboard-nav-btn btn">Invites</a>
+                    <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
                 </div>
             </div>
 
@@ -79,7 +76,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     {{/unless}}

@@ -3,6 +3,9 @@
 
         <div class="col-8 edit-form">
             <form id="edit-form">
+            
+            <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Dashboard</a>
+
                 <h3>Enter Your Wedding Information</h3>
                 {{#each wedding}}
                 <div class="form-group">
@@ -12,7 +15,7 @@
 
                 <div class="form-group">
                     <label for="wedding-hashtag">Create A Wedding Hashtag</label>
-                    <input type="text" class="form-control" id="wedding-hashtag" placeholder="{{wedding_hashtag}}"">
+                    <input type="text" class="form-control" id="wedding-hashtag" placeholder="{{wedding.hastage}}" />
                     <small class="form-text text-muted">Guests will use this id to find and accept invitations</small>
                 </div>
 

@@ -4,16 +4,15 @@
         <div class="row">
             <div class="col-4 dashboard-nav-div">
                 <div class="profile-pic-div">
-                    <img src="#" />
+                    <i class="fas fa-user-friends"></i>
                     {{#each couple}}
-                    <h5>{{partner1_name}} &</br>
-                    {{partner2_name}}</h5>
+                    <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
                 </div>
 
                 <div class="nav-btns-div">
                     <a href="#" class="dashboard-nav-btn btn">My Wedding</a>
                     <button class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
-                    <a href="/gallery" class="dashboard-nav-btn btn">Slide Show</a>
+                    <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
                 </div>
             </div>
 
@@ -24,23 +23,20 @@
                     </div>
 
                     <div class="dashboard-subtitle">
-                        {{!-- Is there a better way to destructure our data object? --}}
-                        
                         <h4>{{wedding.wedding_hashtag}}</h5>
                     </div> 
                 </div>
 
                 <div class="dashboard-widget">
-
-                    </div class="my-wedding-info-widget-info">
-                        <h4>{{wedding.wedding_date}}</h4> </br>
-                        <h4>{{wedding.wedding_location}}</h4> </br>
-                        <h5>{{wedding.wedding_details}}</h5>
-                        {{/each}}
+                    <div class="my-wedding-info-widget-info">
+                        <h4><span class="details-span">Save the Date:</span> {{wedding.wedding_date}}</h4>
+                        <h4><span class="details-span">Location:</span> {{wedding.wedding_location}}</h4>
+                        <h4><span class="details-span">Small Details:</span> {{wedding.wedding_details}}</h4>
                         <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
                     </div>
                 </div>
             </div>
+            {{/each}}
 
             </div>
         </div>
@@ -50,7 +46,7 @@
         <div class="row">
             <div class="col-4 dashboard-nav-div">
                 <div class="profile-pic-div">
-                    <img src="#" />
+                    <i class="fas fa-user-alt"></i>
                     <h5>name placeholder{{full_name}}</h5>
                    
                 </div>

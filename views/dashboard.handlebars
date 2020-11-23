@@ -43,16 +43,17 @@
     {{/if}}
 
     {{#unless engaged}}
+    {{!-- {{#each user}} --}}
         <div class="row">
             <div class="col-4 dashboard-nav-div">
                 <div class="profile-pic-div">
                     <i class="fas fa-user-alt"></i>
-                    <h5>name placeholder{{full_name}}</h5>
+                    <h5>{{full_name}}</h5>
                    
                 </div>
 
                 <div class="nav-btns-div">
-                    <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a>
+                    {{!-- <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a> --}}
                     <a href="" class="dashboard-nav-btn btn">Invites</a>
                     <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
                 </div>
@@ -60,12 +61,12 @@
 
             <div class="col-8 dashboard">
                 <div class="dashboard-title">
-                    <h2>Your Weddings</h2>
+                    <h2>Your Upcoming Weddings</h2>
                 </div>
 
 
 
-                <div class="dashboard-widget list-group">
+                <div class="dashboard-widget list-group guest-border">
                     {{#each userWedding}}
                         {{> upcoming-weddings}}
                     {{/each}}
@@ -78,6 +79,7 @@
                 </div>
             </div>
         </div>
+    {{!-- {{/each}} --}}
     {{/unless}}
 </div>
 

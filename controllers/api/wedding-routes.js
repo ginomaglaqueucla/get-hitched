@@ -60,7 +60,10 @@ router.post('/', (req, res) => {
         where: {
           user_id: req.session.user_id
         }
-      })
+      });
+      req.session.save(() => {
+        req.session.cachedWedding = true;
+      });
       res.json(dbWeddingData);
     })
     .catch(err => {

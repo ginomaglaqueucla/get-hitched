@@ -37,9 +37,11 @@ router.get('/', (req, res) => {
   
         })
         .then(dbCoupleData => {
-            console.log(dbCoupleData);
             const couple = dbCoupleData.map(couple => couple.get({plain:true}));
             console.log('data',couple);
+            req.session.save(() => {
+                req.session.cachedWedding = couple[0].wedding_id;
+            });
             res.render('dashboard', {couple, engaged, loggedIn: true, keyname:'fun times.'});
         })
         .catch(err => {
@@ -116,10 +118,61 @@ router.get('/', (req, res) => {
 
 //GET request to view edit dashbaord information
 router.get('/edit', (req, res) => {
-    console.log('in edit')
-    res.render('edit-wedding')
+    console.log('in edit');
+    if(req.session.cachedWedding !== null){
+        Wedding.findAll({
+            where:{
+                id: req.session.cachedWedding
+            },
+            attributes: [
+                'id',
+                'wedding_date',
+                'wedding_location',
+                'wedding_hashtag',
+                'wedding_details'
+            ]
+        })
+        .then(dbWeddingData => {
+            const wedding = dbWeddingData.map(wedding => wedding.get({plain:true}));
+            console.log('data',wedding);
+            console.log(req.session.loggedIn);
+            res.render('edit-wedding', {wedding, loggedIn: true});
+        })
+    }
+    else{
+        const wedding = [
+            {
+                wedding_date: "MM/DD/YY",
+                wedding_location: "Torrey Pines Country Club 11480 N Torrey Pines Rd, La Jolla, CA 92037",
+                wedding_hashtag: "#YourUniqueWeddingHashtag",
+                wedding_details: "With all due respect, please small children at home"
+            }
+        ]
+        res.render('edit-wedding', {wedding, loggedIn: true});
+    }
   });
 
+// POST request which will logout the user
+router.post('/edit/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
+});
+
+// POST request which will logout the user
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
+});
 
 
 module.exports = router;

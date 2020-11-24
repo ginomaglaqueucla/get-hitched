@@ -133,7 +133,7 @@ router.get('/edit', withAuth, (req, res) => {
             const wedding = dbWeddingData.map(wedding => wedding.get({plain:true}));
             console.log('data',wedding);
             console.log(req.session.loggedIn);
-            res.render('edit-wedding', {wedding, loggedIn: true});
+            res.render('edit-wedding', {wedding, checkIfWedding: true, loggedIn: true});
         })
     }
     else{
@@ -146,7 +146,7 @@ router.get('/edit', withAuth, (req, res) => {
                 wedding_details: "With all due respect, please small children at home"
             }
         ]
-        res.render('edit-wedding', {wedding, loggedIn: true});
+        res.render('edit-wedding', {wedding, checkIfWedding: false, loggedIn: true});
     }
 });
 

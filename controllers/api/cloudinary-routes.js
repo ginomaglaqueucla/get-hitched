@@ -11,9 +11,6 @@ require('dotenv').config();
 
 //create the connection to the cloudinary api
 cloudinary.config({
-    // cloud_name: process.env.CLOUD_NAME,
-    // api_key: process.env.API_KEY,
-    // api_secret: process.env.API_SECRET
     cloud_name: 'gettinhitched',
     api_key: '881384245614239',
     api_secret: 'uz6R2vfu6QcblHW9AIkUxCpxwUg'
@@ -23,9 +20,10 @@ cloudinary.config({
 router.post('/upload', upload.single('weddingImage') , async (req, res, next) => {
     // console.log(req.file);
     const newFolder = req.session.cachedWedding;
+    console.log(newFolder);
     const cloudUpload = cloudinary.uploader.upload_stream(
         {
-            folder: newFolder 
+            folder: newFolder
             // tags: "tester"
         },
         function(err, result) {
@@ -34,8 +32,8 @@ router.post('/upload', upload.single('weddingImage') , async (req, res, next) =>
     );
     // console.log(cloudUpload)
     streamifier.createReadStream(req.file.buffer).pipe(cloudUpload);
-    console.log(next);
-    console.log(res);
+    // console.log(next);
+    // console.log(res);
 });
 
 module.exports = router;

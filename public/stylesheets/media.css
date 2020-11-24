@@ -1,6 +1,9 @@
-@media screen and (min-width: 500px) and (max-width: 600px) {
+@media screen and (min-width: 500px) and (max-width: 768px) {
 
-
+    .gallery-div {
+        height: auto;
+        overflow: none;
+    }
 
 }
 
@@ -67,6 +70,11 @@
 
     .profile-pic-div h5 {
         font-size: 1.25em;
+    }
+
+    .gallery-div {
+        height: auto;
+        overflow: none;
     }
 
 }

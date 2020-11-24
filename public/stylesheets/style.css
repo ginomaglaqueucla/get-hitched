@@ -424,17 +424,16 @@ margin-bottom: 1em;
 
 /* gallery page styling  */
 .gallery-wrapper {
-    margin: 5em 0;
+    margin: 5em;
 }
 
 .gallery-div {
     background-color: #EE81BD;
-    width: 75em;
-    height: 30em;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     border-radius: 15px 15px 15px 15px;
+    height: 30em;
     overflow: auto;
 }
 

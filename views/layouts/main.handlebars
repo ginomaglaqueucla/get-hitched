@@ -20,13 +20,14 @@
         <header>
             <h1>Get Hitched!</h1>
             <nav>
-                    {{!-- this are just placeholders --}}
                     <ul class="misc-ul">
                         {{#if loggedIn}}
                         <li><a href="/dashboard">Dashboard</a></li>
                         {{/if}}
                         {{!-- {{#}} --}}
+                        {{#if ifNotHome}}
                         <li><button class="btn logout-btn" id="logout-btn">Logout</button></li>
+                        {{/if}}
                         {{!-- {{/ }} --}}
                     </ul>
             </nav>

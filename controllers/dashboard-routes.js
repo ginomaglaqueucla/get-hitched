@@ -115,7 +115,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 //GET request to view edit dashboard information
-router.get('/edit', withAuth, (req, res) => {
+router.get('/edit', (req, res) => {
     console.log('in edit');
     if(req.session.cachedWedding !== null){
         Wedding.findAll({

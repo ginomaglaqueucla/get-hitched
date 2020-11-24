@@ -14,29 +14,30 @@ async function guestlistButtonHandler(event){
     document.location.replace('/dashboard/guestlist'); 
 }
 
-// async function addWeddingButtonHandler(event){
-//     event.preventDefault();
+async function addWeddingButtonHandler(event){
+    event.preventDefault();
 
-//     const invite_hashtag = invite_hashtagForm.nodeValue.trim();
-//     const queryString = '/api/wedding/'+invite_hashtag;
+    const invite_hashtag = invite_hashtagForm.value.trim();
+    const queryString = '/api/wedding/hashtag/'+invite_hashtag;
 
-//     if(invite_hashtag){
-//         const response = await fetch(queryString, {
-//             method: 'GET',
-//             headers: { 'Content-Type': 'application/json' }
-//         });
-//         // check the response status
-//         if (response.ok) {
-//             console.log('You got redirected to invite page.');
-//             document.location.replace('/dashboard/invite');
-//         } else {
-//             console.log(response.statusText);
-//         }
-//     }
-// }
+    if(invite_hashtag){
+        const response = await fetch(queryString, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        // check the response status
+        if (response.ok) {
+            console.log('You got redirected to invite page.');
+            document.location.replace('/dashboard/invite');
+        } else {
+            console.log("YEAH COULDNT FIND");
+            console.log(response.statusText);
+        }
+    }
+}
 
 
 
-// document.querySelector('#add-wedding-btn').addEventListener('click', addWeddingButtonHandler);
+document.querySelector('#add-wedding-btn').addEventListener('click', addWeddingButtonHandler);
 document.querySelector('#edit-wedding-btn').addEventListener('click', editWeddingButtonHandler);
 document.querySelector('#guestlist-btn').addEventListener('click', guestlistButtonHandler);

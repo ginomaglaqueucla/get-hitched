@@ -241,7 +241,8 @@ footer ul li a {
 .login-form h3,
 .signup-form h3,
 .gallery-header h3,
-.upload-form-wrapper h3 {
+.upload-form-wrapper h3,
+.creator-div h3 {
     font-family: 'Pacifico', Arial, Helvetica, sans-serif;
     font-weight: lighter;
     color: #fff;
@@ -510,3 +511,49 @@ form.custom-file {
     width: 85%;
 }
 
+
+/* styling for creators page  */
+
+.creator-wrapper {
+    margin: 5em 0;
+}
+
+.creator-div {
+    background-color: #EE81BD;
+    width: 75em;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1em;
+}
+
+.creator-div h3 {
+    margin-bottom: 1em;;
+}
+
+.creator-img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.creators-section h4 {
+    font-size: 1.25em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.creators-section img {
+    width: 50%;
+}
+
+.creator-info a {
+    color: #E32D91;
+}
+
+.creator-info a:hover {
+    color: #FFF;
+}

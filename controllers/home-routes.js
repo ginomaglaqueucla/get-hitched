@@ -20,4 +20,10 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 })
 
+//GET request to render creator's page
+router.get('/creators', (req, res) => {
+    console.log('creators page');
+    res.render('creators', {loggedIn: true})
+})
+
 module.exports = router;

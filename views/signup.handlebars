@@ -1,7 +1,6 @@
 <div class="signup-form-wrapper">
-    <div class="row">
 
-        <div class="col-8 signup-form">
+        <div class=" signup-form">
             <form id="signup-form">
                 <h3>Signup</h3>
 
@@ -36,7 +35,7 @@
 
                 <div class="form-group">
                     <label for="user-fullname toggle-a-content">Partner One's Name</label>
-                    <label for="user-fullname toggle-b-content">Full Name</label>
+                    <label for="user-fullname toggle-b-content">Your Full Name</label>
                     <input type="text" class="form-control user-fullname" id="user-fullname" placeholder="Enter your fullname">
                     <small class="form-text text-muted toggle-a-content">Both names of couple are nessecary.</small>
                     <small class="form-text text-muted toggle-b-content">Your fullname will be displayed on the guestlist.</small>
@@ -52,21 +51,12 @@
                     </div>
                 </div>
 
-                {{!-- here are the guest's form options  --}}
-                {{!-- <div class="toggle-b-content">
-                    <div class="form-group">
-                        <label for="guest-wedding-id">Couple's Wedding ID</label>
-                        <input type="text" class="form-control" id="guest-wedding-id" placeholder="ID Given by Couple">
-                        <small class="form-text text-muted">Enter the ID of the Wedding you're attending</small>
-                    </div>
-                </div> --}}
-
-                <button type="submit" class="btn signup-btn signup-hover">Enter <i class="far fa-heart"></i></button> 
+                <button type="submit" class="btn signup-btn signup-hover">Enter <i class="far fa-heart"></i></button>
+                <a class="btn login-btn" href="/login">Login Instead</a>
             </form>
         </div>
 
-        <div class="col-4 logo-signup-div">
-            {{!-- update with logo and remove css for icon on line-ish 142  --}}
+        <div class="logo-signup-div">
             <i class="fas fa-heart"></i>
         </div>
 

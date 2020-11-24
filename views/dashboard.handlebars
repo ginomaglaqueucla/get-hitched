@@ -1,31 +1,27 @@
  <div class="dashboard-page">
     {{#if engaged}}
-    
-        <div class="row">
-            <div class="col-4 dashboard-nav-div">
-                <div class="profile-pic-div">
-                    <i class="fas fa-user-friends"></i>
-                    {{#each couple}}
-                    <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
-                </div>
-
-                <div class="nav-btns-div">
-                    <button class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
-                    <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
-                </div>
+        {{#each couple}}
+        <div class="dashboard-nav-div">
+            <div class="profile-pic-div">
+                <i class="fas fa-user-friends"></i>
+                <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
             </div>
 
-            <div class="col-8 dashboard">
-                <div class="dashboard-title-div">
-                    <div class="dashboard-title">
-                        <h2>My Wedding</h2>
-                    </div>
+            <div class="nav-btns-div">
+                <button class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
+                <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
+            </div>
+        </div>
 
-                    <div class="dashboard-subtitle">
-                        <h4>{{wedding.wedding_hashtag}}</h5>
-                    </div> 
+        <div class="dashboard">
+            <div class="dashboard-title-div">
+                <div class="dashboard-title">
+                    <h2>My Wedding</h2>
                 </div>
 
+                <div class="dashboard-subtitle">
+                    <h4>{{wedding.wedding_hashtag}}</h5>
+                </div> 
                 <div class="dashboard-widget">
                     <div class="my-wedding-info-widget-info">
                         <h4><span class="details-span">Save the Date:</span> {{wedding.wedding_date}}</h4>
@@ -40,53 +36,51 @@
                     </div>
                 </div>
             </div>
-            {{/each}}
-
-            </div>
+        </div>
+        {{/each}}
     {{/if}}
 
     {{#unless engaged}}
     {{!-- {{#each user}} --}}
-        <div class="row">
-            <div class="col-4 dashboard-nav-div">
-                <div class="profile-pic-div">
-                    <i class="fas fa-user-alt"></i>
-                    <h5>{{full_name}}</h5>
-                   
-                </div>
 
-                <div class="nav-btns-div">
-                    {{!-- <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a> --}}
-                    <a href="" class="dashboard-nav-btn btn">Invites</a>
-                </div>
+        <div class="dashboard-nav-div">
+            <div class="profile-pic-div">
+                <i class="fas fa-user-alt"></i>
+                <h5>{{full_name}}</h5>
+                
             </div>
 
-            <div class="col-8 dashboard">
-                <div class="dashboard-title">
-                    <h2>Your Upcoming Weddings</h2>
-                </div>
+            <div class="nav-btns-div">
+                {{!-- <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a> --}}
+                <a href="" class="dashboard-nav-btn btn">Invites</a>
+                <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
 
+            </div>
+        </div>
 
-
-                <div class="dashboard-widget list-group guest-border">
-                    {{#each userWedding}}
-                        {{> upcoming-weddings}}
-                    {{/each}}
-                </div>
+        <div class="dashboard">
+            <div class="dashboard-title">
+                <h2>Your Upcoming Weddings</h2>
+            </div>
 
                     </div class="my-wedding-info-widget-info">
                         <ul>
                         </ul>
                         <div class="form-group">
                             <label for="invite-hashtag">Enter Wedding Hashtag:</label>
-                            <textarea type="text" class="form-control" id="invite-hashtag" placeholder="some-text"></textarea>
+                            <input type="text" class="form-control" id="invite-hashtag" placeholder="some-text"></input>
                         </div>
                         <button class="dashboard-nav-btn btn" id="add-wedding-btn">Add Wedding</button>
                     </div>
 
-                </div>
+
+            <div class="dashboard-widget list-group guest-border">
+                {{#each userWedding}}
+                    {{> upcoming-weddings}}
+                {{/each}}
             </div>
         </div>
+    
     {{!-- {{/each}} --}}
     {{/unless}}
 </div>

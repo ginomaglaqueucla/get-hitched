@@ -7,36 +7,75 @@
             <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Dashboard</a>
 
                 <h3>Enter Your Wedding Information</h3>
+                <h3>This: {{checkIfWedding}}</h3>
+                {{#if checkIfWedding}}
                 {{#each wedding}}
-                <div hidden class="form-group">
-                    <label for="wedding-id">ID:</label>
-                    <input type="text" class="form-control" id="wedding-id" name="wedding-id" value="{{id}}">
-                </div>
+                    <div hidden class="form-group">
+                        <label for="wedding-id">ID:</label>
+                        <input type="text" class="form-control" id="wedding-id" name="wedding-id" value={{id}}>
+                    </div>
 
-                <div class="form-group">
-                    <label for="wedding-date">Date:</label>
-                    <input type="date" class="form-control" id="wedding-date" name="wedding-date" placeholder="{{wedding_date}}">
-                </div>
+                    <div class="form-group">
+                        <label for="wedding-date">Date:</label>
+                        <input type="date" class="form-control" id="wedding-date" name="wedding-date" value={{wedding_date}}>
+                    </div>
 
-                <div class="form-group">
-                    <label for="wedding-hashtag">Create A Wedding Hashtag</label>
-                    <input type="text" class="form-control" id="wedding-hashtag" placeholder="{{wedding_hashtag}}">
+                    <div class="form-group">
+                        <label for="wedding-hashtag">Create A Wedding Hashtag</label>
+                        <input type="text" class="form-control" id="wedding-hashtag" value={{wedding_hashtag}}>
 
-                    <small class="form-text text-muted">Guests will use this id to find and accept invitations</small>
-                </div>
+                        <small class="form-text text-muted">Guests will use this id to find and accept invitations</small>
+                    </div>
 
-                <div class="form-group">
-                    <label for="wedding-location">Enter Your Wedding Location:</label>
-                    <input type="text" class="form-control" id="wedding-location" placeholder="{{wedding_location}}">
-                </div>
+                    <div class="form-group">
+                        <label for="wedding-location">Enter Your Wedding Location:</label>
+                        <input type="text" class="form-control" id="wedding-location" value={{wedding_location}}>
+                    </div>
 
-                <div class="form-group">
-                    <label for="wedding-details">Enter Your Wedding Details:</label>
-                    <textarea type="text" class="form-control" id="wedding-details" placeholder="{{wedding_details}}"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="wedding-details">Enter Your Wedding Details:</label>
+                        <textarea type="text" class="form-control" id="wedding-details">{{wedding_details}}</textarea>
+                    </div>
+                    
+
+                    <button type="submit" class="btn edit-btn">Update Wedding Information <i class="far fa-heart"></i></button>
                 {{/each}}
+                {{/if}}
 
-                <button type="submit" class="btn edit-btn">Create Wedding <i class="far fa-heart"></i></button> 
+                {{#unless checkIfWedding}}
+                {{#each wedding}}
+                    <div hidden class="form-group">
+                        <label for="wedding-id">ID:</label>
+                        <input type="text" class="form-control" id="wedding-id" name="wedding-id" value={{id}}>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wedding-date">Date:</label>
+                        <input type="date" class="form-control" id="wedding-date" name="wedding-date" placeholder={{wedding_date}}>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wedding-hashtag">Create A Wedding Hashtag</label>
+                        <input type="text" class="form-control" id="wedding-hashtag" placeholder={{wedding_hashtag}}>
+
+                        <small class="form-text text-muted">Guests will use this id to find and accept invitations</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wedding-location">Enter Your Wedding Location:</label>
+                        <input type="text" class="form-control" id="wedding-location" placeholder="{{wedding_location}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wedding-details">Enter Your Wedding Details:</label>
+                        <textarea type="text" class="form-control" id="wedding-details" placeholder="{{wedding_details}}"></textarea>
+                    </div>
+                    
+
+                    <button type="submit" class="btn edit-btn">Create Wedding <i class="far fa-heart"></i></button>
+                {{/each}}
+                {{/unless}}
+                
             </form>
         </div>
 

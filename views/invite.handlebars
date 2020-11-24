@@ -1,15 +1,16 @@
 <div class="invite-wrapper">
     <div class="invite-div">
+        <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Dashboard</a>
         <div class="invite-form">
             <h3>Edit Your RSVP Information</h3>
             <form id="invite-form">
 
                 <div class="form-group">
-                    <h5>Will you be RSVPing attending?</h5>
+                    <h5>Will you be attending the wedding?</h5>
                     <input type="radio" class="" name="user-type" id="yes-going" value="yes" checked>
+                    <label for="yes" class="rvsp-choice"><i class="fas fa-check"></i></label>
                     <input type="radio" class="" name="user-type" id="no-going" value="no">
-                    <label for="yes" class=""><i class="fas fa-check"></i></label>
-                    <label for="no" class=""><i class="fas fa-times"></i></label>
+                    <label for="no" class="rvsp-choice"><i class="fas fa-times"></i></label>
                 </div>
 
                 <div class="dropdown">
@@ -40,9 +41,10 @@
 
             </form>
         </div>
-        <div class="col-4 logo-rsvp-div">
-            <i class="fas fa-heart"></i>
-        </div>
+    </div>
+
+    <div class="col-4 logo-invite-div">
+        <i class="fas fa-heart"></i>
     </div>
 </div>
 

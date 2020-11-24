@@ -38,9 +38,9 @@ header h1 {
     font-weight: lighter;
     letter-spacing: 0.2rem;
     background: -webkit-linear-gradient(
-        5deg,
+        0deg,
         #E32D91,
-        #9d93fc
+        #EE81BD
     );
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -311,13 +311,12 @@ footer ul li a {
 
 .dashboard-nav-div {
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
-    /* justify-content: space-evenly; */
+    justify-content: center;
+    align-items: center;
     background-color: #EE81BD;
     color: #FFFFFF;
     border-radius: 15px 0px 0px 15px;
-    width: 15em;
 }
 
 .profile-pic-div {
@@ -326,8 +325,6 @@ footer ul li a {
     flex-direction: column;
     /* justify-content: space-between; */
     align-items: center;
-    padding: .5em;
-    margin-top: 5em;
 }
 
 .dashboard-title h2 {
@@ -355,6 +352,7 @@ margin-bottom: 1em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .dashboard-nav-btn {

@@ -1,9 +1,18 @@
 const router = require('express').Router();
-const temp = require('../models');
-console.log(temp);
+
+const homeRoutes = require('./home-routes');
+const dashboardRoutes = require('./dashboard-routes');
+const galleryRoutes = require('./gallery-routes');
+const apiRoutes = require('./api');
+
+router.use('/', homeRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/gallery', galleryRoutes);
+router.use('/api', apiRoutes);
 
 router.use((req, res) => { //this is so if the api endpoint doesn't exist they get an error code
     res.status(404).end();
 });
 
-module.exports = router;
+module.exports = router
+

@@ -1,0 +1,84 @@
+<div class="edit-wedding-wrapper">
+    <div class="row">
+
+        <div class="col-8 edit-form">
+            <form id="edit-form">
+            
+            <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Dashboard</a>
+
+
+                <h3>Your Guest List</h3>
+            
+                    <div class="guestlist-scroller">
+                        <div class="individual-guest-wrapper">
+                            <h5>Guest Name</h5>
+                            <h5>RSVP</h5>
+                            <h5>Guest Food</h5> 
+                            <h5>Plus One</h5>
+                        </div>
+                        <div class="individual-guest-wrapper">
+                            <h5>Guest Name</h5>
+                            <h5>RSVP</h5>
+                            <h5>Guest Food</h5> 
+                            <h5>Plus One</h5>
+                        </div>
+                        <div class="individual-guest-wrapper">
+                            <h5>Guest Name</h5>
+                            <h5>RSVP</h5>
+                            <h5>Guest Food</h5> 
+                            <h5>Plus One</h5>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn edit-btn">Update Guest List <i class="far fa-heart"></i></button>       
+            </form>
+        </div>
+    </div>
+</div>
+
+{{!-- <script src="/javascript/dashboard.js"></script> --}}
+
+<div class="dashboard-page">
+    {{#if engaged}}
+    
+        <div class="row">
+            <div class="col-4 dashboard-nav-div">
+                <div class="profile-pic-div">
+                    <i class="fas fa-user-friends"></i>
+                    {{#each couple}}
+                    <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
+                </div>
+
+                <div class="nav-btns-div">
+                    <button class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
+                    <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
+                </div>
+            </div>
+
+            <div class="col-8 dashboard">
+                <div class="dashboard-title-div">
+                    <div class="dashboard-title">
+                        <h2>My Wedding</h2>
+                    </div>
+
+                    <div class="dashboard-subtitle">
+                        <h4>{{wedding.wedding_hashtag}}</h5>
+                    </div> 
+                </div>
+
+                <div class="dashboard-widget">
+                    <div class="my-wedding-info-widget-info">
+                        <h4><span class="details-span">Save the Date:</span> {{wedding.wedding_date}}</h4>
+                        <h4><span class="details-span">Location:</span> {{wedding.wedding_location}}</h4>
+                        <h4><span class="details-span">Small Details:</span> {{wedding.wedding_details}}</h4>
+                        {{#if wedding_id}}
+                        <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
+                        {{/if}}
+                        {{#unless wedding_id}}
+                        <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Create Wedding</button>
+                        {{/unless}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    {{/if}} 

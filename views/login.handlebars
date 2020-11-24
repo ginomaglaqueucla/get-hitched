@@ -1,0 +1,27 @@
+<div class="login-form-wrapper">
+
+        <div class="logo-login-div">
+            {{!-- update with logo and remove css for icon on line-ish 115  --}}
+            <i class="fas fa-heart"></i>
+        </div>
+
+        <div class="login-form">
+            <form id="login-form">
+                <h3>Login</h3>
+                <div class="form-group">
+                    <label for="login-email">Email address</label>
+                    <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Enter your email">
+                    <small id="emailHelp">We could say something here, idk what tho</small>
+                </div>
+                <div class="form-group">
+                    <label for="login-pw">Password</label>
+                    <input type="password" class="form-control" id="login-pw" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn login-btn login-hover">Enter <i class="far fa-heart"></i></button> 
+                <a class="btn signup-btn" href="/signup">Signup Instead</a>
+            </form>
+        </div>
+
+</div>
+
+<script src="/javascript/login.js"></script>

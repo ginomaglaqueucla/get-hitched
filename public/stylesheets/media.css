@@ -1,0 +1,84 @@
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+    .gallery-div {
+        height: auto;
+        overflow: none;
+    }
+
+}
+
+@media screen and  (max-width: 500px) {
+    
+    footer ul {
+        flex-direction: column;
+    }
+
+    .login-form-wrapper,
+    .signup-form-wrapper,
+    .edit-wedding-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo-login-div,
+    .logo-signup-div,
+    .logo-editwedding-div {
+        width: 100%;
+        height: 10em;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .login-form,
+    .signup-form,
+    .edit-form {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .logo-signup-div,
+    .logo-editwedding-div {
+        order: 1;
+    }
+
+    .signup-form,
+    .edit-form {
+        order: 2;
+    }
+
+    .dashboard-page {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard-nav-div {
+        width: 100%;
+        padding-bottom: 2em;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .dashboard {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .profile-pic-div {
+        margin-top: 2em;
+    }
+
+    .profile-pic-div i {
+        font-size: 6em;
+        color: #e32d91;
+    }
+
+    .profile-pic-div h5 {
+        font-size: 1.25em;
+    }
+
+    .gallery-div {
+        height: auto;
+        overflow: none;
+    }
+
+    .gallery-header {
+        flex-direction: column;
+    }
+
+}

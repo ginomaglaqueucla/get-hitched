@@ -1,10 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 const bcrypt = require('bcrypt');
-const { v4: uuidv4 } = require('uuid');
 
 class User extends Model {
-//bcrypt for password encrypt will go here
+    passwordCheck(loginPassword) {
+        return bcrypt.compareSync(loginPassword, this.password);
+    }
 }
 
 User.init(
@@ -15,11 +16,12 @@ User.init(
             allowNull: false,
             autoIncrement: true
         },
-        username: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
-            vaidate: {
-                len: [5]
+            unique: true,
+            validate: {
+              isEmail: true
             }
         },
         password: {
@@ -28,10 +30,33 @@ User.init(
             validate: {
                 len: [5]
             }
+
+        },
+        full_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        // guest = true | couple = false
+        engaged: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
         }
+
     },
     {
-        //hooks for passwords will go here
+        hooks: {
+            // set up beforeCreate lifecycle "hook" functionality
+            async beforeCreate(newUserData) {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+            // set up beforeUpdate lifecycle "hook" functionality
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            }
+        },
         sequelize,
         timestamps: false,
         freezeTableName: true,

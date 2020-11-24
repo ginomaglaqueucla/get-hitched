@@ -42,6 +42,43 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// GET /api/wedding/1
+router.get('/:wedding_hashtag', (req, res) => {
+  let ifHashtagValid;
+  Wedding.findOne({
+    where: {
+      wedding_hashtag: req.params.wedding_hashtag
+    },
+    include: [
+      {
+        model: User,
+        attributes: [
+        'id',
+        'full_name'
+        ],
+        through: GuestList,
+        as: 'wedding_guestlist'
+      }
+    ]
+  })
+    .then(dbWeddingData => {
+      if (!dbWeddingData) {
+        res.status(404).json({ message: 'No wedding found with this hashtag' });
+        ifHashtagValid = false;
+        res.render('invite', {ifHashtagValid)
+      } else {
+
+      }
+      res.json(dbWeddingData);
+      if
+      res.render('invite', )
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 // POST /api/wedding
 router.post('/', (req, res) => {
   console.log("in wedding");

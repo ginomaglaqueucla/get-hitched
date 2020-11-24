@@ -189,14 +189,15 @@ footer ul li a {
 
 .logo-login-div i.fa-heart,
 .logo-signup-div i.fa-heart,
-.logo-editwedding-div i.fa-heart {
+.logo-editwedding-div i.fa-heart,
+.logo-invite-div i.fa-heart {
     font-size: 5em;
     color: #fff;
 }
 
 .logo-login-div i.fa-heart:hover,
 .logo-signup-div i.fa-heart:hover,
-.logo-editwedding-div i.fa-heart {
+.logo-editwedding-div i.fa-heart:hover {
     font-size: 5em;
     color: #fff;
     text-shadow: 0px 0px 10px #FFFFFF;
@@ -205,7 +206,8 @@ footer ul li a {
 
 .signup-form,
 .edit-form,
-.login-form {
+.login-form,
+.invite-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,6 +227,10 @@ footer ul li a {
     border-radius: 15px 0px 0px 15px;
 }
 
+.invite-form {
+    background-color: #EE81BD;
+}
+
 .login-btn,
 .signup-btn {
     margin-right: 2em;
@@ -234,7 +240,8 @@ footer ul li a {
 .signup-btn,
 .upload-btn,
 .back-btn, 
-.edit-btn {
+.edit-btn,
+.rsvp-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
@@ -245,7 +252,8 @@ footer ul li a {
 .main-btns:hover,
 .upload-btn:hover,
 .back-btn:hover,
-.edit-btn:hover {
+.edit-btn:hover,
+.rsvp-btn:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
@@ -270,7 +278,8 @@ footer ul li a {
 }
 
 .logo-signup-div,
-.logo-editwedding-div {
+.logo-editwedding-div,
+.logo-invite-div {
     background-color: #E32D91;
     width: 15em;
     display: flex;
@@ -289,14 +298,18 @@ footer ul li a {
 }
 
 .user-type {
-    color: #E32D91;
+    color: #fff;
     font-size: 5em;
     margin-left: 0.25em;
 }
 
+.rsvp-choice {
+    color: #fff;
+}
+
 .toggle-a:checked ~ .toggle-a-btn,
 .toggle-b:checked ~ .toggle-b-btn{
-    color: #ffffff;
+    color: #E32D91;
     box-shadow: none;
 }
 
@@ -340,7 +353,7 @@ margin-bottom: 1em;
 }
 
 .details-span {
-    color: #EE81BD;
+    color:#e32d91;
     font-size: 0.75em;
 }
 
@@ -353,7 +366,7 @@ margin-bottom: 1em;
 }
 
 .span-anpersan {
-    color: #e32d91;
+    color: #EE81BD; 
 }
 
 .nav-btns-div {
@@ -569,15 +582,30 @@ form.custom-file {
 /* styling for the invites page  */
 
 .invite-wrapper {
-    margin: 5em;
+    margin: 7em 2em;;
     display: flex;
     justify-content: center;
 }
 
 .invite-div {
     background-color: #EE81BD;
-    width: 80%;
-    display: flex;
-    border-radius: 15px 15px 15px 15px;
+    width: 100%;
+    border-radius: 15px 0 0 15px;
     padding: 1em;
 }
+
+.rvsp-choice i.fa-check,
+.rvsp-choice i.fa-times {
+    font-size: 3em;
+    margin: 1em;
+}
+
+.dropdown {
+    margin-bottom: 2em;;
+}
+
+.dropdown-toggle {
+    background-color: #FFF;
+}
+
+

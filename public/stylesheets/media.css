@@ -13,13 +13,6 @@
         flex-direction: column;
     }
 
-    .login-form-wrapper,
-    .signup-form-wrapper,
-    .edit-wedding-wrapper {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
     .logo-login-div,
     .logo-signup-div,
     .logo-editwedding-div {
@@ -65,7 +58,7 @@
 
     .profile-pic-div i {
         font-size: 6em;
-        color: #EE81BD;s
+        color: #e32d91;
     }
 
     .profile-pic-div h5 {

@@ -1,46 +1,29 @@
 <div class="dashboard-page">
-    <div class="row">
-        <div class="col-4 dashboard-nav-div">
-            <div class="profile-pic-div">
-                <i class="fas fa-user-friends"></i>
-                {{#each couple}}
-                <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
-                {{/each}}
-            </div>
+    <div class="col-4 dashboard-nav-div">
+        <div class="profile-pic-div">
+            <i class="fas fa-user-friends"></i>
+            {{!-- {{#each couple}}
+            <h5>{{partner1_name}}<span class="span-anpersan">&</span>{{partner2_name}}</h5>
+            {{/each}} --}}
+        </div>
 
-            <div class="nav-btns-div">
-                <a class="btn back-btn" href="/dashboard"></i>My Wedding</a>
-                <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
+        <div class="nav-btns-div">
+            <a class="dashboard-nav-btn btn" href="/dashboard"></i>My Wedding</a>
+            <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
+        </div>
+    </div>
+
+    <div class="col-8 dashboard">
+        <div class="dashboard-title-div">
+            <div class="dashboard-title">
+                <h2>My Guestlist</h2>
             </div>
         </div>
 
-        <div class="col-8 dashboard">
-            <div class="dashboard-title-div">
-                <div class="dashboard-title">
-                    <h2>My Guestlist</h2>
-                </div>
-            </div>
-
-            <div class="col-8 guestlist-scroller">
-                <div class="individual-guest-wrapper">
-                    <h5>Guest Name</h5> </br>
-                    <h5>RSVP</h5> </br>
-                    <h5>Guest Food</h5> </br>
-                    <h5>Plus One</h5>
-                </div>
-                <div class="individual-guest-wrapper">
-                    <h5>Guest Name</h5> </br>
-                    <h5>RSVP</h5> </br>
-                    <h5>Guest Food</h5> </br>
-                    <h5>Plus One</h5>
-                </div>
-                <div class="individual-guest-wrapper">
-                    <h5>Guest Name</h5> </br>
-                    <h5>RSVP</h5> </br>
-                    <h5>Guest Food</h5> </br>
-                    <h5>Plus One</h5>
-                </div>
-            </div>
+        <div class="guestlist-scroller">
+            {{#each userData}}
+                {{> guestlist-details}}
+            {{/each}}
         </div>
     </div>
 </div>

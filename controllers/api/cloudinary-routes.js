@@ -11,9 +11,12 @@ require('dotenv').config();
 
 //create the connection to the cloudinary api
 cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key: process.env.API_KEY,
-    api_secret: process.env.API_SECRET
+    // cloud_name: process.env.CLOUD_NAME,
+    // api_key: process.env.API_KEY,
+    // api_secret: process.env.API_SECRET
+    cloud_name: 'gettinhitched',
+    api_key: '881384245614239',
+    api_secret: 'uz6R2vfu6QcblHW9AIkUxCpxwUg'
 });
 
 //this is a POST request to send a file to cloudinary

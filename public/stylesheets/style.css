@@ -167,13 +167,14 @@ footer ul li a {
 
 /* below are the form styles */
 
-.login-form-wrapper {
+.login-form-wrapper,
+.signup-form-wrapper,
+.edit-wedding-wrapper {
     margin: 5em 0;
     padding: 0 1em;
     width: 100%;
     display: flex;
     justify-content: center;
-    /* width: 80%; */
 }
 
 .logo-login-div {
@@ -187,39 +188,45 @@ footer ul li a {
 }
 
 .logo-login-div i.fa-heart,
-.logo-signup-div i.fa-heart {
+.logo-signup-div i.fa-heart,
+.logo-editwedding-div i.fa-heart {
     font-size: 5em;
     color: #fff;
 }
 
 .logo-login-div i.fa-heart:hover,
-.logo-signup-div i.fa-heart:hover {
+.logo-signup-div i.fa-heart:hover,
+.logo-editwedding-div i.fa-heart {
     font-size: 5em;
     color: #fff;
     text-shadow: 0px 0px 10px #FFFFFF;
     transition: text-shadow 0.5s ease-out;
 }
 
-
-.login-form,
-.signup-form
-.edit-form {
-    background-color: #E32D91;
-    color: #FFFFFF;
+.signup-form,
+.edit-form,
+.login-form {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     border-radius: 0px 15px 15px 0px;
-}
-
-.login-form {
-    
     padding: 2em;
+    color: #FFFFFF;
+    background-color: #E32D91;
 }
 
-.login-btn {
+.signup-form {
+    background-color: #EE81BD;
+    border-radius: 15px 0 0 15px;
+}
+
+.edit-form {
+    border-radius: 15px 0px 0px 15px;
+}
+
+.login-btn,
+.signup-btn {
     margin-right: 2em;
 }
 
@@ -262,37 +269,27 @@ footer ul li a {
     color: #fff;
 }
 
-.logo-signup-div {
-    background-color: #EE81BD;
-    width: 25em;
+.logo-signup-div,
+.logo-editwedding-div {
+    background-color: #E32D91;
+    width: 15em;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0px 15px 15px 0px;
-    margin: 3rem 0;
 }
 
-.signup-form,
-.edit-form,
-.signup-form {
-    background-color:#f4abd3;
-    width: 25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px 0px 0px 15px;
-    padding: 3em;
-    margin: 3rem 0;
+.logo-editwedding-div {
+    background-color: #EE81BD;
+    border-radius: 0px 15px 15px 0px;
 }
-
 
 .signup-form h4 {
     color: #fff;
 }
 
-
 .user-type {
-    color: #EE81BD;
+    color: #E32D91;
     font-size: 5em;
     margin-left: 0.25em;
 }
@@ -302,7 +299,6 @@ footer ul li a {
     color: #ffffff;
     box-shadow: none;
 }
-
 
 .toggle-a:checked ~ .toggle-a-content,
 .toggle-b:checked ~ .toggle-b-content{
@@ -319,7 +315,6 @@ footer ul li a {
 .dashboard-page {
     margin: 5rem;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 

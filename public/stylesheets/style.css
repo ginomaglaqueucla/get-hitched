@@ -422,6 +422,17 @@ margin-bottom: 1em;
     color: #FFFFFF;
 }
 
+/* guestlist page styling start */
+
+.guestlist-scroller {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 25rem;
+}
+
+/* guestlist page styling end */
+
 /* gallery page styling  */
 .gallery-wrapper {
     margin: 5em;

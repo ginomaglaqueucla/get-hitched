@@ -1,37 +1,38 @@
 <div class="invite-wrapper">
     <div class="invite-div">
+        <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Dashboard</a>
         <div class="invite-form">
             <h3>Edit Your RSVP Information</h3>
             <form id="invite-form">
 
-                <div class="form-group">
-                    <h5>Will you be RSVPing attending?</h5>
-                    <input type="radio" class="" name="user-type" id="yes-going" value="yes" checked>
-                    <input type="radio" class="" name="user-type" id="no-going" value="no">
-                    <label for="yes" class=""><i class="fas fa-check"></i></label>
-                    <label for="no" class=""><i class="fas fa-times"></i></label>
-                </div>
+                <h5>Will you be attending the wedding?</h5>
+                <input hidden type="radio" class="toggle-a" name="user-type" id="yes-going" value="yes" checked>
+                <input hidden type="radio" class="toggle-b" name="user-type" id="no-going" value="no">
+                <label for="yes-going" class="rvsp-choice toggle-a-btn"><i class="fas fa-check"></i></label>
+                <label for="no-going" class="rvsp-choice toggle-b-btn"><i class="fas fa-times"></i></label>
 
                 <div class="dropdown">
+                    <h5>Pick one option for food.</h5>
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Food Choose One
+                        Choose One
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Chicken</a>
-                        <a class="dropdown-item" href="#">Steak</a>
-                        <a class="dropdown-item" href="#">Fish</a>
-                        <a class="dropdown-item" href="#">Vegetarian</a>
-                        <a class="dropdown-item" href="#">Vegan</a>
+                        <option class="dropdown-item" value="Chicken">Chicken</option>
+                        <option class="dropdown-item" value="Steak">Steak</option>
+                        <option class="dropdown-item" value="Fish">Fish</option>
+                        <option class="dropdown-item" value="Vegetarian">Vegetarian</option>
+                        <option class="dropdown-item" value="Vegan">Vegan</option>
                     </div>
                 </div>
 
                 <div class="dropdown">
+                    <h5>Will you be bringing a plus one?</h5>
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Plus Choose One
+                        Choose One
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Yes</a>
-                        <a class="dropdown-item" href="#">No</a>
+                        <option class="dropdown-item" value="Yes">Yes</option>
+                        <option class="dropdown-item" value="No">No</option>
                     </div>
                 </div>
 
@@ -39,8 +40,12 @@
 
             </form>
         </div>
-        <div class="col-4 logo-rsvp-div">
-            <i class="fas fa-heart"></i>
-        </div>
+    </div>
+
+    <div class="col-4 logo-invite-div">
+        <i class="fas fa-heart"></i>
     </div>
 </div>
+
+<script src="/javascript/rsvp.js"></script>
+

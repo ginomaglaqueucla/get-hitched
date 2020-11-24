@@ -495,10 +495,8 @@ margin-bottom: 1em;
 
 .upload-page-wrapper {
     background-color: #EE81BD;
-    width: 50em;
-    height: 29em;
-    margin: 5rem 0;
-    display: flex;
+    height: 30em;
+    margin: 5rem 2em;
     border-radius: 15px 15px 15px 15px;
 }
 
@@ -506,6 +504,7 @@ margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2em;
 }
 
 .upload-form-wrapper small {

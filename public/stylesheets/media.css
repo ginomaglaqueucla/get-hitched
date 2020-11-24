@@ -1,6 +1,22 @@
-/* creators media adjustments */
-@media screen and (min-width: 600px) and (max-width: 992px) {
-    .creator-div {
-        
+@media screen and (min-width: 500px) and (max-width: 600px) {
+
+
+
+}
+
+@media screen and  (max-width: 500px) {
+    .login-form-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo-login-div {
+        width: 100%;
+        height: 10em;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .login-form {
+        border-radius: 0 0 15px 15px;
     }
 }

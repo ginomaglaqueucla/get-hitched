@@ -3,8 +3,19 @@ const invite_hashtagForm =document.querySelector('#invite-hashtag');
 async function editWeddingButtonHandler(event){
     event.preventDefault();
 
-    console.log("redirecting to edit wedding");
-    document.location.replace('/dashboard/edit'); 
+    const response = await fetch('/dashboard/edit', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    });
+    // check the response status
+    if (response.ok) {
+        console.log("redirecting to edit wedding");
+        document.location.replace('/dashboard/edit'); 
+    } else {
+        console.log("YEAH COULDNT FIND");
+        console.log(response.statusText);
+    }
+
 }
 
 async function guestlistButtonHandler(event){

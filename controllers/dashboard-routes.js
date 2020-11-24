@@ -180,11 +180,15 @@ router.get('/guestlist', (req, res) => {
                 })
                 .then(dbUserData => {
                     const user = dbUserData.map(user => user.get({plain:true}));
-                    userData.push(user[0]);
-                    console.log("users invited",userData);
+                    guestList[i].push(user[0]);
+                    userData.push(guestList[0]);
+                    // userData.push(user[0]);
+                    // guestList[i].push(user[0]);
+                    // console.log("users invited",userData);
                     // render editable wedding guestlist page
-                    if(i===guestList.length-1){
-                        res.render('guestList', {guestList, userData, loggedIn: true, ifNotHome: true});
+                    if(i === guestList.length-1){
+                        console.log("here we go",userData);
+                        res.render('guestList', {userData, loggedIn: true, ifNotHome: true});
                     }
                     
                 })

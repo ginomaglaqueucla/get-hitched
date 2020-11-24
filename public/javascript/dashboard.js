@@ -1,22 +1,22 @@
 const invite_hashtagForm =document.querySelector('#invite-hashtag');
 
-async function editWeddingButtonHandler(event){
-    event.preventDefault();
+// async function editWeddingButtonHandler(event){
+//     event.preventDefault();
 
-    const response = await fetch('/dashboard/edit', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
-    });
-    // check the response status
-    if (response.ok) {
-        console.log("redirecting to edit wedding");
-        document.location.replace('/dashboard/edit'); 
-    } else {
-        console.log("YEAH COULDNT FIND");
-        console.log(response.statusText);
-    }
+//     const response = await fetch('/dashboard/edit', {
+//         method: 'GET',
+//         headers: { 'Content-Type': 'application/json' }
+//     });
+//     // check the response status
+//     if (response.ok) {
+//         console.log("redirecting to edit wedding");
+//         document.location.replace('/dashboard/edit'); 
+//     } else {
+//         console.log("YEAH COULDNT FIND");
+//         console.log(response.statusText);
+//     }
 
-}
+// }
 
 async function guestlistButtonHandler(event){
     event.preventDefault();
@@ -51,5 +51,5 @@ async function addWeddingButtonHandler(event){
 
 
 document.querySelector('#add-wedding-btn').addEventListener('click', addWeddingButtonHandler);
-document.querySelector('#edit-wedding-btn').addEventListener('click', editWeddingButtonHandler);
+// document.querySelector('#edit-wedding-btn').addEventListener('click', editWeddingButtonHandler);
 document.querySelector('#guestlist-btn').addEventListener('click', guestlistButtonHandler);

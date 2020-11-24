@@ -43,7 +43,8 @@ router.get('/:id', (req, res) => {
 });
 
 // GET /api/wedding/1
-router.get('/:wedding_hashtag', (req, res) => {
+router.get('/hashtag/:wedding_hashtag', (req, res) => {
+  console.log("in weddonghashst");
   let ifHashtagValid;
   Wedding.findOne({
     where: {
@@ -62,16 +63,22 @@ router.get('/:wedding_hashtag', (req, res) => {
     ]
   })
     .then(dbWeddingData => {
+      // const wedding = dbWeddingData.map(wedding => wedding.get({plain:true}));
+      console.log("weddinG",dbWeddingData);
       if (!dbWeddingData) {
         res.status(404).json({ message: 'No wedding found with this hashtag' });
-        ifHashtagValid = false;
-        res.render('invite', {ifHashtagValid)
+        res.render('invite', {ifHashtagValid: false});
       } else {
-
+        let currentUser = req.session.user_id;
+        console.log(currentUser);
+        console.log(dbWeddingData.wedding_guestlist[0].id);
+        for(let i = 0; i < dbWeddingData.wedding_guestlist.length; i++){
+          if(currentUser === dbWeddingData.wedding_guestlist[i].id){
+            res.render('invite', {dbWeddingData, ifHashtagValid: true, loggedIn: true});
+          }
+        }
+        res.render('invite', {message: "You are not on the Guest List!", ifHashtagValid: false, logged: true});
       }
-      res.json(dbWeddingData);
-      if
-      res.render('invite', )
     })
     .catch(err => {
       console.log(err);

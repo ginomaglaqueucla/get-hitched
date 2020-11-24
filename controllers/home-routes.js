@@ -3,7 +3,10 @@ const router = require('express').Router();
 //GET reqest to render homepage
 router.get('/', (req, res) => {
     console.log('homepage');
-    res.render('homepage');
+    req.session.save(() => {
+        req.session.ifNotHome = false;
+    });
+    res.render('homepage'), {ifHome: false};
 });
 
 //GET request to render login page

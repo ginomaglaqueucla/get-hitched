@@ -69,15 +69,16 @@ router.get('/hashtag/:wedding_hashtag', (req, res) => {
         res.status(404).json({ message: 'No wedding found with this hashtag' });
         res.render('invite', {ifHashtagValid: false});
       } else {
-        let currentUser = req.session.user_id;
-        console.log(currentUser);
-        console.log(dbWeddingData.wedding_guestlist[0].id);
-        for(let i = 0; i < dbWeddingData.wedding_guestlist.length; i++){
-          if(currentUser === dbWeddingData.wedding_guestlist[i].id){
-            res.render('invite', {dbWeddingData, ifHashtagValid: true, loggedIn: true});
+          let currentUser = req.session.user_id;
+          console.log(currentUser);
+          console.log(dbWeddingData.wedding_guestlist[0].id);
+          for(let i = 0; i < dbWeddingData.wedding_guestlist.length; i++){
+            if(currentUser === dbWeddingData.wedding_guestlist[i].id){
+              console.log("you are invited!");
+              res.render('invite', {dbWeddingData, ifHashtagValid: true, loggedIn: true});
+            }
           }
-        }
-        res.render('invite', {message: "You are not on the Guest List!", ifHashtagValid: false, logged: true});
+        // res.render('invite', {message: "You are not on the Guest List!", ifHashtagValid: false, logged: true});
       }
     })
     .catch(err => {

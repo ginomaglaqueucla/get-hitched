@@ -20,6 +20,7 @@ async function addWeddingButtonHandler(event){
     const invite_hashtag = invite_hashtagForm.value.trim();
     const queryString = '/api/wedding/hashtag/'+ invite_hashtag;
 
+
     if(invite_hashtag){
         const response = await fetch(queryString, {
             method: 'GET',

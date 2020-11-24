@@ -197,6 +197,12 @@ router.get('/guestlist', (req, res) => {
 
 });
 
+router.get('/invite', (req, res) => {
+    console.log("in the invites");
+    
+});
+
+
 // POST request which will logout the user
 router.post('/edit/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {

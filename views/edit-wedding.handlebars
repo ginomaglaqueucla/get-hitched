@@ -1,13 +1,23 @@
 <div class="edit-wedding-wrapper">
     <div class="row">
+        <div class="col-4 dashboard-nav-div">
+            <div class="profile-pic-div">
+                <i class="fas fa-user-friends"></i>
+                {{#each couple}}
+                <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
+            </div>
+
+            <div class="nav-btns-div">
+                {{!-- need to change the id of this button to match "My Wedding" --}}
+                <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i>My Wedding</a>
+                <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
+            </div>
+        </div>
 
         <div class="col-8 edit-form">
             <form id="edit-form">
-            
-            <a class="btn back-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Dashboard</a>
 
                 <h3>Enter Your Wedding Information</h3>
-                <h3>This: {{checkIfWedding}}</h3>
                 {{#if checkIfWedding}}
                 {{#each wedding}}
                     <div hidden class="form-group">

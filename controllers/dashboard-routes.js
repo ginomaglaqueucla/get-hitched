@@ -39,8 +39,9 @@ router.get('/', withAuth, (req, res) => {
             console.log('data',couple);
             req.session.save(() => {
                 req.session.cachedWedding = couple[0].wedding_id;
+                req.session.ifNotHome = true;
             });
-            res.render('dashboard', {couple, engaged, loggedIn: true, keyname:'fun times.'});
+            res.render('dashboard', {couple, engaged, loggedIn: true, ifNotHome: true});
         })
         .catch(err => {
             console.log(err);
@@ -69,7 +70,7 @@ router.get('/', withAuth, (req, res) => {
             // console.log('data',guestlist);
             if(guestlist.length <= 0){
                 // no wedding invites
-                res.render('dashboard', {loggedIn: true, keyname:'fun times.'});
+                res.render('dashboard', {loggedIn: true, ifNotHome: true});
             }
             else {
                 for (let i = 0; i < guestlist.length; i++){
@@ -96,7 +97,7 @@ router.get('/', withAuth, (req, res) => {
                             //     loggedIn: true
                             // };
                             // console.log("sending this over:",userWeddingData);
-                            res.render('dashboard', {userWedding, loggedIn: true});
+                            res.render('dashboard', {userWedding, loggedIn: true, ifNotHome: true});
                         }
                     })
                     .catch(err => {
@@ -133,7 +134,7 @@ router.get('/edit', withAuth, (req, res) => {
             const wedding = dbWeddingData.map(wedding => wedding.get({plain:true}));
             console.log('data',wedding);
             console.log(req.session.loggedIn);
-            res.render('edit-wedding', {wedding, checkIfWedding: true, loggedIn: true});
+            res.render('edit-wedding', {wedding, checkIfWedding: true, loggedIn: true, ifNotHome: true});
         })
     }
     else{
@@ -146,7 +147,7 @@ router.get('/edit', withAuth, (req, res) => {
                 wedding_details: "With all due respect, please small children at home"
             }
         ]
-        res.render('edit-wedding', {wedding, checkIfWedding: false, loggedIn: true});
+        res.render('edit-wedding', {wedding, checkIfWedding: false, loggedIn: true, ifNotHome: true});
     }
 });
 
@@ -183,7 +184,7 @@ router.get('/guestlist', (req, res) => {
                     console.log("users invited",userData);
                     // render editable wedding guestlist page
                     if(i===guestList.length-1){
-                        res.render('guestList', {guestList, userData, loggedIn: true, hello: "hello"});
+                        res.render('guestList', {guestList, userData, loggedIn: true, ifNotHome: true});
                     }
                     
                 })
@@ -199,7 +200,7 @@ router.get('/guestlist', (req, res) => {
 
 router.get('/invite', (req, res) => {
     console.log("in the invites");
-    
+    res.render('invite');
 });
 
 

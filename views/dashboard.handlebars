@@ -27,6 +27,7 @@
                         <h4><span class="details-span">Save the Date:</span> {{wedding.wedding_date}}</h4>
                         <h4><span class="details-span">Location:</span> {{wedding.wedding_location}}</h4>
                         <h4><span class="details-span">Small Details:</span> {{wedding.wedding_details}}</h4>
+                        <button hidden class="dashboard-nav-btn btn" id="add-wedding-btn">RSVP to Wedding</button>
                         {{#if wedding_id}}
                         <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
                         {{/if}}
@@ -52,7 +53,8 @@
 
             <div class="nav-btns-div">
                 {{!-- <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a> --}}
-                <a href="" class="dashboard-nav-btn btn">Invites</a>
+                <a href="/dashboard/invite" class="dashboard-nav-btn btn">Invites</a>
+                <button hidden class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
                 <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
 
             </div>
@@ -68,13 +70,14 @@
                 </ul>
                 <div class="form-group">
                     <label for="invite-hashtag">Enter Wedding Hashtag:</label>
-                    <input type="text" class="form-control" id="invite-hashtag" placeholder="some-text"></input>
+                    <input type="text" class="form-control" id="invite-hashtag" placeholder="Enter unique Wedding Hashtag"></input>
                 </div>
-                <button class="dashboard-nav-btn btn" id="add-wedding-btn">Add Wedding</button>
+                <button class="dashboard-nav-btn btn" id="add-wedding-btn">RSVP to Wedding</button>
             </div>
 
 
             <div class="dashboard-widget list-group guest-border">
+                <button hidden class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
                 {{#each userWedding}}
                     {{> upcoming-weddings}}
                 {{/each}}

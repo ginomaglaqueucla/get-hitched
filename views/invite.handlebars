@@ -1,4 +1,50 @@
-<div class="dashboard-page">
+<div class="invite-wrapper">
+    <div class="invite-div">
+        <div class="invite-form">
+            <h3>Edit Your RSVP Information</h3>
+            <form id="invite-form">
+
+                <div class="form-group">
+                    <h5>Will you be RSVPing attending?</h5>
+                    <input type="radio" class="" name="user-type" id="yes-going" value="yes" checked>
+                    <input type="radio" class="" name="user-type" id="no-going" value="no">
+                    <label for="yes" class=""><i class="fas fa-check"></i></label>
+                    <label for="no" class=""><i class="fas fa-times"></i></label>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Food Choose One
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Chicken</a>
+                        <a class="dropdown-item" href="#">Steak</a>
+                        <a class="dropdown-item" href="#">Fish</a>
+                        <a class="dropdown-item" href="#">Vegetarian</a>
+                        <a class="dropdown-item" href="#">Vegan</a>
+
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plus Choose One
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Yes</a>
+                        <a class="dropdown-item" href="#">No</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-4 logo-rsvp-div">
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+</div>
+
+{{!-- <div class="dashboard-page">
     <div class="row">
         <div class="col-8 edit-form">
             <form id="edit-form">
@@ -9,63 +55,10 @@
                     <input type="date" class="form-control" id="wedding-date" name="wedding-date" placeholder="{{wedding_date}}">
                 </div>
 
-                <div class="form-group">
-                                <label for="wedding-hashtag">Enter Your Wedding Hashtag</label>
-                                <input type="text" class="form-control" id="wedding-hashtag" placeholder="{{wedding_hashtag}}">
-                                <small class="form-text text-muted">RSVP by entering your corresponding Wedding Hashtag</small>
-                            </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        RSVP?
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Yes</a>
-                        <a class="dropdown-item" href="#">No</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Food Choice
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Chicken</a>
-                        <a class="dropdown-item" href="#">Steak</a>
-                        <a class="dropdown-item" href="#">Fish</a>
-                        <a class="dropdown-item" href="#">Veggie</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Food Choice
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Chicken</a>
-                        <a class="dropdown-item" href="#">Steak</a>
-                        <a class="dropdown-item" href="#">Fish</a>
-                        <a class="dropdown-item" href="#">Veggie</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Plus One
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Yes</a>
-                        <a class="dropdown-item" href="#">No</a>
-                    </div>
-                </div>
-
                 <button type="submit" class="btn edit-btn">Add Wedding <i class="far fa-heart"></i></button> 
             </form>
         </div>
 
-        <div class="col-4 logo-signup-div">
 
-            <i class="fas fa-heart"></i>
-        </div>
     </div>
-</div>
+</div> --}}

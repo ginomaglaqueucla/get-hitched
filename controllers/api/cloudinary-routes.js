@@ -23,6 +23,7 @@ cloudinary.config({
 router.post('/upload', upload.single('weddingImage') , async (req, res, next) => {
     // console.log(req.file);
     const newFolder = req.session.cachedWedding;
+    console.log(newFolder);
     const cloudUpload = cloudinary.uploader.upload_stream(
         {
             folder: newFolder 

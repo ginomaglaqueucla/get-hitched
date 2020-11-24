@@ -31,7 +31,12 @@
                         <h4><span class="details-span">Save the Date:</span> {{wedding.wedding_date}}</h4>
                         <h4><span class="details-span">Location:</span> {{wedding.wedding_location}}</h4>
                         <h4><span class="details-span">Small Details:</span> {{wedding.wedding_details}}</h4>
+                        {{#if wedding_id}}
                         <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
+                        {{/if}}
+                        {{#unless wedding_id}}
+                        <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Create Wedding</button>
+                        {{/unless}}
                     </div>
                 </div>
             </div>

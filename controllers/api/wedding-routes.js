@@ -43,71 +43,71 @@ router.get('/:id', (req, res) => {
 });
 
 // GET /api/wedding/1
-router.get('/:wedding_hashtag', (req, res) => {
-  let ifHashtagValid;
-  Wedding.findOne({
-    where: {
-      wedding_hashtag: req.params.wedding_hashtag
-    },
-    include: [
-      {
-        model: User,
-        attributes: [
-        'id',
-        'full_name'
-        ],
-        through: GuestList,
-        as: 'wedding_guestlist'
-      }
-    ]
-  })
-    .then(dbWeddingData => {
-      if (!dbWeddingData) {
-        res.status(404).json({ message: 'No wedding found with this hashtag' });
-        ifHashtagValid = false;
-        res.render('invite', {ifHashtagValid)
-      } else {
+// router.get('/:wedding_hashtag', (req, res) => {
+//   let ifHashtagValid;
+//   Wedding.findOne({
+//     where: {
+//       wedding_hashtag: req.params.wedding_hashtag
+//     },
+//     include: [
+//       {
+//         model: User,
+//         attributes: [
+//         'id',
+//         'full_name'
+//         ],
+//         through: GuestList,
+//         as: 'wedding_guestlist'
+//       }
+//     ]
+//   })
+//     .then(dbWeddingData => {
+//       if (!dbWeddingData) {
+//         res.status(404).json({ message: 'No wedding found with this hashtag' });
+//         ifHashtagValid = false;
+//         res.render('invite', {ifHashtagValid})
+//       } else {
 
-      }
-      res.json(dbWeddingData);
-      if
-      res.render('invite', )
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+//       }
+//       res.json(dbWeddingData);
+//       if
+//       res.render('invite', )
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
-// POST /api/wedding
-router.post('/', (req, res) => {
-  console.log("in wedding");
-  // expects {wedding_date: '', guest_list_id: '', wedding_location: '', wedding_hashtag: '', wedding_details: ''}
-  Wedding.create({
-    wedding_date: req.body.wedding_date,
-    // guest_list_id: req.body.guest_list_id,
-    wedding_location: req.body.wedding_location,
-    wedding_hashtag: req.body.wedding_hashtag,
-    wedding_details: req.body.wedding_details
-  })
-    .then(dbWeddingData => {
-      console.log("WEDDING",dbWeddingData.id);
-      // Updates couple table with "their" wedding
-      Couple.update({wedding_id: dbWeddingData.id},{
-        where: {
-          user_id: req.session.user_id
-        }
-      });
-      req.session.save(() => {
-        req.session.cachedWedding = true;
-      });
-      res.json(dbWeddingData);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// // POST /api/wedding
+// router.post('/', (req, res) => {
+//   console.log("in wedding");
+//   // expects {wedding_date: '', guest_list_id: '', wedding_location: '', wedding_hashtag: '', wedding_details: ''}
+//   Wedding.create({
+//     wedding_date: req.body.wedding_date,
+//     // guest_list_id: req.body.guest_list_id,
+//     wedding_location: req.body.wedding_location,
+//     wedding_hashtag: req.body.wedding_hashtag,
+//     wedding_details: req.body.wedding_details
+//   })
+//     .then(dbWeddingData => {
+//       console.log("WEDDING",dbWeddingData.id);
+//       // Updates couple table with "their" wedding
+//       Couple.update({wedding_id: dbWeddingData.id},{
+//         where: {
+//           user_id: req.session.user_id
+//         }
+//       });
+//       req.session.save(() => {
+//         req.session.cachedWedding = true;
+//       });
+//       res.json(dbWeddingData);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 // PUT /api/wedding/1
 router.put('/:id', (req, res) => {

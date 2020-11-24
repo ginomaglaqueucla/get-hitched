@@ -321,7 +321,7 @@ footer ul li a {
 .dashboard-nav-div {
     display: flex;
     flex-direction: column;
-    background-color: #EE81BD;
+    background-color:#E32D91;
     color: #FFFFFF;
     border-radius: 15px 0px 0px 15px;
     width: 85%;
@@ -378,7 +378,7 @@ margin-bottom: 1em;
 }
 
 .dashboard {
-    background-color: #E32D91;
+    background-color: #EE81BD;;
     color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
@@ -413,9 +413,9 @@ margin-bottom: 1em;
     color: #FFFFFF;
 }
 
-.guest-border {
-    border: solid 10px #EE81BD;
-}
+/* .guest-border {
+    border: solid 10px #FFF;
+} */
 
 .my-wedding-info-widget-info {
     text-align: center;

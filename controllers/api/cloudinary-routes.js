@@ -19,10 +19,10 @@ cloudinary.config({
 //this is a POST request to send a file to cloudinary
 router.post('/upload', upload.single('weddingImage') , async (req, res, next) => {
     // console.log(req.file);
-    
+    const newFolder = req.session.cachedWedding;
     const cloudUpload = cloudinary.uploader.upload_stream(
         {
-            folder: "tester"
+            folder: newFolder 
             // tags: "tester"
         },
         function(err, result) {

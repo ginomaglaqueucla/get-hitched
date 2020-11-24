@@ -7,10 +7,12 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
     console.log('wedding pictures gallery')
     //i think this should also have session logic
+    const newFolder = req.session.cachedWedding;
+    console.log('front', newFolder);
     cloudinary.api.resources(
         {
             type: 'upload',
-            prefix: 'tester/',
+            prefix: `${newFolder}/`, //'tester/'
             invalidate: true,
             max_results: 30
         },

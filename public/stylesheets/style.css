@@ -240,7 +240,8 @@ footer ul li a {
 .signup-btn,
 .upload-btn,
 .back-btn, 
-.edit-btn {
+.edit-btn,
+.rsvp-btn {
     background-color: #fff;
     color: #E32D91;
     cursor: pointer;
@@ -251,7 +252,8 @@ footer ul li a {
 .main-btns:hover,
 .upload-btn:hover,
 .back-btn:hover,
-.edit-btn:hover {
+.edit-btn:hover,
+.rsvp-btn:hover {
     color: #EE81BD;
     box-shadow: 0 0 8px 3px #fff;
     transition: box-shadow 0.5s ease-out;
@@ -296,14 +298,18 @@ footer ul li a {
 }
 
 .user-type {
-    color: #E32D91;
+    color: #fff;
     font-size: 5em;
     margin-left: 0.25em;
 }
 
+.rsvp-choice {
+    color: #fff;
+}
+
 .toggle-a:checked ~ .toggle-a-btn,
 .toggle-b:checked ~ .toggle-b-btn{
-    color: #ffffff;
+    color: #E32D91;
     box-shadow: none;
 }
 
@@ -577,15 +583,14 @@ form.custom-file {
 /* styling for the invites page  */
 
 .invite-wrapper {
-    margin: 5em;
+    margin: 7em 2em;;
     display: flex;
     justify-content: center;
 }
 
 .invite-div {
     background-color: #EE81BD;
-    width: 80%;
-    display: flex;
+    width: 100%;
     border-radius: 15px 0 0 15px;
     padding: 1em;
 }
@@ -595,3 +600,13 @@ form.custom-file {
     font-size: 3em;
     margin: 1em;
 }
+
+.dropdown {
+    margin-bottom: 2em;;
+}
+
+.dropdown-toggle {
+    background-color: #FFF;
+}
+
+

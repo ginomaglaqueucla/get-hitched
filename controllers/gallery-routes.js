@@ -12,7 +12,8 @@ router.get('/', withAuth, (req, res) => {
     cloudinary.api.resources(
         {
             type: 'upload',
-            prefix: `${newFolder}/`, //'tester/'
+            // prefix: `${newFolder}/`, //'tester/'
+            prefix: 'test/',
             invalidate: true,
             max_results: 30
         },

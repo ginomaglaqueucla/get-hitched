@@ -13,7 +13,7 @@ router.get('/', withAuth, (req, res) => {
         {
             type: 'upload',
             // prefix: `${newFolder}/`, //'tester/'
-            prefix: 'test/',
+            prefix: 'testing/',
             invalidate: true,
             max_results: 30
         },

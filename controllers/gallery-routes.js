@@ -13,7 +13,7 @@ router.get('/', withAuth, (req, res) => {
         {
             type: 'upload',
             // prefix: `${newFolder}/`, //'tester/'
-            prefix: `${req.session.cachedWedding}/`,
+            prefix: 'test/',
             invalidate: true,
             max_results: 30
         },

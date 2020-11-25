@@ -84,7 +84,7 @@ Replace with your own info in the config/connection.js
 
 ### Chris Meissner
 
-[GitHub](https://github.com/ChrisMeissner) - add your email here
+[GitHub](https://github.com/ChrisMeissner) - christophermssnr@gmail.com
 * Front End Designer
 * Graphic Design & Branding
 * Dashboard, Edit Dashboard, Edit Guestlist, 

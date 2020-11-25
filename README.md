@@ -106,7 +106,7 @@ Replace with your own info in the config/connection.js
 
 ### Deployed
 
-[Click here for the application deployed to Heroku!](https://sheltered-eyrie-92140.herokuapp.com/dashboard "Get Hitched")
+[Click here for the application deployed to Heroku!](https://sheltered-eyrie-92140.herokuapp.com/ "Get Hitched")
 
 ### Screenshot
 

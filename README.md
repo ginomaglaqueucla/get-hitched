@@ -73,7 +73,7 @@ Replace with your own info in the config/connection.js
 
 ### Gino Maglaque 
 
-[GitHub](https://github.com/ginomaglaqueucla/) - add your email here
+[GitHub](https://github.com/ginomaglaqueucla/) - ginomaglaque@gmail.com
 
 * Project Managment
 * Lead Backend Engineer
@@ -109,9 +109,8 @@ Replace with your own info in the config/connection.js
 
 ### Screenshot
 
-<!-- <img src='' alt='Screenshot of Get Hitched'/> -->
+<img src='/public/assets/graphics/gethitchedcollage.png' alt='Screenshot of Get Hitched'/>
 
-<!-- <img src='' alt='GIF of Get Hitched'/> -->
 
 ___Thank you___
 

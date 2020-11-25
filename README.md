@@ -109,7 +109,7 @@ Replace with your own info in the config/connection.js
 
 ### Screenshot
 
-<!-- <img src='' alt='Screenshot of Get Hitched'/> -->
+<img src='https://raw.githubusercontent.com/ginomaglaqueucla/get-hitched/develop/public/assets/graphics/gethitchedcollage.png' alt='Screenshot of Get Hitched'/> 
 
 <!-- <img src='' alt='GIF of Get Hitched'/> -->
 

@@ -5,6 +5,11 @@
         overflow: none;
     }
 
+    .cta-wrapper {
+        height: 20em;
+        width: 75vh;
+    }
+
 }
 
 @media screen and  (max-width: 500px) {
@@ -65,7 +70,7 @@
 
     .profile-pic-div i {
         font-size: 6em;
-        color: #EE81BD;s
+        color: #EE81BD;
     }
 
     .profile-pic-div h5 {
@@ -79,6 +84,16 @@
 
     .gallery-header {
         flex-direction: column;
+    }
+
+    .gallery-div {
+        height: auto;
+        overflow: none;
+    }
+
+    .cta-wrapper {
+        height: 10em;
+        width: 35vh;
     }
 
 }

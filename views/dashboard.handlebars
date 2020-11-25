@@ -4,7 +4,8 @@
         <div class="dashboard-nav-div">
             <div class="profile-pic-div">
                 <i class="fas fa-user-friends"></i>
-                <h5>{{partner1_name}} <span class="span-anpersan">&</span> {{partner2_name}}</h5>
+                <h5>{{partner1_name}} <span class="span-anpersan">&<br/>
+                </span> {{partner2_name}}</h5>
             </div>
 
             <div class="nav-btns-div">
@@ -20,13 +21,16 @@
                 </div>
 
                 <div class="dashboard-subtitle">
-                    <h4>{{wedding.wedding_hashtag}}</h5>
+                    <h4>#{{wedding.wedding_hashtag}}</h5>
                 </div> 
                 <div class="dashboard-widget">
                     <div class="my-wedding-info-widget-info">
-                        <h4><span class="details-span">Save the Date:</span> {{wedding.wedding_date}}</h4>
-                        <h4><span class="details-span">Location:</span> {{wedding.wedding_location}}</h4>
-                        <h4><span class="details-span">Small Details:</span> {{wedding.wedding_details}}</h4>
+                        <h4><span class="details-span">Save the Date:</span></br> 
+                        {{wedding.wedding_date}}</h4><br/>
+                        <h4><span class="details-span">Location:</span></br> 
+                        {{wedding.wedding_location}}</h4><br/>
+                        <h4><span class="details-span">Details:</span></br> 
+                        {{wedding.wedding_details}}</h4><br/>
                         <button hidden class="dashboard-nav-btn btn" id="add-wedding-btn">RSVP to Wedding</button>
                         {{#if wedding_id}}
                         <a href="/dashboard/edit" class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</a>
@@ -53,9 +57,9 @@
 
             <div class="nav-btns-div">
                 {{!-- <a href="" class="dashboard-nav-btn btn">Your Upcoming Weddings</a> --}}
-                <a href="/dashboard/invite" class="dashboard-nav-btn btn">Invites</a>
+                <a hidden href="/dashboard/invite" class="dashboard-nav-btn btn">Invites</a>
                 <button hidden class="dashboard-nav-btn btn" id="guestlist-btn">Guest List</button>
-                <a href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
+                <a hidden href="/gallery" class="dashboard-nav-btn btn">Wedding Gallery</a>
 
             </div>
         </div>

@@ -5,8 +5,8 @@
                 <h3>Signup</h3>
 
                 {{!-- these are the two choices: guest or couple  --}}
-                <input hidden type="radio" class="hidden toggle-a engaged-selector" name="user-type" id="couple-choice" value="couple" checked>
-                <input hidden type="radio" class="hidden toggle-b engaged-selector" name="user-type" id="guest-choice" value="guest">
+                <input hidden type="radio" class="hidden toggle-a" name="user-type" id="couple-choice" value="couple" checked>
+                <input hidden type="radio" class="hidden toggle-b" name="user-type" id="guest-choice" value="guest">
                 <label for="couple-choice" class="user-type toggle-a-btn"><i class="fas fa-user-friends"></i></label>
                 <label for="guest-choice" class="user-type toggle-b-btn"><i class="fas fa-user-alt"></i></label>
                 <small class="form-text text-muted">Choose whether you'd like to sign up as a Couple or <br />a Guest by clicking on one of the icons above.</small>
@@ -34,11 +34,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="user-fullname toggle-a-content">Partner One's Name</label>
                     <label for="user-fullname toggle-b-content">Your Full Name</label>
-                    <input type="text" class="form-control user-fullname" id="user-fullname" placeholder="Enter your fullname">
-                    <small class="form-text text-muted toggle-a-content">Both names of couple are nessecary.</small>
-                    <small class="form-text text-muted toggle-b-content">Your fullname will be displayed on the guestlist.</small>
+                    <input type="text" class="form-control user-fullname" id="user-fullname" placeholder="Enter your full name">
+                    <small class="form-text text-muted toggle-a-content">We'll need your full name.</small>
                 </div>
 
                 {{!-- here are the couple's form options  --}}
@@ -46,8 +44,8 @@
                     
                     <div class="form-group">
                         <label for="signup-partner-two">Partner Two's Name</label>
-                        <input type="text" class="form-control" id="signup-partner-two" placeholder="Bottom">
-                        <small class="form-text text-muted">Both names of couple are nessecary.</small>
+                        <input type="text" class="form-control" id="signup-partner-two" placeholder="Partner's Name Here">
+                        <small class="form-text text-muted">Your partner's name is necessary.</small>
                     </div>
                 </div>
 

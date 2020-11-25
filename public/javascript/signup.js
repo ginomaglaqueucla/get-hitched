@@ -35,7 +35,6 @@ async function signupFormHandler(event) {
         if (response.ok) {
             console.log('You have successfully made an account.');
             document.location.replace('/dashboard');
-            // document.location.replace('/dashboard/edit');
         } else {
             console.log(response.statusText);
         }

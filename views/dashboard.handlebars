@@ -29,10 +29,10 @@
                         <h4><span class="details-span">Small Details:</span> {{wedding.wedding_details}}</h4>
                         <button hidden class="dashboard-nav-btn btn" id="add-wedding-btn">RSVP to Wedding</button>
                         {{#if wedding_id}}
-                        <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</button>
+                        <a href="/dashboard/edit" class="dashboard-nav-btn btn" id="edit-wedding-btn">Edit My Wedding</a>
                         {{/if}}
                         {{#unless wedding_id}}
-                        <button class="dashboard-nav-btn btn" id="edit-wedding-btn">Create Wedding</button>
+                        <a href="/dashboard/edit" class="dashboard-nav-btn btn" id="edit-wedding-btn">Create Wedding</a>
                         {{/unless}}
                     </div>
                 </div>

@@ -38,9 +38,9 @@ header h1 {
     font-weight: lighter;
     letter-spacing: 0.2rem;
     background: -webkit-linear-gradient(
-        5deg,
+        0deg,
         #E32D91,
-        #9d93fc
+        #EE81BD
     );
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -143,7 +143,10 @@ footer ul li a {
     justify-content: center;
     align-items: center;
     width: 100vh;
-    height: 29em;
+    height: 22em;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 3px #EE81BD;
 }
 
 .main-btn-wrapper {
@@ -171,10 +174,10 @@ footer ul li a {
 .signup-form-wrapper,
 .edit-wedding-wrapper {
     margin: 5em 0;
-    padding: 0 1em;
-    width: 100%;
     display: flex;
     justify-content: center;
+    border: 5px solid #fff;
+    border-radius: 15px;
 }
 
 .logo-login-div {
@@ -335,6 +338,8 @@ footer ul li a {
     display: flex;
     flex-direction: column;
     background-color:#E32D91;
+    justify-content: space-around;
+    align-items: center;
     color: #FFFFFF;
     border-radius: 15px 0px 0px 15px;
     width: 85%;
@@ -346,12 +351,10 @@ footer ul li a {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    padding: .5em;
-    margin-top: 5em;
 }
 
 .dashboard-title h2 {
-margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .details-span {
@@ -375,6 +378,8 @@ margin-bottom: 1em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
 }
 
 .dashboard-nav-btn {
@@ -437,12 +442,38 @@ margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    height: 25rem;
+    height: 20rem;
+    width: 20rem;
+}
+
+.individual-guest {
+    border: 2.5px solid #E32D91;
+    border-radius: 15px;
+    background: #E32D91;
+    color: #fff;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+}
+
+.individual-guest:hover {
+    border: 2.5px solid #FFF;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #E32D91;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    box-shadow: 0 0 8px 3px #fff;
+    transition: box-shadow 0.5s ease-out;
 }
 
 /* gallery page styling  */
 .gallery-wrapper {
     margin: 5em;
+    border-radius: 15px;
 }
 
 .gallery-div {
@@ -514,7 +545,7 @@ margin-bottom: 1em;
     background-color: #EE81BD;
     height: 30em;
     margin: 5rem 2em;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
 }
 
 .upload-form-wrapper {
@@ -539,6 +570,9 @@ form.custom-file {
     margin: 5em 0;
     display: flex;
     justify-content: center;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 3px #EE81BD;
 }
 
 .creator-div {

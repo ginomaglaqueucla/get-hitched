@@ -115,7 +115,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 //GET request to view edit dashboard information
-router.get('/edit', withAuth, (req, res) => {
+router.get('/edit', (req, res) => {
     console.log('in edit');
     if(req.session.cachedWedding !== null){
         Wedding.findAll({
@@ -180,10 +180,14 @@ router.get('/guestlist', (req, res) => {
                 })
                 .then(dbUserData => {
                     const user = dbUserData.map(user => user.get({plain:true}));
+                    // guestList[i].push(user[0]);
+                    // userData.push(guestList[0]);
                     userData.push(user[0]);
-                    console.log("users invited",userData);
+                    // guestList[i].push(user[0]);
+                    // console.log("users invited",userData);
                     // render editable wedding guestlist page
-                    if(i===guestList.length-1){
+                    if(i === guestList.length-1){
+                        console.log("here we go",userData);
                         res.render('guestList', {guestList, userData, loggedIn: true, ifNotHome: true});
                     }
                     

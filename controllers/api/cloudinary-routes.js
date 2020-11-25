@@ -27,7 +27,7 @@ router.post('/upload', upload.single('weddingImage') , async (req, res, next) =>
     const cloudUpload = cloudinary.uploader.upload_stream(
         {
             // folder: newFolder 
-            folder: "tester"
+            folder: "test"
             // tags: "tester"
         },
         function(err, result) {

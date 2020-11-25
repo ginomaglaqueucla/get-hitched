@@ -29,7 +29,7 @@ Wedding.init(
     wedding_hashtag: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true, //this will make it unique in the database and keep it from being used twice, needs to be pre queries and have error 
+        unique: true, 
         validate: {
             len: [5]
         }

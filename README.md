@@ -87,29 +87,30 @@ Replace with your own info in the config/connection.js
 [GitHub](https://github.com/ChrisMeissner) - christophermssnr@gmail.com
 * Front End Designer
 * Graphic Design & Branding
-* Dashboard, Edit Dashboard, Edit Guestlist, 
-* Main Page 
+* Handlebars
+* Dashboard, Edit Dashboard, Edit Guestlist, Main Page,  
 
 
 ### Cat Lin (Caitlin) Morgan 
 
 [GitHub](https://github.com/cat-lin-morgan/) - plummorgan@gmail.com
 
+* Lead Designer 
 * Lead Frontend Engineer
 * CSS aesthetic and HTML structure
 * Frontend Routes
-* Header, Footer, Signup, Login, Weddings Cards for Guests, Gallery and Upload Designs
-* About the Creators Page **Fun Bonus**
+* Handlebars
+* Header, Footer, Signup, Login, Weddings Cards for Guests, About the Creators Page, Gallery, RSVP Page, and Upload Designs
 * Cloudinary API
 
 
 ### Deployed
 
-[Click here for the application deployed to Heroku!](https://gentle-harbor-12576.herokuapp.com/ "Get Hitched")
+[Click here for the application deployed to Heroku!](https://sheltered-eyrie-92140.herokuapp.com/dashboard "Get Hitched")
 
 ### Screenshot
 
-<img src='/public/assets/graphics/gethitchedcollage.png' alt='Screenshot of Get Hitched'/>
+<img src='https://raw.githubusercontent.com/ginomaglaqueucla/get-hitched/develop/public/assets/graphics/gethitchedcollage.png' alt='Screenshot of Get Hitched'/> 
 
 
 ___Thank you___

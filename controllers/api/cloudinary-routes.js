@@ -23,7 +23,6 @@ router.post('/upload', upload.single('weddingImage') , async (req, res, next) =>
     console.log(newFolder);
     const cloudUpload = cloudinary.uploader.upload_stream(
         {
-            // folder: newFolder 
             folder: "testing"
             // tags: "tester"
         },
@@ -33,8 +32,6 @@ router.post('/upload', upload.single('weddingImage') , async (req, res, next) =>
     );
     // console.log(cloudUpload)
     streamifier.createReadStream(req.file.buffer).pipe(cloudUpload);
-    // console.log(next);
-    // console.log(res);
 });
 
 module.exports = router;

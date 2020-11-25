@@ -36,7 +36,6 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // guest = true | couple = false
         engaged: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
@@ -46,12 +45,10 @@ User.init(
     },
     {
         hooks: {
-            // set up beforeCreate lifecycle "hook" functionality
             async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
             },
-            // set up beforeUpdate lifecycle "hook" functionality
             async beforeUpdate(updatedUserData) {
                 updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
                 return updatedUserData;

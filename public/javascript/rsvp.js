@@ -1,4 +1,4 @@
-console.log('some rsvp script stuff');
+//this form works theres just no route to the db
 
 async function inviteFormHandler(event) {
     event.preventDefault();

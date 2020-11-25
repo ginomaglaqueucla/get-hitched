@@ -11,14 +11,6 @@ Couple.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-// User.hasMany(GuestList, {
-//     foreignKey: 'user_id'
-// });
-  
-// GuestList.belongsToMany(User, {
-//     foreignKey: 'user_id'
-// });
-
 User.belongsToMany(Wedding, {
     through: GuestList,
     as: 'wedding_guestlist',

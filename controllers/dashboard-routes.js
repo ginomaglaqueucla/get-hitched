@@ -92,11 +92,6 @@ router.get('/', withAuth, (req, res) => {
                         userWedding.push(user[0]);
                         // console.log('data',user);
                         if(i === guestlist.length-1){
-                            // const userWeddingData = {
-                            //     weddings: userWedding,
-                            //     loggedIn: true
-                            // };
-                            // console.log("sending this over:",userWeddingData);
                             res.render('dashboard', {userWedding, loggedIn: true, ifNotHome: true});
                         }
                     })
@@ -180,12 +175,7 @@ router.get('/guestlist', (req, res) => {
                 })
                 .then(dbUserData => {
                     const user = dbUserData.map(user => user.get({plain:true}));
-                    // guestList[i].push(user[0]);
-                    // userData.push(guestList[0]);
                     userData.push(user[0]);
-                    // guestList[i].push(user[0]);
-                    // console.log("users invited",userData);
-                    // render editable wedding guestlist page
                     if(i === guestList.length-1){
                         console.log("here we go",userData);
                         res.render('guestList', {guestList, userData, loggedIn: true, ifNotHome: true});

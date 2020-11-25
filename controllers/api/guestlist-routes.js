@@ -17,24 +17,6 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    // include: [
-    //   {
-    //     model: GuestList,
-    //     attributes: [
-    //       'wedding_id'
-    //     ],
-    //     through: Wedding
-    //   },
-    //   {
-    //     model: User,
-    //     attributes: [
-    //       'id',
-    //       'email',
-    //       'full_name'
-    //     ],
-    //     through: GuestList
-    //   }
-    // ]
   })
     .then(dbGuestListData => {
       if (!dbGuestListData) {

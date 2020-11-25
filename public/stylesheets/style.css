@@ -437,7 +437,6 @@ footer ul li a {
 }
 
 /* guestlist page styling start */
-
 .guestlist-scroller {
     display: flex;
     flex-direction: column;
@@ -565,7 +564,6 @@ form.custom-file {
 
 
 /* styling for creators page  */
-
 .creator-wrapper {
     margin: 5em 0;
     display: flex;
@@ -612,7 +610,6 @@ form.custom-file {
 }
 
 /* styling for the invites page  */
-
 .invite-wrapper {
     margin: 7em 2em;;
     display: flex;
@@ -639,5 +636,4 @@ form.custom-file {
 .dropdown-toggle {
     background-color: #FFF;
 }
-
 

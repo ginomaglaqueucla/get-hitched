@@ -17,23 +17,30 @@
                         Choose One
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <option class="dropdown-item" value="Chicken">Chicken</option>
-                        <option class="dropdown-item" value="Steak">Steak</option>
-                        <option class="dropdown-item" value="Fish">Fish</option>
-                        <option class="dropdown-item" value="Vegetarian">Vegetarian</option>
-                        <option class="dropdown-item" value="Vegan">Vegan</option>
+                        <label for="food-choice-chicken" class="dropdown-item">Chicken</label>
+                        <label for="food-choice-steak" class="dropdown-item">Steak</label>
+                        <label for="food-choice-fish" class="dropdown-item">Fish</label>
+                        <label for="food-choice-vegetarian" class="dropdown-item">Vegetarian</label>
+                        <label for="food-choice-vegan" class="dropdown-item">Vegan</label>
                     </div>
+                    <input hidden type="radio" name="food-choice" value="Chicken" id="food-choice-chicken" >
+                    <input hidden type="radio" name="food-choice" value="Steak" id="food-choice-steak" >
+                    <input hidden type="radio" name="food-choice" value="Fish" id="food-choice-fish" >
+                    <input hidden type="radio" name="food-choice" value="Vegetarian" id="food-choice-vegetarian" >
+                    <input hidden type="radio" name="food-choice" value="Vegan" id="food-choice-vegan" >
                 </div>
 
                 <div class="dropdown">
-                    <h5>Will you be bringing a plus one?</h5>
+                    <h5>Will you be bringing plus one?</h5>
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Choose One
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <option class="dropdown-item" value="Yes">Yes</option>
-                        <option class="dropdown-item" value="No">No</option>
+                        <label for="plusone-choice-yes" class="dropdown-item">Yes</label>
+                        <label for="plusone-choice-no" class="dropdown-item">No</label>
                     </div>
+                    <input hidden type="radio" name="plusone-choice" value="Yes" id="plusone-choice-yes" >
+                    <input hidden type="radio" name="plusone-choice" value="No" id="plusone-choice-no" >
                 </div>
 
                 <button type="submit" class="btn rsvp-btn">Save Preferences</button> 

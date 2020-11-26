@@ -43,7 +43,8 @@
         width: 100%;
         border-radius: 15px 15px 15px 15px;
         padding: 1em;
-
+    }
+    
     .login-form,
     .signup-form,
     .edit-form {

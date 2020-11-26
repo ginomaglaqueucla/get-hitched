@@ -108,6 +108,7 @@ Replace with your own info in the config/connection.js
 
 [Click here for the application deployed to Heroku!](https://sheltered-eyrie-92140.herokuapp.com/ "Get Hitched")
 
+
 ### Screenshot
 
 <img src='https://raw.githubusercontent.com/ginomaglaqueucla/get-hitched/develop/public/assets/graphics/gethitchedcollage.png' alt='Screenshot of Get Hitched'/> 
